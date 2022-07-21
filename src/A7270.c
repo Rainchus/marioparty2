@@ -1,0 +1,9 @@
+#include "common.h"
+
+INCLUDE_ASM(s32, "A7270", func_800A6670);
+
+INCLUDE_ASM(s32, "A7270", func_800A66C4);
+
+INCLUDE_ASM(s32, "A7270", func_800A6800);
+
+INCLUDE_ASM(s32, "A7270", func_800A6860);

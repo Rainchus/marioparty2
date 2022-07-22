@@ -1,3 +1,3 @@
 #include "common.h"
 
-INCLUDE_ASM(s32, "B2310", func_800B1710);
+INCLUDE_ASM(s32, "B2310", func_800B1710_B2310);

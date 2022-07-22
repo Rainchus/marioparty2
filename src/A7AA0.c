@@ -1,3 +1,3 @@
 #include "common.h"
 
-INCLUDE_ASM(s32, "A7AA0", func_800A6EA0);
+INCLUDE_ASM(s32, "A7AA0", func_800A6EA0_A7AA0);

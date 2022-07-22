@@ -4,5 +4,5 @@ undefined_syms_auto.txt
 asm/
 build/
 assets/
-marioparty.ld
+marioparty2.ld
 ctx.c

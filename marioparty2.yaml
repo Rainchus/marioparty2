@@ -8,11 +8,12 @@ options:
   find_file_boundaries: True
   header_encoding: ASCII
   platform: n64
+  symbol_name_format: $VRAM_$ROM
   undefined_funcs_auto: True
   undefined_funcs_auto_path: undefined_funcs_auto.txt
   undefined_syms_auto: True
   undefined_syms_auto_path: undefined_syms_auto.txt
-  #symbol_addrs_path: symbol_addrs.txt
+  symbol_addrs_path: symbol_addrs.txt
   undefined_syms_path: undefined_syms.txt
   asm_path: asm
   src_path: src
@@ -332,4 +333,1384 @@ segments:
       - [0xB8920, c]
   - type: bin
     start: 0xB8AC0
+  - type: code
+    start: 0x0D57F0
+    vram: 0x80102800
+    dir: ovl_00_name
+    name: name_00
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x00D57F0, c]
+     #- [0x000D8E40, rodata]
+  - type: bin
+    start: 0x0D8E40
+  - type: code
+    start: 0x0DA290
+    vram: 0x80102800
+    dir: ovl_01_name
+    name: name_01
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x00DA290, c]
+     #- [0x000E3140, rodata]
+  - type: bin
+    start: 0x0E3140
+  - type: code
+    start: 0x0E3A40
+    vram: 0x80102800
+    dir: ovl_02_name
+    name: name_02
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x00E3A40, c]
+     #- [0x000F32E0, rodata]
+  - type: bin
+    start: 0x0F32E0
+  - type: code
+    start: 0x0F3F10
+    vram: 0x80102800
+    dir: ovl_03_name
+    name: name_03
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x00F3F10, c]
+     #- [0x000F7D10, rodata]
+  - type: bin
+    start: 0x0F7D10
+  - type: code
+    start: 0x0F84C0
+    vram: 0x80102800
+    dir: ovl_04_name
+    name: name_04
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x00F84C0, c]
+     #- [0x000FECF0, rodata]
+  - type: bin
+    start: 0x0FECF0
+  - type: code
+    start: 0x0FF7E0
+    vram: 0x80102800
+    dir: ovl_05_name
+    name: name_05
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x00FF7E0, c]
+     #- [0x00105790, rodata]
+  - type: bin
+    start: 0x105790
+  - type: code
+    start: 0x105FC0
+    vram: 0x80102800
+    dir: ovl_06_name
+    name: name_06
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x0105FC0, c]
+     #- [0x0010BC10, rodata]
+  - type: bin
+    start: 0x10BC10
+  - type: code
+    start: 0x10BE10
+    vram: 0x80102800
+    dir: ovl_07_name
+    name: name_07
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x010BE10, c]
+     #- [0x00113910, rodata]
+  - type: bin
+    start: 0x113910
+  - type: code
+    start: 0x113C80
+    vram: 0x80102800
+    dir: ovl_08_name
+    name: name_08
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x0113C80, c]
+     #- [0x0011B630, rodata]
+  - type: bin
+    start: 0x11B630
+  - type: code
+    start: 0x11B910
+    vram: 0x80102800
+    dir: ovl_09_name
+    name: name_09
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x011B910, c]
+     #- [0x00121630, rodata]
+  - type: bin
+    start: 0x121630
+  - type: code
+    start: 0x121740
+    vram: 0x80102800
+    dir: ovl_0A_name
+    name: name_0A
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x0121740, c]
+     #- [0x00125C00, rodata]
+  - type: bin
+    start: 0x125C00
+  - type: code
+    start: 0x125FE0
+    vram: 0x80102800
+    dir: ovl_0B_name
+    name: name_0B
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x0125FE0, c]
+     #- [0x0012D840, rodata]
+  - type: bin
+    start: 0x12D840
+  - type: code
+    start: 0x12E3F0
+    vram: 0x80102800
+    dir: ovl_0C_name
+    name: name_0C
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x012E3F0, c]
+     #- [0x00137D00, rodata]
+  - type: bin
+    start: 0x137D00
+  - type: code
+    start: 0x138530
+    vram: 0x80102800
+    dir: ovl_0D_name
+    name: name_0D
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x0138530, c]
+     #- [0x0013C840, rodata]
+  - type: bin
+    start: 0x13C840
+  - type: code
+    start: 0x13CB90
+    vram: 0x80102800
+    dir: ovl_0E_name
+    name: name_0E
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x013CB90, c]
+     #- [0x00143CF0, rodata]
+  - type: bin
+    start: 0x143CF0
+  - type: code
+    start: 0x144190
+    vram: 0x80102800
+    dir: ovl_0F_name
+    name: name_0F
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x0144190, c]
+     #- [0x0014C080, rodata]
+  - type: bin
+    start: 0x14C080
+  - type: code
+    start: 0x14C320
+    vram: 0x80102800
+    dir: ovl_10_name
+    name: name_10
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x014C320, c]
+     #- [0x00155280, rodata]
+  - type: bin
+    start: 0x155280
+  - type: code
+    start: 0x155C90
+    vram: 0x80102800
+    dir: ovl_11_name
+    name: name_11
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x0155C90, c]
+     #- [0x00160060, rodata]
+  - type: bin
+    start: 0x160060
+  - type: code
+    start: 0x160B20
+    vram: 0x80102800
+    dir: ovl_12_name
+    name: name_12
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x0160B20, c]
+     #- [0x00167060, rodata]
+  - type: bin
+    start: 0x167060
+  - type: code
+    start: 0x1675A0
+    vram: 0x80102800
+    dir: ovl_13_name
+    name: name_13
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x01675A0, c]
+     #- [0x0016B490, rodata]
+  - type: bin
+    start: 0x16B490
+  - type: code
+    start: 0x16B740
+    vram: 0x80102800
+    dir: ovl_14_name
+    name: name_14
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x016B740, c]
+     #- [0x0016FE10, rodata]
+  - type: bin
+    start: 0x16FE10
+  - type: code
+    start: 0x170190
+    vram: 0x80102800
+    dir: ovl_15_name
+    name: name_15
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x0170190, c]
+     #- [0x00179B90, rodata]
+  - type: bin
+    start: 0x179B90
+  - type: code
+    start: 0x17A5B0
+    vram: 0x80102800
+    dir: ovl_16_name
+    name: name_16
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x017A5B0, c]
+     #- [0x00180A20, rodata]
+  - type: bin
+    start: 0x180A20
+  - type: code
+    start: 0x181420
+    vram: 0x80102800
+    dir: ovl_17_name
+    name: name_17
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x0181420, c]
+     #- [0x00185FB0, rodata]
+  - type: bin
+    start: 0x185FB0
+  - type: code
+    start: 0x186490
+    vram: 0x80102800
+    dir: ovl_18_name
+    name: name_18
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x0186490, c]
+     #- [0x001906D0, rodata]
+  - type: bin
+    start: 0x1906D0
+  - type: code
+    start: 0x1913A0
+    vram: 0x80102800
+    dir: ovl_19_name
+    name: name_19
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x01913A0, c]
+     #- [0x0019AB90, rodata]
+  - type: bin
+    start: 0x19AB90
+  - type: code
+    start: 0x19B590
+    vram: 0x80102800
+    dir: ovl_1A_name
+    name: name_1A
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x019B590, c]
+     #- [0x001A3EB0, rodata]
+  - type: bin
+    start: 0x1A3EB0
+  - type: code
+    start: 0x1A40A0
+    vram: 0x80102800
+    dir: ovl_1B_name
+    name: name_1B
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x01A40A0, c]
+     #- [0x001AB520, rodata]
+  - type: bin
+    start: 0x1AB520
+  - type: code
+    start: 0x1ABE90
+    vram: 0x80102800
+    dir: ovl_1C_name
+    name: name_1C
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x01ABE90, c]
+     #- [0x001B4430, rodata]
+  - type: bin
+    start: 0x1B4430
+  - type: code
+    start: 0x1B4950
+    vram: 0x80102800
+    dir: ovl_1D_name
+    name: name_1D
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x01B4950, c]
+     #- [0x001B8730, rodata]
+  - type: bin
+    start: 0x1B8730
+  - type: code
+    start: 0x1B8DF0
+    vram: 0x80102800
+    dir: ovl_1E_name
+    name: name_1E
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x01B8DF0, c]
+     #- [0x001BE020, rodata]
+  - type: bin
+    start: 0x1BE020
+  - type: code
+    start: 0x1BE380
+    vram: 0x80102800
+    dir: ovl_1F_name
+    name: name_1F
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x01BE380, c]
+     #- [0x001C6260, rodata]
+  - type: bin
+    start: 0x1C6260
+  - type: code
+    start: 0x1C6BB0
+    vram: 0x80102800
+    dir: ovl_20_name
+    name: name_20
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x01C6BB0, c]
+     #- [0x001CF900, rodata]
+  - type: bin
+    start: 0x1CF900
+  - type: code
+    start: 0x1CFB60
+    vram: 0x80102800
+    dir: ovl_21_name
+    name: name_21
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x01CFB60, c]
+     #- [0x001D61C0, rodata]
+  - type: bin
+    start: 0x1D61C0
+  - type: code
+    start: 0x1D6EE0
+    vram: 0x80102800
+    dir: ovl_22_name
+    name: name_22
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x01D6EE0, c]
+     #- [0x001E11C0, rodata]
+  - type: bin
+    start: 0x1E11C0
+  - type: code
+    start: 0x1E1C50
+    vram: 0x80102800
+    dir: ovl_23_name
+    name: name_23
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x01E1C50, c]
+     #- [0x001E84C0, rodata]
+  - type: bin
+    start: 0x1E84C0
+  - type: code
+    start: 0x1E89B0
+    vram: 0x80102800
+    dir: ovl_24_name
+    name: name_24
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x01E89B0, c]
+     #- [0x001F0CB0, rodata]
+  - type: bin
+    start: 0x1F0CB0
+  - type: code
+    start: 0x1F1540
+    vram: 0x80102800
+    dir: ovl_25_name
+    name: name_25
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x01F1540, c]
+     #- [0x001F6D50, rodata]
+  - type: bin
+    start: 0x1F6D50
+  - type: code
+    start: 0x1F71A0
+    vram: 0x80102800
+    dir: ovl_26_name
+    name: name_26
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x01F71A0, c]
+     #- [0x001FE760, rodata]
+  - type: bin
+    start: 0x1FE760
+  - type: code
+    start: 0x1FEE60
+    vram: 0x80102800
+    dir: ovl_27_name
+    name: name_27
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x01FEE60, c]
+     #- [0x002059E0, rodata]
+  - type: bin
+    start: 0x2059E0
+  - type: code
+    start: 0x205BA0
+    vram: 0x80102800
+    dir: ovl_28_name
+    name: name_28
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x0205BA0, c]
+     #- [0x0020C3E0, rodata]
+  - type: bin
+    start: 0x20C3E0
+  - type: code
+    start: 0x20C750
+    vram: 0x80102800
+    dir: ovl_29_name
+    name: name_29
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x020C750, c]
+     #- [0x00210BC0, rodata]
+  - type: bin
+    start: 0x210BC0
+  - type: code
+    start: 0x2111A0
+    vram: 0x80102800
+    dir: ovl_2A_name
+    name: name_2A
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x02111A0, c]
+     #- [0x00218980, rodata]
+  - type: bin
+    start: 0x218980
+  - type: code
+    start: 0x218BF0
+    vram: 0x80102800
+    dir: ovl_2B_name
+    name: name_2B
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x0218BF0, c]
+     #- [0x00223080, rodata]
+  - type: bin
+    start: 0x223080
+  - type: code
+    start: 0x223D30
+    vram: 0x80102800
+    dir: ovl_2C_name
+    name: name_2C
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x0223D30, c]
+     #- [0x002290B0, rodata]
+  - type: bin
+    start: 0x2290B0
+  - type: code
+    start: 0x2292D0
+    vram: 0x80102800
+    dir: ovl_2D_name
+    name: name_2D
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x02292D0, c]
+     #- [0x0022DE20, rodata]
+  - type: bin
+    start: 0x22DE20
+  - type: code
+    start: 0x22E170
+    vram: 0x80102800
+    dir: ovl_2E_name
+    name: name_2E
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x022E170, c]
+     #- [0x00231E90, rodata]
+  - type: bin
+    start: 0x231E90
+  - type: code
+    start: 0x232150
+    vram: 0x80102800
+    dir: ovl_2F_name
+    name: name_2F
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x0232150, c]
+     #- [0x00238440, rodata]
+  - type: bin
+    start: 0x238440
+  - type: code
+    start: 0x2386E0
+    vram: 0x80102800
+    dir: ovl_30_name
+    name: name_30
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x02386E0, c]
+     #- [0x00243CA0, rodata]
+  - type: bin
+    start: 0x243CA0
+  - type: code
+    start: 0x246110
+    vram: 0x80102800
+    dir: ovl_31_name
+    name: name_31
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x0246110, c]
+     #- [0x0024D6C0, rodata]
+  - type: bin
+    start: 0x24D6C0
+  - type: code
+    start: 0x24DE70
+    vram: 0x80102800
+    dir: ovl_32_name
+    name: name_32
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x024DE70, c]
+     #- [0x00253920, rodata]
+  - type: bin
+    start: 0x253920
+  - type: code
+    start: 0x253A80
+    vram: 0x80102800
+    dir: ovl_33_name
+    name: name_33
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x0253A80, c]
+     #- [0x00258FF0, rodata]
+  - type: bin
+    start: 0x258FF0
+  - type: code
+    start: 0x259900
+    vram: 0x80102800
+    dir: ovl_34_name
+    name: name_34
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x0259900, c]
+     #- [0x00267160, rodata]
+  - type: bin
+    start: 0x267160
+  - type: code
+    start: 0x2677B0
+    vram: 0x80102800
+    dir: ovl_35_name
+    name: name_35
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x02677B0, c]
+     #- [0x0026F5C0, rodata]
+  - type: bin
+    start: 0x26F5C0
+  - type: code
+    start: 0x26FEE0
+    vram: 0x80102800
+    dir: ovl_36_name
+    name: name_36
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x026FEE0, c]
+     #- [0x00274CB0, rodata]
+  - type: bin
+    start: 0x274CB0
+  - type: code
+    start: 0x274F30
+    vram: 0x80102800
+    dir: ovl_37_name
+    name: name_37
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x0274F30, c]
+     #- [0x0027A070, rodata]
+  - type: bin
+    start: 0x27A070
+  - type: code
+    start: 0x27A330
+    vram: 0x80102800
+    dir: ovl_38_name
+    name: name_38
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x027A330, c]
+     #- [0x0027F2A0, rodata]
+  - type: bin
+    start: 0x27F2A0
+  - type: code
+    start: 0x27F4F0
+    vram: 0x80102800
+    dir: ovl_39_name
+    name: name_39
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x027F4F0, c]
+     #- [0x002847C0, rodata]
+  - type: bin
+    start: 0x2847C0
+  - type: code
+    start: 0x284A10
+    vram: 0x80102800
+    dir: ovl_3A_name
+    name: name_3A
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x0284A10, c]
+     #- [0x0028B470, rodata]
+  - type: bin
+    start: 0x28B470
+  - type: code
+    start: 0x28B620
+    vram: 0x80102800
+    dir: ovl_3B_name
+    name: name_3B
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x028B620, c]
+     #- [0x00291240, rodata]
+  - type: bin
+    start: 0x291240
+  - type: code
+    start: 0x291870
+    vram: 0x80102800
+    dir: ovl_3C_name
+    name: name_3C
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x0291870, c]
+     #- [0x00297490, rodata]
+  - type: bin
+    start: 0x297490
+  - type: code
+    start: 0x297890
+    vram: 0x80102800
+    dir: ovl_3D_name
+    name: name_3D
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x0297890, c]
+     #- [0x00297AB0, rodata]
+  - type: bin
+    start: 0x297AB0
+  - type: code
+    start: 0x297AD0
+    vram: 0x80102800
+    dir: ovl_3E_name
+    name: name_3E
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x0297AD0, c]
+     #- [0x002A6BF0, rodata]
+  - type: bin
+    start: 0x2A6BF0
+  - type: code
+    start: 0x2A89A0
+    vram: 0x80102800
+    dir: ovl_3F_name
+    name: name_3F
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x02A89A0, c]
+     #- [0x002AE8D0, rodata]
+  - type: bin
+    start: 0x2AE8D0
+  - type: code
+    start: 0x2AEDB0
+    vram: 0x80102800
+    dir: ovl_40_name
+    name: name_40
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x02AEDB0, c]
+     #- [0x002B0EF0, rodata]
+  - type: bin
+    start: 0x2B0EF0
+  - type: code
+    start: 0x2B10C0
+    vram: 0x80102800
+    dir: ovl_41_name
+    name: name_41
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x02B10C0, c]
+     #- [0x002BF2F0, rodata]
+  - type: bin
+    start: 0x2BF2F0
+  - type: code
+    start: 0x2C0780
+    vram: 0x80102800
+    dir: ovl_42_name
+    name: name_42
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x02C0780, c]
+     #- [0x002C7820, rodata]
+  - type: bin
+    start: 0x2C7820
+  - type: code
+    start: 0x2C7CF0
+    vram: 0x80102800
+    dir: ovl_43_name
+    name: name_43
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x02C7CF0, c]
+     #- [0x002D8F90, rodata]
+  - type: bin
+    start: 0x2D8F90
+  - type: code
+    start: 0x2DA8B0
+    vram: 0x80102800
+    dir: ovl_44_name
+    name: name_44
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x02DA8B0, c]
+     #- [0x002E09D0, rodata]
+  - type: bin
+    start: 0x2E09D0
+  - type: code
+    start: 0x2E0F30
+    vram: 0x80102800
+    dir: ovl_45_name
+    name: name_45
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x02E0F30, c]
+     #- [0x002EF400, rodata]
+  - type: bin
+    start: 0x2EF400
+  - type: code
+    start: 0x2F1730
+    vram: 0x80102800
+    dir: ovl_46_name
+    name: name_46
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x02F1730, c]
+     #- [0x002F6D00, rodata]
+  - type: bin
+    start: 0x2F6D00
+  - type: code
+    start: 0x2F7100
+    vram: 0x80102800
+    dir: ovl_47_name
+    name: name_47
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x02F7100, c]
+     #- [0x00305250, rodata]
+  - type: bin
+    start: 0x305250
+  - type: code
+    start: 0x306BA0
+    vram: 0x80102800
+    dir: ovl_48_name
+    name: name_48
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x0306BA0, c]
+     #- [0x0030C870, rodata]
+  - type: bin
+    start: 0x30C870
+  - type: code
+    start: 0x30CCB0
+    vram: 0x80102800
+    dir: ovl_49_name
+    name: name_49
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x030CCB0, c]
+     #- [0x0031D0A0, rodata]
+  - type: bin
+    start: 0x31D0A0
+  - type: code
+    start: 0x31EE40
+    vram: 0x80102800
+    dir: ovl_4A_name
+    name: name_4A
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x031EE40, c]
+     #- [0x00324E80, rodata]
+  - type: bin
+    start: 0x324E80
+  - type: code
+    start: 0x3252C0
+    vram: 0x80102800
+    dir: ovl_4B_name
+    name: name_4B
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x03252C0, c]
+     #- [0x00325AE0, rodata]
+  - type: bin
+    start: 0x325AE0
+  - type: code
+    start: 0x325BC0
+    vram: 0x80102800
+    dir: ovl_4C_name
+    name: name_4C
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x0325BC0, c]
+     #- [0x00328890, rodata]
+  - type: bin
+    start: 0x328890
+  - type: code
+    start: 0x328A30
+    vram: 0x80102800
+    dir: ovl_4D_name
+    name: name_4D
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x0328A30, c]
+     #- [0x00329F80, rodata]
+  - type: bin
+    start: 0x329F80
+  - type: code
+    start: 0x32A1C0
+    vram: 0x80102800
+    dir: ovl_4E_name
+    name: name_4E
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x032A1C0, c]
+     #- [0x00334BB0, rodata]
+  - type: bin
+    start: 0x334BB0
+  - type: code
+    start: 0x335440
+    vram: 0x80102800
+    dir: ovl_4F_name
+    name: name_4F
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x0335440, c]
+     #- [0x00342390, rodata]
+  - type: bin
+    start: 0x342390
+  - type: code
+    start: 0x343060
+    vram: 0x80102800
+    dir: ovl_50_name
+    name: name_50
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x0343060, c]
+     #- [0x003521C0, rodata]
+  - type: bin
+    start: 0x3521C0
+  - type: code
+    start: 0x352E10
+    vram: 0x80102800
+    dir: ovl_51_name
+    name: name_51
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x0352E10, c]
+     #- [0x003589D0, rodata]
+  - type: bin
+    start: 0x3589D0
+  - type: code
+    start: 0x358DE0
+    vram: 0x80102800
+    dir: ovl_52_name
+    name: name_52
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x0358DE0, c]
+     #- [0x0035CDC0, rodata]
+  - type: bin
+    start: 0x35CDC0
+  - type: code
+    start: 0x35D110
+    vram: 0x80102800
+    dir: ovl_53_name
+    name: name_53
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x035D110, c]
+     #- [0x00360470, rodata]
+  - type: bin
+    start: 0x360470
+  - type: code
+    start: 0x360670
+    vram: 0x80102800
+    dir: ovl_54_name
+    name: name_54
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x0360670, c]
+     #- [0x00361640, rodata]
+  - type: bin
+    start: 0x361640
+  - type: code
+    start: 0x3616F0
+    vram: 0x80102800
+    dir: ovl_55_name
+    name: name_55
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x03616F0, c]
+     #- [0x0036A640, rodata]
+  - type: bin
+    start: 0x36A640
+  - type: code
+    start: 0x36B420
+    vram: 0x80102800
+    dir: ovl_56_name
+    name: name_56
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x036B420, c]
+     #- [0x0036CAE0, rodata]
+  - type: bin
+    start: 0x36CAE0
+  - type: code
+    start: 0x36D9A0
+    vram: 0x80102800
+    dir: ovl_57_name
+    name: name_57
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x036D9A0, c]
+     #- [0x0036DED0, rodata]
+  - type: bin
+    start: 0x36DED0
+  - type: code
+    start: 0x36DF00
+    vram: 0x80102800
+    dir: ovl_58_name
+    name: name_58
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x036DF00, c]
+     #- [0x0037E240, rodata]
+  - type: bin
+    start: 0x37E240
+  - type: code
+    start: 0x37EE80
+    vram: 0x80102800
+    dir: ovl_59_name
+    name: name_59
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x037EE80, c]
+     #- [0x0037F230, rodata]
+  - type: bin
+    start: 0x37F230
+  - type: code
+    start: 0x37F290
+    vram: 0x80102800
+    dir: ovl_5A_name
+    name: name_5A
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x037F290, c]
+     #- [0x0037F4A0, rodata]
+  - type: bin
+    start: 0x37F4A0
+  - type: code
+    start: 0x37F4B0
+    vram: 0x80102800
+    dir: ovl_5B_name
+    name: name_5B
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x037F4B0, c]
+     #- [0x0038F320, rodata]
+  - type: bin
+    start: 0x38F320
+  - type: code
+    start: 0x3906C0
+    vram: 0x80102800
+    dir: ovl_5C_name
+    name: name_5C
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x03906C0, c]
+     #- [0x0039E590, rodata]
+  - type: bin
+    start: 0x39E590
+  - type: code
+    start: 0x3A01F0
+    vram: 0x80102800
+    dir: ovl_5D_name
+    name: name_5D
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x03A01F0, c]
+     #- [0x003A87C0, rodata]
+  - type: bin
+    start: 0x3A87C0
+  - type: code
+    start: 0x3A9460
+    vram: 0x80102800
+    dir: ovl_5E_name
+    name: name_5E
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x03A9460, c]
+     #- [0x003AB8B0, rodata]
+  - type: bin
+    start: 0x3AB8B0
+  - type: code
+    start: 0x3AB9A0
+    vram: 0x80102800
+    dir: ovl_5F_name
+    name: name_5F
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x03AB9A0, c]
+     #- [0x003BC8A0, rodata]
+  - type: bin
+    start: 0x3BC8A0
+  - type: code
+    start: 0x3BDF60
+    vram: 0x80102800
+    dir: ovl_60_name
+    name: name_60
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x03BDF60, c]
+     #- [0x003CEA00, rodata]
+  - type: bin
+    start: 0x3CEA00
+  - type: code
+    start: 0x3D0050
+    vram: 0x80102800
+    dir: ovl_61_name
+    name: name_61
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x03D0050, c]
+     #- [0x003D48D0, rodata]
+  - type: bin
+    start: 0x3D48D0
+  - type: code
+    start: 0x3D4D20
+    vram: 0x80102800
+    dir: ovl_62_name
+    name: name_62
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x03D4D20, c]
+     #- [0x003E3530, rodata]
+  - type: bin
+    start: 0x3E3530
+  - type: code
+    start: 0x3E4250
+    vram: 0x80102800
+    dir: ovl_63_name
+    name: name_63
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x03E4250, c]
+     #- [0x003E4300, rodata]
+  - type: bin
+    start: 0x3E4300
+  - type: code
+    start: 0x3E4320
+    vram: 0x80102800
+    dir: ovl_64_name
+    name: name_64
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x03E4320, c]
+     #- [0x003E7CB0, rodata]
+  - type: bin
+    start: 0x3E7CB0
+  - type: code
+    start: 0x3E7ED0
+    vram: 0x80102800
+    dir: ovl_65_name
+    name: name_65
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x03E7ED0, c]
+     #- [0x003EB980, rodata]
+  - type: bin
+    start: 0x3EB980
+  - type: code
+    start: 0x3EBBB0
+    vram: 0x80102800
+    dir: ovl_66_name
+    name: name_66
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x03EBBB0, c]
+     #- [0x003EF5A0, rodata]
+  - type: bin
+    start: 0x3EF5A0
+  - type: code
+    start: 0x3EF7F0
+    vram: 0x80102800
+    dir: ovl_67_name
+    name: name_67
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x03EF7F0, c]
+     #- [0x003F31B0, rodata]
+  - type: bin
+    start: 0x3F31B0
+  - type: code
+    start: 0x3F33E0
+    vram: 0x80102800
+    dir: ovl_68_name
+    name: name_68
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x03F33E0, c]
+     #- [0x003F6EE0, rodata]
+  - type: bin
+    start: 0x3F6EE0
+  - type: code
+    start: 0x3F7130
+    vram: 0x80102800
+    dir: ovl_69_name
+    name: name_69
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x03F7130, c]
+     #- [0x003FABC0, rodata]
+  - type: bin
+    start: 0x3FABC0
+  - type: code
+    start: 0x3FAE40
+    vram: 0x80102800
+    dir: ovl_6A_name
+    name: name_6A
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x03FAE40, c]
+     #- [0x003FE850, rodata]
+  - type: bin
+    start: 0x3FE850
+  - type: code
+    start: 0x3FEAA0
+    vram: 0x80102800
+    dir: ovl_6B_name
+    name: name_6B
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x03FEAA0, c]
+     #- [0x004024B0, rodata]
+  - type: bin
+    start: 0x4024B0
+  - type: code
+    start: 0x402700
+    vram: 0x80102800
+    dir: ovl_6C_name
+    name: name_6C
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x0402700, c]
+     #- [0x00406460, rodata]
+  - type: bin
+    start: 0x406460
+  - type: code
+    start: 0x406640
+    vram: 0x80102800
+    dir: ovl_6D_name
+    name: name_6D
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x0406640, c]
+     #- [0x0040A080, rodata]
+  - type: bin
+    start: 0x40A080
+  - type: code
+    start: 0x40A330
+    vram: 0x80102800
+    dir: ovl_6E_name
+    name: name_6E
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x040A330, c]
+     #- [0x0040B930, rodata]
+  - type: bin
+    start: 0x40B930
+  - type: code
+    start: 0x40BB00
+    vram: 0x80102800
+    dir: ovl_6F_name
+    name: name_6F
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x040BB00, c]
+     #- [0x0040EA00, rodata]
+  - type: bin
+    start: 0x40EA00
+  - type: code
+    start: 0x40EC60
+    vram: 0x80102800
+    dir: ovl_70_name
+    name: name_70
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x040EC60, c]
+     #- [0x00413B00, rodata]
+  - type: bin
+    start: 0x413B00
+  - type: code
+    start: 0x413C90
+    vram: 0x80102800
+    dir: ovl_71_name
+    name: name_71
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x0413C90, c]
+     #- [0x00414B00, rodata]
+  - type: bin
+    start: 0x414B00
+  - type: code
+    start: 0x415790
+    vram: 0x80102800
+    dir: ovl_72_name
+    name: name_72
+    overlay: True
+    exclusive_ram_id: minigame
+    subsegments:
+      - [0x0415790, c]
+     #- [0x00417E10, rodata]
+  - type: bin
+    start: 0x417E10
   - [0x2000000]

@@ -1,3 +1,3 @@
 #include "common.h"
 
-INCLUDE_ASM(s32, "99D50", func_80099150_99D50);
+INCLUDE_ASM(const s32, "99D50", func_80099150_99D50);

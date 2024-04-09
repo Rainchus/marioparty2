@@ -9,15 +9,16 @@ options:
   header_encoding: ASCII
   platform: n64
   symbol_name_format: $VRAM_$ROM
-  undefined_funcs_auto: True
   undefined_funcs_auto_path: undefined_funcs_auto.txt
-  undefined_syms_auto: True
   undefined_syms_auto_path: undefined_syms_auto.txt
   symbol_addrs_path: symbol_addrs.txt
-  undefined_syms_path: undefined_syms.txt
   asm_path: asm
   src_path: src
   build_path: build
+  asm_function_macro: glabel
+  asm_jtbl_label_macro: jlabel
+  asm_data_macro: dlabel
+  migrate_rodata_to_functions: True
   # extensions_path: tools/splat_ext
   # mips_abi_float_regs: o32
   # section_order: [".text", ".data", ".rodata", ".bss"]

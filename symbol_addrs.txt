@@ -1,1 +1,1 @@
-
+rand8 = 0x80018AFC; //rom:0x196FC

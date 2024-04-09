@@ -8,7 +8,7 @@ INCLUDE_ASM(const s32, "19630", func_80018A98_19698);
 
 INCLUDE_ASM(const s32, "19630", func_80018ACC_196CC);
 
-INCLUDE_ASM(const s32, "19630", func_80018AFC_196FC);
+INCLUDE_ASM(const s32, "19630", rand8);
 
 INCLUDE_ASM(const s32, "19630", func_80018B30_19730);
 

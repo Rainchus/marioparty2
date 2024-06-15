@@ -3,9 +3,15 @@
 
 #include "ultra64.h"
 
+typedef struct unkfunc_8001AFD8 {
+    s16 unk0;
+    struct unkfunc_8001AFD8* unk4; //is this correct?
+    s16 unk8;
+} unkfunc_8001AFD8;
+
 typedef struct unkfunc_8007EE0C {
     void* GetEepTypeFunc; //func pointer
-    s32* unk4;
+    unkfunc_8001AFD8* unk4; //is this correct?
     s32 unk8;
     OSMesgQueue* mesgQueue;
 } unkfunc_8007EE0C;

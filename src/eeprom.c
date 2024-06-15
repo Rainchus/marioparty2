@@ -8,11 +8,11 @@ extern OSMesgQueue D_800FA5E0;
 typedef struct UnkEep {
     u16 unk0;
     char unk2[2];
-    s32 unk4;
+    u8* unk4;
     u16 unk8;
 } UnkEep;
 
-void func_800A5210_A5E10(u8*, s32, u16);
+void func_800A5210_A5E10(u8*, u8*, u16);
 
 s32 GetEepType(s8** arg0) {
     s16 eepromProbeResult;
@@ -73,16 +73,46 @@ s32 GetEepType(s8** arg0) {
     return 0;
 }
 
-s32 func_8001AEDC_1BADC(s32 arg0) {
+s32 func_8001AEDC_1BADC(unkfunc_8001AFD8* arg0) {
     unkfunc_8007EE0C sp10;
-    s32 sp20 = arg0;
+    unkfunc_8001AFD8* sp20 = arg0; //?
 
     return func_8007EE0C_7FA0C(&sp10, &GetEepType, &sp20, 1);
 }
 
-INCLUDE_ASM(const s32, "1B8D0", func_8001AF0C_1BB0C);
+s32 func_8001AF0C_1BB0C(UnkEep* arg0) {
+    u8 eepromBlockCount;
+    s16 i;
+    s32 alignmentOffset;
+    s32 startOffset;
 
-INCLUDE_ASM(const s32, "1B8D0", func_8001AFD8_1BBD8);
+    if (arg0->unk0 >= 8) {
+            for (i = 0; i < arg0->unk8; i++) {
+                if (arg0->unk0 + i >= (EEPROM_MAXBLOCKS * EEPROM_BLOCK_SIZE)) {
+                    break;
+                }
+                D_800D89F0[arg0->unk0 + i] = arg0->unk4[i];
+            }
+        
+        
+        eepromBlockCount = (arg0->unk0 / EEPROM_BLOCK_SIZE);
+        alignmentOffset = arg0->unk0 & 7;
+        startOffset = (arg0->unk8 + alignmentOffset + 7) & 0xFFF8;
+        return (osEepromLongWrite(&D_800FA5E0, eepromBlockCount, &D_800D89F0[eepromBlockCount * EEPROM_BLOCK_SIZE], startOffset) != 0) * 2;
+    }
+    return 2;
+}
+
+void func_8001AFD8_1BBD8(s32 arg0, unkfunc_8001AFD8* arg1, s16 arg2) {
+    unkfunc_8007EE0C sp10;
+    unkfunc_8001AFD8 sp20;
+
+    sp20.unk0 = arg0 + 8;
+    sp20.unk4 = arg1;
+    sp20.unk8 = arg2;
+
+    func_8007EE0C_7FA0C(&sp10, func_8001AF0C_1BB0C, &sp20, 1);
+}
 
 s32 func_8001B014_1BC14(UnkEep* arg0) {
     if (osEepromLongRead(&D_800FA5E0, 0, D_800D89F0, (EEPROM_MAXBLOCKS * EEPROM_BLOCK_SIZE)) != 0) {
@@ -92,20 +122,41 @@ s32 func_8001B014_1BC14(UnkEep* arg0) {
     return 0;
 }
 
-INCLUDE_ASM(const s32, "1B8D0", func_8001B078_1BC78);
+void func_8001B078_1BC78(s32 arg0, unkfunc_8001AFD8* arg1, s16 arg2) {
+    unkfunc_8007EE0C sp10;
+    unkfunc_8001AFD8 sp20;
 
-INCLUDE_ASM(const s32, "1B8D0", func_8001B0B4_1BCB4);
+    sp20.unk0 = arg0 + 8;
+    sp20.unk4 = arg1;
+    sp20.unk8 = arg2;
 
-INCLUDE_ASM(const s32, "1B8D0", func_8001B0E8_1BCE8);
+    func_8007EE0C_7FA0C(&sp10, func_8001B014_1BC14, &sp20, 1);
+}
 
-INCLUDE_ASM(const s32, "1B8D0", func_8001B114_1BD14);
+s32 func_8001B0B4_1BCB4(void) {
+    return (osEepromWrite(&D_800FA5E0, 0, &D_800C9B60[1]) != 0) * 2;
+}
 
-INCLUDE_ASM(const s32, "1B8D0", func_8001B170_1BD70);
+s32 func_8001B0E8_1BCE8(unkfunc_8001AFD8* arg0) {
+    unkfunc_8007EE0C sp10;
 
-INCLUDE_ASM(const s32, "1B8D0", func_8001B434_1C034);
+    return func_8007EE0C_7FA0C(&sp10, &func_8001B0B4_1BCB4, 0, 1);
+}
 
-INCLUDE_ASM(const s32, "1B8D0", func_8001B548_1C148);
+s32 GetSaveFileChecksum(u16 checksumAddrOffset, u16 size) {
+    u16 offset;
+    u16 checksumTotal;
 
-INCLUDE_ASM(const s32, "1B8D0", func_8001B9AC_1C5AC);
+    checksumTotal = 0;
+    checksumAddrOffset += 8;
 
-INCLUDE_ASM(const s32, "1B8D0", func_8001BB54_1C754);
+    while (size--) {
+        offset = checksumAddrOffset;
+        checksumAddrOffset++;
+        checksumTotal += D_800D89F0[offset];
+        if ((checksumAddrOffset) >= (EEPROM_MAXBLOCKS * EEPROM_BLOCK_SIZE)) {
+            break;
+        }
+    }
+    return checksumTotal;
+}

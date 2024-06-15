@@ -6,10 +6,12 @@ osSiGetAccess = 0x800A5F94; // rom:0xA6B94
 osEepStatus = 0x8009C930; // rom:0x9D530
 osEepromLongRead = 0x8009CC40; // rom:0x9D840
 osEepromLongWrite = 0x8009CB50; // rom:0x9D750
+osEepromWrite = 0x8009C720; //rom:0x9D320
 osCreateMesgQueue = 0x800A5720; // rom:0xA6320
 osSendMesg = 0x800A59C0; // rom:0xA65C0
 osRecvMesg = 0x800A5890; // rom:0xA6490
 SleepVProcess = 0x8007DA44; // rom:0x7E644
 GetEepType = 0x8001ACD0; //rom:0x1B8D0
+GetSaveFileChecksum = 0x8001B114; //rom:0x1BD14
  
  

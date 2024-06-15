@@ -5,8 +5,8 @@
 #define TRUE 1
 
 #include <ultra64.h>
-// #include "common_structs.h"
-// #include "functions.us.h"
+#include "common_structs.h"
+#include "functions.h"
 #include "include_asm.h"
 // #include "variables.us.h"
 #include "macros.h"

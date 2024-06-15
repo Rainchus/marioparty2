@@ -58,7 +58,7 @@ INCLUDE_ASM(const s32, "7D1D0", func_8007D9A4_7E5A4);
 
 INCLUDE_ASM(const s32, "7D1D0", func_8007D9E0_7E5E0);
 
-INCLUDE_ASM(const s32, "7D1D0", func_8007DA44_7E644);
+INCLUDE_ASM(const s32, "7D1D0", SleepVProcess);
 
 INCLUDE_ASM(const s32, "7D1D0", func_8007DA60_7E660);
 

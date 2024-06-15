@@ -5,6 +5,15 @@ extern u8 D_800D89F0[];
 extern u8 D_800D89F8[];
 extern OSMesgQueue D_800FA5E0;
 
+typedef struct UnkEep {
+    u16 unk0;
+    char unk2[2];
+    s32 unk4;
+    u16 unk8;
+} UnkEep;
+
+void func_800A5210_A5E10(u8*, s32, u16);
+
 s32 GetEepType(s8** arg0) {
     s16 eepromProbeResult;
     s32 var_s1;
@@ -36,6 +45,7 @@ s32 GetEepType(s8** arg0) {
         while (1) {
             if (D_800D89F0[i] != D_800C9B60[i]) {
                 var_s1 = 1;
+                //Write "HUDSON\0\0" header
                 for (i = 0; i < 8; i++) {
                     D_800D89F0[i] = D_800C9B60[i];
                 }
@@ -63,13 +73,24 @@ s32 GetEepType(s8** arg0) {
     return 0;
 }
 
-INCLUDE_ASM(const s32, "1B8D0", func_8001AEDC_1BADC);
+s32 func_8001AEDC_1BADC(s32 arg0) {
+    unkfunc_8007EE0C sp10;
+    s32 sp20 = arg0;
+
+    return func_8007EE0C_7FA0C(&sp10, &GetEepType, &sp20, 1);
+}
 
 INCLUDE_ASM(const s32, "1B8D0", func_8001AF0C_1BB0C);
 
 INCLUDE_ASM(const s32, "1B8D0", func_8001AFD8_1BBD8);
 
-INCLUDE_ASM(const s32, "1B8D0", func_8001B014_1BC14);
+s32 func_8001B014_1BC14(UnkEep* arg0) {
+    if (osEepromLongRead(&D_800FA5E0, 0, D_800D89F0, (EEPROM_MAXBLOCKS * EEPROM_BLOCK_SIZE)) != 0) {
+        return 2;
+    }
+    func_800A5210_A5E10(&D_800D89F0[arg0->unk0], arg0->unk4, arg0->unk8);
+    return 0;
+}
 
 INCLUDE_ASM(const s32, "1B8D0", func_8001B078_1BC78);
 

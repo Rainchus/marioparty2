@@ -1,3 +1,3 @@
 #include "common.h"
 
-INCLUDE_ASM(const s32, "A6490", func_800A5890_A6490);
+INCLUDE_ASM(const s32, "A6490", osRecvMesg);

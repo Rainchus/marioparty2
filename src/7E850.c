@@ -1,5 +1,8 @@
 #include "common.h"
 
+extern OSMesgQueue D_800FD3C8;
+void SleepVProcess(void);
+
 INCLUDE_ASM(const s32, "7E850", func_8007DC50_7E850);
 
 INCLUDE_ASM(const s32, "7E850", func_8007DC74_7E874);
@@ -62,4 +65,27 @@ INCLUDE_ASM(const s32, "7E850", func_8007ECD0_7F8D0);
 
 INCLUDE_ASM(const s32, "7E850", func_8007ED44_7F944);
 
-INCLUDE_ASM(const s32, "7E850", func_8007EE0C_7FA0C);
+s32 func_8007EE0C_7FA0C(unkfunc_8007EE0C* arg0, void* GetEepType, s32* arg2, s32 arg3) {
+    OSMesgQueue sp10;
+    OSMesg sp28;
+
+    arg0->GetEepTypeFunc = GetEepType;
+    arg0->unk4 = arg2;
+    arg0->mesgQueue = &sp10;
+    osCreateMesgQueue(&sp10, &sp28, 1);
+    osSendMesg(&D_800FD3C8, arg0, 1);
+    switch (arg3) {
+    case 0:
+        arg0->unk8 = 0;
+        break;
+    case 1:
+        osRecvMesg(&sp10, 0, 1);
+        break;
+    case 2:
+        while (osRecvMesg(&sp10, 0, 0) != 0) {
+            SleepVProcess(); //sleep 1 frame
+        }
+        break;
+    }
+    return arg0->unk8;
+}

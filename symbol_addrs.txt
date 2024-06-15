@@ -3,10 +3,13 @@ rnd_seed = 0x800C99B4;
 osEPiRawStartDma = 0x8009D950; //rom:0x9E550
 osEepromProbe = 0x8009CAD0; // rom:0x9D6D0
 osSiGetAccess = 0x800A5F94; // rom:0xA6B94
-osEepStatus = 0x8009C930; //rom:0x9D530
-osEepromLongRead = 0x8009CC40; //rom:0x9D840
-osEepromLongWrite = 0x8009CB50; //rom:0x9D750
-
+osEepStatus = 0x8009C930; // rom:0x9D530
+osEepromLongRead = 0x8009CC40; // rom:0x9D840
+osEepromLongWrite = 0x8009CB50; // rom:0x9D750
+osCreateMesgQueue = 0x800A5720; // rom:0xA6320
+osSendMesg = 0x800A59C0; // rom:0xA65C0
+osRecvMesg = 0x800A5890; // rom:0xA6490
+SleepVProcess = 0x8007DA44; // rom:0x7E644
 GetEepType = 0x8001ACD0; //rom:0x1B8D0
  
  

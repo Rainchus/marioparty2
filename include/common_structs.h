@@ -16,4 +16,11 @@ typedef struct unkfunc_8007EE0C {
     OSMesgQueue* mesgQueue;
 } unkfunc_8007EE0C;
 
+typedef struct UnkEep {
+    u16 unk0;
+    char unk2[2];
+    u8* unk4;
+    u16 unk8;
+} UnkEep;
+
 #endif

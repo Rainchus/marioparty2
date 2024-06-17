@@ -2,13 +2,23 @@
 
 extern OSMesgQueue D_800FD3C8;
 void SleepVProcess(void);
-s32 func_8007EE0C_7FA0C(unkfunc_8007EE0C*, void*, unkfunc_8001AFD8*, s32);
 
-INCLUDE_ASM(const s32, "7E850", func_8007DC50_7E850);
+u16 func_8007DC50_7E850(void) {
+    return GetSaveFileChecksum(0, (EEPROM_MAXBLOCKS * EEPROM_BLOCK_SIZE) - 0x10);
+}
 
 INCLUDE_ASM(const s32, "7E850", func_8007DC74_7E874);
 
-INCLUDE_ASM(const s32, "7E850", func_8007DCAC_7E8AC);
+extern u8 D_800EB900;
+
+void func_8007DCAC_7E8AC(void) {
+    u16 checksumResult;
+
+    checksumResult = func_8007DC50_7E850();
+    if (D_800EB900 != 0) {
+        func_8001AFD8_1BBD8((EEPROM_MAXBLOCKS * EEPROM_BLOCK_SIZE) - 0x10, &checksumResult, 2);
+    }
+}
 
 INCLUDE_ASM(const s32, "7E850", func_8007DCE8_7E8E8);
 
@@ -66,12 +76,12 @@ INCLUDE_ASM(const s32, "7E850", func_8007ECD0_7F8D0);
 
 INCLUDE_ASM(const s32, "7E850", func_8007ED44_7F944);
 
-s32 func_8007EE0C_7FA0C(unkfunc_8007EE0C* arg0, void* GetEepType, unkfunc_8001AFD8* arg2, s32 arg3) {
+s32 func_8007EE0C_7FA0C(unkfunc_8007EE0C* arg0, void* GetEepType, UnkEep** arg2, s32 arg3) {
     OSMesgQueue sp10;
     OSMesg sp28;
 
     arg0->GetEepTypeFunc = GetEepType;
-    arg0->unk4 = arg2;
+    arg0->unk4 = (void*)arg2;
     arg0->mesgQueue = &sp10;
     osCreateMesgQueue(&sp10, &sp28, 1);
     osSendMesg(&D_800FD3C8, arg0, 1);

@@ -5,13 +5,6 @@ extern u8 D_800D89F0[];
 extern u8 D_800D89F8[];
 extern OSMesgQueue D_800FA5E0;
 
-typedef struct UnkEep {
-    u16 unk0;
-    char unk2[2];
-    u8* unk4;
-    u16 unk8;
-} UnkEep;
-
 void func_800A5210_A5E10(u8*, u8*, u16);
 
 s32 GetEepType(s8** arg0) {
@@ -103,9 +96,9 @@ s32 func_8001AF0C_1BB0C(UnkEep* arg0) {
     return 2;
 }
 
-void func_8001AFD8_1BBD8(s32 arg0, unkfunc_8001AFD8* arg1, s16 arg2) {
+void func_8001AFD8_1BBD8(s32 arg0, UnkEep* arg1, s16 arg2) {
     unkfunc_8007EE0C sp10;
-    unkfunc_8001AFD8 sp20;
+    UnkEep sp20;
 
     sp20.unk0 = arg0 + 8;
     sp20.unk4 = arg1;
@@ -122,9 +115,9 @@ s32 func_8001B014_1BC14(UnkEep* arg0) {
     return 0;
 }
 
-void func_8001B078_1BC78(s32 arg0, unkfunc_8001AFD8* arg1, s16 arg2) {
+void func_8001B078_1BC78(s32 arg0, UnkEep* arg1, s16 arg2) {
     unkfunc_8007EE0C sp10;
-    unkfunc_8001AFD8 sp20;
+    UnkEep sp20;
 
     sp20.unk0 = arg0 + 8;
     sp20.unk4 = arg1;
@@ -137,7 +130,7 @@ s32 func_8001B0B4_1BCB4(void) {
     return (osEepromWrite(&D_800FA5E0, 0, &D_800C9B60[1]) != 0) * 2;
 }
 
-s32 func_8001B0E8_1BCE8(unkfunc_8001AFD8* arg0) {
+s32 func_8001B0E8_1BCE8(UnkEep* arg0) {
     unkfunc_8007EE0C sp10;
 
     return func_8007EE0C_7FA0C(&sp10, &func_8001B0B4_1BCB4, 0, 1);

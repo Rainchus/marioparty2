@@ -6,3 +6,4 @@ build/
 assets/
 marioparty2.ld
 ctx.c
+__pycache__

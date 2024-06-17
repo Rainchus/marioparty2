@@ -4,9 +4,9 @@ INCLUDE_ASM(const s32, "8FBB0", func_8008EFB0_8FBB0);
 
 INCLUDE_ASM(const s32, "8FBB0", func_8008EFF8_8FBF8);
 
-INCLUDE_ASM(const s32, "8FBB0", func_8008F544_90144);
+INCLUDE_ASM(const s32, "8FBB0", InitFadeIn);
 
-INCLUDE_ASM(const s32, "8FBB0", func_8008F5AC_901AC);
+INCLUDE_ASM(const s32, "8FBB0", InitFadeOut);
 
 extern u8 D_800F92DC;
 

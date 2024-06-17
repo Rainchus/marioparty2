@@ -1,6 +1,6 @@
 #include "common.h"
 
-INCLUDE_ASM(const s32, "76CC0", func_800760C0_76CC0);
+INCLUDE_ASM(const s32, "76CC0", InitObjSys);
 
 INCLUDE_ASM(const s32, "76CC0", func_80076390_76F90);
 

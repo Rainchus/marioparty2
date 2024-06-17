@@ -15,6 +15,10 @@ GetEepType = 0x8001ACD0; // rom:0x1B8D0
 GetSaveFileChecksum = 0x8001B114; //rom:0x1BD14
 LoadOverlay = 0x80018B30; // rom:0x19730
 InitProcess = 0x80076E64; // rom:0x77A64
+SleepProcess = 0x8007D9E0; //rom:0x7E5E0
 GetCurrentPlayerIndex = 0x8005DC30; // rom:0x5E830
-
+_malloc = 0x80068480; // rom:0x69080
+InitFadeIn = 0x8008F544; // rom:0x90144
+InitFadeOut = 0x8008F5AC; // rom:0x901AC
+InitObjSys = 0x800760C0; // rom:0x76CC0
 gCurrentPlayerIndex = 0x800F93C6; // type:u8

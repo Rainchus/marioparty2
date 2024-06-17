@@ -602,8 +602,8 @@ segments:
   - type: code
     start: 0x17A5B0
     vram: 0x80102800
-    dir: ovl_16_name
-    name: name_16
+    dir: ovl_16_FiletRelay
+    name: FiletRelay
     overlay: True
     exclusive_ram_id: minigame
     subsegments:
@@ -650,8 +650,8 @@ segments:
   - type: code
     start: 0x19B590
     vram: 0x80102800
-    dir: ovl_1A_name
-    name: name_1A
+    dir: ovl_1A_HandcarHavoc
+    name: HandcarHavoc
     overlay: True
     exclusive_ram_id: minigame
     subsegments:
@@ -662,8 +662,8 @@ segments:
   - type: code
     start: 0x1A40A0
     vram: 0x80102800
-    dir: ovl_1B_name
-    name: name_1B
+    dir: ovl_1B_BallonBurst
+    name: BallonBurst
     overlay: True
     exclusive_ram_id: minigame
     subsegments:
@@ -698,8 +698,8 @@ segments:
   - type: code
     start: 0x1B8DF0
     vram: 0x80102800
-    dir: ovl_1E_name
-    name: name_1E
+    dir: ovl_1E_CakeFactory
+    name: CakeFactory
     overlay: True
     exclusive_ram_id: minigame
     subsegments:
@@ -1094,8 +1094,8 @@ segments:
   - type: code
     start: 0x2A89A0
     vram: 0x80102800
-    dir: ovl_3F_name
-    name: name_3F
+    dir: ovl_3F_DesertDuel
+    name: DesertDuel
     overlay: True
     exclusive_ram_id: minigame
     subsegments:
@@ -1130,8 +1130,8 @@ segments:
   - type: code
     start: 0x2C0780
     vram: 0x80102800
-    dir: ovl_42_name
-    name: name_42
+    dir: ovl_42_PirateDuel
+    name: PirateDuel
     overlay: True
     exclusive_ram_id: minigame
     subsegments:

@@ -2,7 +2,7 @@
 
 INCLUDE_ASM(const s32, "69060", func_80068460_69060);
 
-INCLUDE_ASM(const s32, "69060", func_80068480_69080);
+INCLUDE_ASM(const s32, "69060", _malloc);
 
 INCLUDE_ASM(const s32, "69060", func_8006850C_6910C);
 

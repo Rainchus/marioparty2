@@ -249,7 +249,9 @@ INCLUDE_ASM(const s32, "58080", func_8005D88C_5E48C);
 
 INCLUDE_ASM(const s32, "58080", func_8005DA20_5E620);
 
-INCLUDE_ASM(const s32, "58080", func_8005DC30_5E830);
+s16 GetCurrentPlayerIndex(void) {
+    return gCurrentPlayerIndex;
+}
 
 INCLUDE_ASM(const s32, "58080", func_8005DC3C_5E83C);
 

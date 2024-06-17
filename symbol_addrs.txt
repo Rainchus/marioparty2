@@ -11,7 +11,10 @@ osCreateMesgQueue = 0x800A5720; // rom:0xA6320
 osSendMesg = 0x800A59C0; // rom:0xA65C0
 osRecvMesg = 0x800A5890; // rom:0xA6490
 SleepVProcess = 0x8007DA44; // rom:0x7E644
-GetEepType = 0x8001ACD0; //rom:0x1B8D0
+GetEepType = 0x8001ACD0; // rom:0x1B8D0
 GetSaveFileChecksum = 0x8001B114; //rom:0x1BD14
- 
- 
+LoadOverlay = 0x80018B30; // rom:0x19730
+InitProcess = 0x80076E64; // rom:0x77A64
+GetCurrentPlayerIndex = 0x8005DC30; // rom:0x5E830
+
+gCurrentPlayerIndex = 0x800F93C6; // type:u8

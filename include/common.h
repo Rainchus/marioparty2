@@ -8,7 +8,7 @@
 #include "common_structs.h"
 #include "functions.h"
 #include "include_asm.h"
-// #include "variables.us.h"
+#include "variables.h"
 #include "macros.h"
 // #include "enums.h"
 

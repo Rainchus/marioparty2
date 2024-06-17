@@ -8,7 +8,11 @@ INCLUDE_ASM(const s32, "8FBB0", func_8008F544_90144);
 
 INCLUDE_ASM(const s32, "8FBB0", func_8008F5AC_901AC);
 
-INCLUDE_ASM(const s32, "8FBB0", func_8008F618_90218);
+extern u8 D_800F92DC;
+
+s32 func_8008F618_90218(void) {
+    return D_800F92DC;
+}
 
 INCLUDE_ASM(const s32, "8FBB0", func_8008F624_90224);
 

@@ -15,7 +15,7 @@ s32 rand8(void) {
     return (u8)(((rnd_seed + 1) >> 16) & 0xFF);
 }
 
-INCLUDE_ASM(const s32, "19630", func_80018B30_19730);
+INCLUDE_ASM(const s32, "19630", LoadOverlay);
 
 INCLUDE_ASM(const s32, "19630", func_80018BD0_197D0);
 

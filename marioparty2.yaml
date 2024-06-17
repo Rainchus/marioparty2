@@ -1075,8 +1075,8 @@ segments:
     overlay: True
     exclusive_ram_id: minigame
     subsegments:
-      - [0x0297890, c]
-     #- [0x00297AB0, rodata]
+      - [0x297890, c, ovl_3D_entrypoint]
+      - [0x2978C0, c]
   - type: bin
     start: 0x297AB0
   - type: code

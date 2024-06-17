@@ -46,7 +46,7 @@ INCLUDE_ASM(const s32, "76CC0", func_80076E20_77A20);
 
 INCLUDE_ASM(const s32, "76CC0", func_80076E54_77A54);
 
-INCLUDE_ASM(const s32, "76CC0", func_80076E64_77A64);
+INCLUDE_ASM(const s32, "76CC0", InitProcess);
 
 INCLUDE_ASM(const s32, "76CC0", func_80076F14_77B14);
 

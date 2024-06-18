@@ -1,6 +1,16 @@
 #include "common.h"
 
-INCLUDE_ASM(const s32, "76CC0", InitObjSys);
+typedef struct omOvlHisData {
+/* 0x00 */ s32 overlayID;
+/* 0x04 */ s16 event;
+/* 0x06 */ u16 stat;
+} omOvlHisData; //sizeof 0x08
+
+void omOvlGotoEx(s32, s32, s32);
+extern s16 omovlhisidx;
+extern omOvlHisData omovlhis[12];
+
+INCLUDE_ASM(const s32, "76CC0", omInitObjMan);
 
 INCLUDE_ASM(const s32, "76CC0", func_80076390_76F90);
 
@@ -58,7 +68,17 @@ INCLUDE_ASM(const s32, "76CC0", func_800770A8_77CA8);
 
 INCLUDE_ASM(const s32, "76CC0", omOvlCallEx);
 
-INCLUDE_ASM(const s32, "76CC0", omOvlReturnEx);
+s32 omOvlReturnEx(s16 level) {
+    omovlhisidx -= level;
+    
+    if (omovlhisidx < 0) {
+        omovlhisidx = 0;
+        omOvlGotoEx(omovlhis[0].overlayID, omovlhis[0].event, omovlhis[0].stat);
+        return 0;
+    }
+    omOvlGotoEx(omovlhis[omovlhisidx].overlayID, omovlhis[omovlhisidx].event, omovlhis[omovlhisidx].stat);
+    return 1;
+}
 
 INCLUDE_ASM(const s32, "76CC0", omOvlGotoEx);
 

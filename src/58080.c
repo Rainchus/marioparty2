@@ -253,7 +253,7 @@ s16 GetCurrentPlayerIndex(void) {
     return gCurrentPlayerIndex;
 }
 
-INCLUDE_ASM(const s32, "58080", func_8005DC3C_5E83C);
+INCLUDE_ASM(const s32, "58080", BoardPlayerGet);
 
 INCLUDE_ASM(const s32, "58080", func_8005DC84_5E884);
 

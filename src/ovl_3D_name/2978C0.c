@@ -4,7 +4,7 @@ void func_80062B14_63714(void);
 s32 func_80068328_68F28(s32);
 void func_8006836C_68F6C(s32);
 void func_800683BC_68FBC(s32);
-void InitObjSys(s32, s32);
+void omInitObjMan(s32, s32);
 void omOvlGotoEx(s32, s32, s32);
 void omOvlHisChg(s32, s32, s32, s32);
 void InitProcess(void* userFunc, u16 priority, s32 stack_size, s32 extra_data_size);
@@ -35,14 +35,14 @@ void func_80102830_2978C0(void) {
     } else {
         func_800683BC_68FBC(0x41);
     }
-    InitObjSys(0xA, 0);
+    omInitObjMan(0xA, 0);
     func_80062B14_63714();
     omOvlGotoEx(0x3D, 1, 0x192);
     omOvlHisChg(0, 0x3D, 1, 0x192);
 }
 
 void func_801028A4_297934(void) {
-    InitObjSys(0xA, 0);
+    omInitObjMan(0xA, 0);
     func_80062BE0_637E0();
 }
 
@@ -81,7 +81,7 @@ void func_801028CC_29795C(void) {
 }
 
 void func_801029E0_297A70(void) {
-    InitObjSys(0xA, 0xA);
+    omInitObjMan(0xA, 0xA);
     func_80079128_79D28();
     InitProcess(&func_801028CC_29795C, 0x1005, 0, 0);
 }

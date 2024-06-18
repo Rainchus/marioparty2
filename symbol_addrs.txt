@@ -61,11 +61,11 @@ HuPrcCall = 0x8007DAA0; // rom:0x7E6A0
 HuPrcMemAlloc = 0x8007DBFC; // rom:0x7E7FC
 HuPrcMemFree = 0x8007DC2C; // rom:0x7E82C
 
-
+BoardPlayerGet = 0x8005DC3C; // rom:0x5E83C
 
 InitFadeIn = 0x8008F544; // rom:0x90144
 InitFadeOut = 0x8008F5AC; // rom:0x901AC
-InitObjSys = 0x800760C0; // rom:0x76CC0
+omInitObjMan = 0x800760C0; // rom:0x76CC0
 omOvlGotoEx = 0x800771EC; // rom:0x77DEC
 omOvlHisChg = 0x80077538; // rom:0x78138
 omOvlCallEx = 0x800770EC; // rom:0x77CEC
@@ -73,3 +73,5 @@ omOvlReturnEx = 0x80077160; // rom:0x77D60
 BoardSpaceGet = 0x8005DD38; // rom:0x5E938
 
 gCurrentPlayerIndex = 0x800F93C6; // type:u8
+omovlhisidx = 0x800CD418; // type:s16
+omovlhis = 0x800FDBE8; // size:0x60

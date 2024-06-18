@@ -334,8 +334,10 @@ segments:
       - [0xB8640, c]
       - [0xB87C0, c]
       - [0xB8920, c]
-  - type: bin
-    start: 0xB8AC0
+      - [0xB8AC0, c]
+      - [0xB8FB0, data]
+      #- {start: 0x0D57F0, type: bss, vram: 0x800D4BF0, name: globalBSS }
+
   - type: code
     start: 0x0D57F0
     vram: 0x80102800
@@ -344,10 +346,8 @@ segments:
     overlay: True
     exclusive_ram_id: minigame
     subsegments:
-      - [0x00D57F0, c]
-     #- [0x000D8E40, rodata]
-  - type: bin
-    start: 0x0D8E40
+      - [0xD57F0, c]
+      - [0xD8E40, data]
   - type: code
     start: 0x0DA290
     vram: 0x80102800
@@ -356,10 +356,8 @@ segments:
     overlay: True
     exclusive_ram_id: minigame
     subsegments:
-      - [0x00DA290, c]
-     #- [0x000E3140, rodata]
-  - type: bin
-    start: 0x0E3140
+      - [0xDA290, c]
+      - [0xE3140, data]
   - type: code
     start: 0x0E3A40
     vram: 0x80102800
@@ -368,10 +366,8 @@ segments:
     overlay: True
     exclusive_ram_id: minigame
     subsegments:
-      - [0x00E3A40, c]
-     #- [0x000F32E0, rodata]
-  - type: bin
-    start: 0x0F32E0
+      - [0xE3A40, c]
+      - [0xF32E0, data]
   - type: code
     start: 0x0F3F10
     vram: 0x80102800
@@ -380,10 +376,8 @@ segments:
     overlay: True
     exclusive_ram_id: minigame
     subsegments:
-      - [0x00F3F10, c]
-     #- [0x000F7D10, rodata]
-  - type: bin
-    start: 0x0F7D10
+      - [0xF3F10, c]
+      - [0xF7D10, data]
   - type: code
     start: 0x0F84C0
     vram: 0x80102800
@@ -392,10 +386,8 @@ segments:
     overlay: True
     exclusive_ram_id: minigame
     subsegments:
-      - [0x00F84C0, c]
-     #- [0x000FECF0, rodata]
-  - type: bin
-    start: 0x0FECF0
+      - [0xF84C0, c]
+      - [0xFECF0, data]
   - type: code
     start: 0x0FF7E0
     vram: 0x80102800
@@ -404,10 +396,8 @@ segments:
     overlay: True
     exclusive_ram_id: minigame
     subsegments:
-      - [0x00FF7E0, c]
-     #- [0x00105790, rodata]
-  - type: bin
-    start: 0x105790
+      - [0xFF7E0, c]
+      - [0x105790, data]
   - type: code
     start: 0x105FC0
     vram: 0x80102800
@@ -416,10 +406,8 @@ segments:
     overlay: True
     exclusive_ram_id: minigame
     subsegments:
-      - [0x0105FC0, c]
-     #- [0x0010BC10, rodata]
-  - type: bin
-    start: 0x10BC10
+      - [0x105FC0, c]
+      - [0x10BC10, data]
   - type: code
     start: 0x10BE10
     vram: 0x80102800
@@ -428,10 +416,8 @@ segments:
     overlay: True
     exclusive_ram_id: minigame
     subsegments:
-      - [0x010BE10, c]
-     #- [0x00113910, rodata]
-  - type: bin
-    start: 0x113910
+      - [0x10BE10, c]
+      - [0x113910, data]
   - type: code
     start: 0x113C80
     vram: 0x80102800
@@ -440,10 +426,8 @@ segments:
     overlay: True
     exclusive_ram_id: minigame
     subsegments:
-      - [0x0113C80, c]
-     #- [0x0011B630, rodata]
-  - type: bin
-    start: 0x11B630
+      - [0x113C80, c]
+      - [0x11B630, data]
   - type: code
     start: 0x11B910
     vram: 0x80102800
@@ -452,10 +436,8 @@ segments:
     overlay: True
     exclusive_ram_id: minigame
     subsegments:
-      - [0x011B910, c]
-     #- [0x00121630, rodata]
-  - type: bin
-    start: 0x121630
+      - [0x11B910, c]
+      - [0x121630, data]
   - type: code
     start: 0x121740
     vram: 0x80102800
@@ -464,10 +446,8 @@ segments:
     overlay: True
     exclusive_ram_id: minigame
     subsegments:
-      - [0x0121740, c]
-     #- [0x00125C00, rodata]
-  - type: bin
-    start: 0x125C00
+      - [0x121740, c]
+      - [0x125C00, data]
   - type: code
     start: 0x125FE0
     vram: 0x80102800
@@ -476,10 +456,8 @@ segments:
     overlay: True
     exclusive_ram_id: minigame
     subsegments:
-      - [0x0125FE0, c]
-     #- [0x0012D840, rodata]
-  - type: bin
-    start: 0x12D840
+      - [0x125FE0, c]
+      - [0x12D840, data]
   - type: code
     start: 0x12E3F0
     vram: 0x80102800
@@ -489,9 +467,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x012E3F0, c]
-     #- [0x00137D00, rodata]
-  - type: bin
-    start: 0x137D00
+      - [0x00137D00, data]
   - type: code
     start: 0x138530
     vram: 0x80102800
@@ -500,10 +476,8 @@ segments:
     overlay: True
     exclusive_ram_id: minigame
     subsegments:
-      - [0x0138530, c]
-     #- [0x0013C840, rodata]
-  - type: bin
-    start: 0x13C840
+      - [0x138530, c]
+      - [0x13C840, data]
   - type: code
     start: 0x13CB90
     vram: 0x80102800
@@ -512,10 +486,8 @@ segments:
     overlay: True
     exclusive_ram_id: minigame
     subsegments:
-      - [0x013CB90, c]
-     #- [0x00143CF0, rodata]
-  - type: bin
-    start: 0x143CF0
+      - [0x13CB90, c]
+      - [0x143CF0, data]
   - type: code
     start: 0x144190
     vram: 0x80102800
@@ -525,9 +497,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x0144190, c]
-     #- [0x0014C080, rodata]
-  - type: bin
-    start: 0x14C080
+      - [0x0014C080, data]
   - type: code
     start: 0x14C320
     vram: 0x80102800
@@ -536,10 +506,8 @@ segments:
     overlay: True
     exclusive_ram_id: minigame
     subsegments:
-      - [0x014C320, c]
-     #- [0x00155280, rodata]
-  - type: bin
-    start: 0x155280
+      - [0x14C320, c]
+      - [0x155280, data]
   - type: code
     start: 0x155C90
     vram: 0x80102800
@@ -548,10 +516,8 @@ segments:
     overlay: True
     exclusive_ram_id: minigame
     subsegments:
-      - [0x0155C90, c]
-     #- [0x00160060, rodata]
-  - type: bin
-    start: 0x160060
+      - [0x155C90, c]
+      - [0x160060, data]
   - type: code
     start: 0x160B20
     vram: 0x80102800
@@ -560,10 +526,8 @@ segments:
     overlay: True
     exclusive_ram_id: minigame
     subsegments:
-      - [0x0160B20, c]
-     #- [0x00167060, rodata]
-  - type: bin
-    start: 0x167060
+      - [0x160B20, c]
+      - [0x167060, data]
   - type: code
     start: 0x1675A0
     vram: 0x80102800
@@ -572,10 +536,8 @@ segments:
     overlay: True
     exclusive_ram_id: minigame
     subsegments:
-      - [0x01675A0, c]
-     #- [0x0016B490, rodata]
-  - type: bin
-    start: 0x16B490
+      - [0x1675A0, c]
+      - [0x16B490, data]
   - type: code
     start: 0x16B740
     vram: 0x80102800
@@ -584,10 +546,8 @@ segments:
     overlay: True
     exclusive_ram_id: minigame
     subsegments:
-      - [0x016B740, c]
-     #- [0x0016FE10, rodata]
-  - type: bin
-    start: 0x16FE10
+      - [0x16B740, c]
+      - [0x16FE10, data]
   - type: code
     start: 0x170190
     vram: 0x80102800
@@ -596,10 +556,8 @@ segments:
     overlay: True
     exclusive_ram_id: minigame
     subsegments:
-      - [0x0170190, c]
-     #- [0x00179B90, rodata]
-  - type: bin
-    start: 0x179B90
+      - [0x170190, c]
+      - [0x179B90, data]
   - type: code
     start: 0x17A5B0
     vram: 0x80102800
@@ -608,10 +566,8 @@ segments:
     overlay: True
     exclusive_ram_id: minigame
     subsegments:
-      - [0x017A5B0, c]
-     #- [0x00180A20, rodata]
-  - type: bin
-    start: 0x180A20
+      - [0x17A5B0, c]
+      - [0x180A20, data]
   - type: code
     start: 0x181420
     vram: 0x80102800
@@ -621,9 +577,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x0181420, c]
-     #- [0x00185FB0, rodata]
-  - type: bin
-    start: 0x185FB0
+      - [0x00185FB0, data]
   - type: code
     start: 0x186490
     vram: 0x80102800
@@ -633,9 +587,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x0186490, c]
-     #- [0x001906D0, rodata]
-  - type: bin
-    start: 0x1906D0
+      - [0x001906D0, data]
   - type: code
     start: 0x1913A0
     vram: 0x80102800
@@ -645,9 +597,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x01913A0, c]
-     #- [0x0019AB90, rodata]
-  - type: bin
-    start: 0x19AB90
+      - [0x0019AB90, data]
   - type: code
     start: 0x19B590
     vram: 0x80102800
@@ -657,9 +607,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x019B590, c]
-     #- [0x001A3EB0, rodata]
-  - type: bin
-    start: 0x1A3EB0
+      - [0x001A3EB0, data]
   - type: code
     start: 0x1A40A0
     vram: 0x80102800
@@ -669,9 +617,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x01A40A0, c]
-     #- [0x001AB520, rodata]
-  - type: bin
-    start: 0x1AB520
+      - [0x001AB520, data]
   - type: code
     start: 0x1ABE90
     vram: 0x80102800
@@ -681,9 +627,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x01ABE90, c]
-     #- [0x001B4430, rodata]
-  - type: bin
-    start: 0x1B4430
+      - [0x001B4430, data]
   - type: code
     start: 0x1B4950
     vram: 0x80102800
@@ -693,9 +637,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x01B4950, c]
-     #- [0x001B8730, rodata]
-  - type: bin
-    start: 0x1B8730
+      - [0x001B8730, data]
   - type: code
     start: 0x1B8DF0
     vram: 0x80102800
@@ -705,9 +647,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x01B8DF0, c]
-     #- [0x001BE020, rodata]
-  - type: bin
-    start: 0x1BE020
+      - [0x001BE020, data]
   - type: code
     start: 0x1BE380
     vram: 0x80102800
@@ -717,9 +657,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x01BE380, c]
-     #- [0x001C6260, rodata]
-  - type: bin
-    start: 0x1C6260
+      - [0x001C6260, data]
   - type: code
     start: 0x1C6BB0
     vram: 0x80102800
@@ -729,9 +667,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x01C6BB0, c]
-     #- [0x001CF900, rodata]
-  - type: bin
-    start: 0x1CF900
+      - [0x001CF900, data]
   - type: code
     start: 0x1CFB60
     vram: 0x80102800
@@ -741,9 +677,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x01CFB60, c]
-     #- [0x001D61C0, rodata]
-  - type: bin
-    start: 0x1D61C0
+      - [0x001D61C0, data]
   - type: code
     start: 0x1D6EE0
     vram: 0x80102800
@@ -753,9 +687,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x01D6EE0, c]
-     #- [0x001E11C0, rodata]
-  - type: bin
-    start: 0x1E11C0
+      - [0x001E11C0, data]
   - type: code
     start: 0x1E1C50
     vram: 0x80102800
@@ -765,9 +697,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x01E1C50, c]
-     #- [0x001E84C0, rodata]
-  - type: bin
-    start: 0x1E84C0
+      - [0x001E84C0, data]
   - type: code
     start: 0x1E89B0
     vram: 0x80102800
@@ -777,9 +707,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x01E89B0, c]
-     #- [0x001F0CB0, rodata]
-  - type: bin
-    start: 0x1F0CB0
+      - [0x001F0CB0, data]
   - type: code
     start: 0x1F1540
     vram: 0x80102800
@@ -789,9 +717,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x01F1540, c]
-     #- [0x001F6D50, rodata]
-  - type: bin
-    start: 0x1F6D50
+      - [0x001F6D50, data]
   - type: code
     start: 0x1F71A0
     vram: 0x80102800
@@ -801,9 +727,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x01F71A0, c]
-     #- [0x001FE760, rodata]
-  - type: bin
-    start: 0x1FE760
+      - [0x001FE760, data]
   - type: code
     start: 0x1FEE60
     vram: 0x80102800
@@ -813,9 +737,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x01FEE60, c]
-     #- [0x002059E0, rodata]
-  - type: bin
-    start: 0x2059E0
+      - [0x002059E0, data]
   - type: code
     start: 0x205BA0
     vram: 0x80102800
@@ -825,9 +747,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x0205BA0, c]
-     #- [0x0020C3E0, rodata]
-  - type: bin
-    start: 0x20C3E0
+      - [0x0020C3E0, data]
   - type: code
     start: 0x20C750
     vram: 0x80102800
@@ -837,9 +757,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x020C750, c]
-     #- [0x00210BC0, rodata]
-  - type: bin
-    start: 0x210BC0
+      - [0x00210BC0, data]
   - type: code
     start: 0x2111A0
     vram: 0x80102800
@@ -849,9 +767,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x02111A0, c]
-     #- [0x00218980, rodata]
-  - type: bin
-    start: 0x218980
+      - [0x00218980, data]
   - type: code
     start: 0x218BF0
     vram: 0x80102800
@@ -861,9 +777,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x0218BF0, c]
-     #- [0x00223080, rodata]
-  - type: bin
-    start: 0x223080
+      - [0x00223080, data]
   - type: code
     start: 0x223D30
     vram: 0x80102800
@@ -873,9 +787,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x0223D30, c]
-     #- [0x002290B0, rodata]
-  - type: bin
-    start: 0x2290B0
+      - [0x002290B0, data]
   - type: code
     start: 0x2292D0
     vram: 0x80102800
@@ -885,9 +797,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x02292D0, c]
-     #- [0x0022DE20, rodata]
-  - type: bin
-    start: 0x22DE20
+      - [0x0022DE20, data]
   - type: code
     start: 0x22E170
     vram: 0x80102800
@@ -897,9 +807,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x022E170, c]
-     #- [0x00231E90, rodata]
-  - type: bin
-    start: 0x231E90
+      - [0x00231E90, data]
   - type: code
     start: 0x232150
     vram: 0x80102800
@@ -909,9 +817,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x0232150, c]
-     #- [0x00238440, rodata]
-  - type: bin
-    start: 0x238440
+      - [0x00238440, data]
   - type: code
     start: 0x2386E0
     vram: 0x80102800
@@ -921,9 +827,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x02386E0, c]
-     #- [0x00243CA0, rodata]
-  - type: bin
-    start: 0x243CA0
+      - [0x00243CA0, data]
   - type: code
     start: 0x246110
     vram: 0x80102800
@@ -933,9 +837,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x0246110, c]
-     #- [0x0024D6C0, rodata]
-  - type: bin
-    start: 0x24D6C0
+      - [0x0024D6C0, data]
   - type: code
     start: 0x24DE70
     vram: 0x80102800
@@ -945,9 +847,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x024DE70, c]
-     #- [0x00253920, rodata]
-  - type: bin
-    start: 0x253920
+      - [0x00253920, data]
   - type: code
     start: 0x253A80
     vram: 0x80102800
@@ -957,9 +857,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x0253A80, c]
-     #- [0x00258FF0, rodata]
-  - type: bin
-    start: 0x258FF0
+      - [0x00258FF0, data]
   - type: code
     start: 0x259900
     vram: 0x80102800
@@ -969,9 +867,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x0259900, c]
-     #- [0x00267160, rodata]
-  - type: bin
-    start: 0x267160
+      - [0x00267160, data]
   - type: code
     start: 0x2677B0
     vram: 0x80102800
@@ -981,9 +877,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x02677B0, c]
-     #- [0x0026F5C0, rodata]
-  - type: bin
-    start: 0x26F5C0
+      - [0x0026F5C0, data]
   - type: code
     start: 0x26FEE0
     vram: 0x80102800
@@ -993,9 +887,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x026FEE0, c]
-     #- [0x00274CB0, rodata]
-  - type: bin
-    start: 0x274CB0
+      - [0x00274CB0, data]
   - type: code
     start: 0x274F30
     vram: 0x80102800
@@ -1005,9 +897,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x0274F30, c]
-     #- [0x0027A070, rodata]
-  - type: bin
-    start: 0x27A070
+      - [0x0027A070, data]
   - type: code
     start: 0x27A330
     vram: 0x80102800
@@ -1017,9 +907,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x027A330, c]
-     #- [0x0027F2A0, rodata]
-  - type: bin
-    start: 0x27F2A0
+      - [0x0027F2A0, data]
   - type: code
     start: 0x27F4F0
     vram: 0x80102800
@@ -1029,9 +917,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x027F4F0, c]
-     #- [0x002847C0, rodata]
-  - type: bin
-    start: 0x2847C0
+      - [0x002847C0, data]
   - type: code
     start: 0x284A10
     vram: 0x80102800
@@ -1041,9 +927,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x0284A10, c]
-     #- [0x0028B470, rodata]
-  - type: bin
-    start: 0x28B470
+      - [0x0028B470, data]
   - type: code
     start: 0x28B620
     vram: 0x80102800
@@ -1053,9 +937,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x028B620, c]
-     #- [0x00291240, rodata]
-  - type: bin
-    start: 0x291240
+      - [0x00291240, data]
   - type: code
     start: 0x291870
     vram: 0x80102800
@@ -1065,9 +947,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x0291870, c]
-     #- [0x00297490, rodata]
-  - type: bin
-    start: 0x297490
+      - [0x00297490, data]
   - type: code
     start: 0x297890
     vram: 0x80102800
@@ -1078,8 +958,7 @@ segments:
     subsegments:
       - [0x297890, c, ovl_3D_entrypoint]
       - [0x2978C0, c]
-  - type: bin
-    start: 0x297AB0
+      - [0x297AB0, .data, ovl_3D_entrypoint]
   - type: code
     start: 0x297AD0
     vram: 0x80102800
@@ -1089,9 +968,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x0297AD0, c]
-     #- [0x002A6BF0, rodata]
-  - type: bin
-    start: 0x2A6BF0
+      - [0x002A6BF0, data]
   - type: code
     start: 0x2A89A0
     vram: 0x80102800
@@ -1101,9 +978,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x02A89A0, c]
-     #- [0x002AE8D0, rodata]
-  - type: bin
-    start: 0x2AE8D0
+      - [0x002AE8D0, data]
   - type: code
     start: 0x2AEDB0
     vram: 0x80102800
@@ -1113,9 +988,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x02AEDB0, c]
-     #- [0x002B0EF0, rodata]
-  - type: bin
-    start: 0x2B0EF0
+      - [0x002B0EF0, data]
   - type: code
     start: 0x2B10C0
     vram: 0x80102800
@@ -1125,9 +998,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x02B10C0, c]
-     #- [0x002BF2F0, rodata]
-  - type: bin
-    start: 0x2BF2F0
+      - [0x002BF2F0, data]
   - type: code
     start: 0x2C0780
     vram: 0x80102800
@@ -1137,9 +1008,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x02C0780, c]
-     #- [0x002C7820, rodata]
-  - type: bin
-    start: 0x2C7820
+      - [0x002C7820, data]
   - type: code
     start: 0x2C7CF0
     vram: 0x80102800
@@ -1149,9 +1018,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x02C7CF0, c]
-     #- [0x002D8F90, rodata]
-  - type: bin
-    start: 0x2D8F90
+      - [0x002D8F90, data]
   - type: code
     start: 0x2DA8B0
     vram: 0x80102800
@@ -1161,9 +1028,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x02DA8B0, c]
-     #- [0x002E09D0, rodata]
-  - type: bin
-    start: 0x2E09D0
+      - [0x002E09D0, data]
   - type: code
     start: 0x2E0F30
     vram: 0x80102800
@@ -1173,9 +1038,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x02E0F30, c]
-     #- [0x002EF400, rodata]
-  - type: bin
-    start: 0x2EF400
+      - [0x002EF400, data]
   - type: code
     start: 0x2F1730
     vram: 0x80102800
@@ -1185,9 +1048,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x02F1730, c]
-     #- [0x002F6D00, rodata]
-  - type: bin
-    start: 0x2F6D00
+      - [0x002F6D00, data]
   - type: code
     start: 0x2F7100
     vram: 0x80102800
@@ -1197,9 +1058,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x02F7100, c]
-     #- [0x00305250, rodata]
-  - type: bin
-    start: 0x305250
+      - [0x00305250, data]
   - type: code
     start: 0x306BA0
     vram: 0x80102800
@@ -1209,9 +1068,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x0306BA0, c]
-     #- [0x0030C870, rodata]
-  - type: bin
-    start: 0x30C870
+      - [0x0030C870, data]
   - type: code
     start: 0x30CCB0
     vram: 0x80102800
@@ -1221,9 +1078,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x030CCB0, c]
-     #- [0x0031D0A0, rodata]
-  - type: bin
-    start: 0x31D0A0
+      - [0x0031D0A0, data]
   - type: code
     start: 0x31EE40
     vram: 0x80102800
@@ -1233,9 +1088,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x031EE40, c]
-     #- [0x00324E80, rodata]
-  - type: bin
-    start: 0x324E80
+      - [0x00324E80, data]
   - type: code
     start: 0x3252C0
     vram: 0x80102800
@@ -1245,9 +1098,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x03252C0, c]
-     #- [0x00325AE0, rodata]
-  - type: bin
-    start: 0x325AE0
+      - [0x00325AE0, data]
   - type: code
     start: 0x325BC0
     vram: 0x80102800
@@ -1257,9 +1108,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x0325BC0, c]
-     #- [0x00328890, rodata]
-  - type: bin
-    start: 0x328890
+      - [0x00328890, data]
   - type: code
     start: 0x328A30
     vram: 0x80102800
@@ -1269,9 +1118,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x0328A30, c]
-     #- [0x00329F80, rodata]
-  - type: bin
-    start: 0x329F80
+      - [0x00329F80, data]
   - type: code
     start: 0x32A1C0
     vram: 0x80102800
@@ -1281,9 +1128,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x032A1C0, c]
-     #- [0x00334BB0, rodata]
-  - type: bin
-    start: 0x334BB0
+      - [0x00334BB0, data]
   - type: code
     start: 0x335440
     vram: 0x80102800
@@ -1293,9 +1138,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x0335440, c]
-     #- [0x00342390, rodata]
-  - type: bin
-    start: 0x342390
+      - [0x00342390, data]
   - type: code
     start: 0x343060
     vram: 0x80102800
@@ -1305,9 +1148,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x0343060, c]
-     #- [0x003521C0, rodata]
-  - type: bin
-    start: 0x3521C0
+      - [0x003521C0, data]
   - type: code
     start: 0x352E10
     vram: 0x80102800
@@ -1317,9 +1158,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x0352E10, c]
-     #- [0x003589D0, rodata]
-  - type: bin
-    start: 0x3589D0
+      - [0x003589D0, data]
   - type: code
     start: 0x358DE0
     vram: 0x80102800
@@ -1329,9 +1168,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x0358DE0, c]
-     #- [0x0035CDC0, rodata]
-  - type: bin
-    start: 0x35CDC0
+      - [0x0035CDC0, data]
   - type: code
     start: 0x35D110
     vram: 0x80102800
@@ -1341,9 +1178,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x035D110, c]
-     #- [0x00360470, rodata]
-  - type: bin
-    start: 0x360470
+      - [0x00360470, data]
   - type: code
     start: 0x360670
     vram: 0x80102800
@@ -1353,9 +1188,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x0360670, c]
-     #- [0x00361640, rodata]
-  - type: bin
-    start: 0x361640
+      - [0x00361640, data]
   - type: code
     start: 0x3616F0
     vram: 0x80102800
@@ -1365,9 +1198,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x03616F0, c]
-     #- [0x0036A640, rodata]
-  - type: bin
-    start: 0x36A640
+      - [0x0036A640, data]
   - type: code
     start: 0x36B420
     vram: 0x80102800
@@ -1377,9 +1208,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x036B420, c]
-     #- [0x0036CAE0, rodata]
-  - type: bin
-    start: 0x36CAE0
+      - [0x0036CAE0, data]
   - type: code
     start: 0x36D9A0
     vram: 0x80102800
@@ -1389,9 +1218,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x036D9A0, c]
-     #- [0x0036DED0, rodata]
-  - type: bin
-    start: 0x36DED0
+      - [0x0036DED0, data]
   - type: code
     start: 0x36DF00
     vram: 0x80102800
@@ -1401,9 +1228,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x036DF00, c]
-     #- [0x0037E240, rodata]
-  - type: bin
-    start: 0x37E240
+      - [0x0037E240, data]
   - type: code
     start: 0x37EE80
     vram: 0x80102800
@@ -1413,9 +1238,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x037EE80, c]
-     #- [0x0037F230, rodata]
-  - type: bin
-    start: 0x37F230
+      - [0x0037F230, data]
   - type: code
     start: 0x37F290
     vram: 0x80102800
@@ -1425,9 +1248,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x037F290, c]
-     #- [0x0037F4A0, rodata]
-  - type: bin
-    start: 0x37F4A0
+      - [0x0037F4A0, data]
   - type: code
     start: 0x37F4B0
     vram: 0x80102800
@@ -1437,9 +1258,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x037F4B0, c]
-     #- [0x0038F320, rodata]
-  - type: bin
-    start: 0x38F320
+      - [0x0038F320, data]
   - type: code
     start: 0x3906C0
     vram: 0x80102800
@@ -1449,9 +1268,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x03906C0, c]
-     #- [0x0039E590, rodata]
-  - type: bin
-    start: 0x39E590
+      - [0x0039E590, data]
   - type: code
     start: 0x3A01F0
     vram: 0x80102800
@@ -1461,9 +1278,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x03A01F0, c]
-     #- [0x003A87C0, rodata]
-  - type: bin
-    start: 0x3A87C0
+      - [0x003A87C0, data]
   - type: code
     start: 0x3A9460
     vram: 0x80102800
@@ -1473,9 +1288,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x03A9460, c]
-     #- [0x003AB8B0, rodata]
-  - type: bin
-    start: 0x3AB8B0
+      - [0x003AB8B0, data]
   - type: code
     start: 0x3AB9A0
     vram: 0x80102800
@@ -1485,9 +1298,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x03AB9A0, c]
-     #- [0x003BC8A0, rodata]
-  - type: bin
-    start: 0x3BC8A0
+      - [0x003BC8A0, data]
   - type: code
     start: 0x3BDF60
     vram: 0x80102800
@@ -1497,9 +1308,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x03BDF60, c]
-     #- [0x003CEA00, rodata]
-  - type: bin
-    start: 0x3CEA00
+      - [0x003CEA00, data]
   - type: code
     start: 0x3D0050
     vram: 0x80102800
@@ -1509,9 +1318,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x03D0050, c]
-     #- [0x003D48D0, rodata]
-  - type: bin
-    start: 0x3D48D0
+      - [0x003D48D0, data]
   - type: code
     start: 0x3D4D20
     vram: 0x80102800
@@ -1521,9 +1328,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x03D4D20, c]
-     #- [0x003E3530, rodata]
-  - type: bin
-    start: 0x3E3530
+      - [0x003E3530, data]
   - type: code
     start: 0x3E4250
     vram: 0x80102800
@@ -1533,9 +1338,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x03E4250, c]
-     #- [0x003E4300, rodata]
-  - type: bin
-    start: 0x3E4300
+      - [0x003E4300, data]
   - type: code
     start: 0x3E4320
     vram: 0x80102800
@@ -1545,9 +1348,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x03E4320, c]
-     #- [0x003E7CB0, rodata]
-  - type: bin
-    start: 0x3E7CB0
+      - [0x003E7CB0, data]
   - type: code
     start: 0x3E7ED0
     vram: 0x80102800
@@ -1557,9 +1358,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x03E7ED0, c]
-     #- [0x003EB980, rodata]
-  - type: bin
-    start: 0x3EB980
+      - [0x003EB980, data]
   - type: code
     start: 0x3EBBB0
     vram: 0x80102800
@@ -1569,9 +1368,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x03EBBB0, c]
-     #- [0x003EF5A0, rodata]
-  - type: bin
-    start: 0x3EF5A0
+      - [0x003EF5A0, data]
   - type: code
     start: 0x3EF7F0
     vram: 0x80102800
@@ -1581,9 +1378,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x03EF7F0, c]
-     #- [0x003F31B0, rodata]
-  - type: bin
-    start: 0x3F31B0
+      - [0x003F31B0, data]
   - type: code
     start: 0x3F33E0
     vram: 0x80102800
@@ -1593,9 +1388,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x03F33E0, c]
-     #- [0x003F6EE0, rodata]
-  - type: bin
-    start: 0x3F6EE0
+      - [0x003F6EE0, data]
   - type: code
     start: 0x3F7130
     vram: 0x80102800
@@ -1605,9 +1398,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x03F7130, c]
-     #- [0x003FABC0, rodata]
-  - type: bin
-    start: 0x3FABC0
+      - [0x003FABC0, data]
   - type: code
     start: 0x3FAE40
     vram: 0x80102800
@@ -1617,9 +1408,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x03FAE40, c]
-     #- [0x003FE850, rodata]
-  - type: bin
-    start: 0x3FE850
+      - [0x003FE850, data]
   - type: code
     start: 0x3FEAA0
     vram: 0x80102800
@@ -1629,9 +1418,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x03FEAA0, c]
-     #- [0x004024B0, rodata]
-  - type: bin
-    start: 0x4024B0
+      - [0x004024B0, data]
   - type: code
     start: 0x402700
     vram: 0x80102800
@@ -1641,9 +1428,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x0402700, c]
-     #- [0x00406460, rodata]
-  - type: bin
-    start: 0x406460
+      - [0x00406460, data]
   - type: code
     start: 0x406640
     vram: 0x80102800
@@ -1653,9 +1438,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x0406640, c]
-     #- [0x0040A080, rodata]
-  - type: bin
-    start: 0x40A080
+      - [0x0040A080, data]
   - type: code
     start: 0x40A330
     vram: 0x80102800
@@ -1665,9 +1448,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x040A330, c]
-     #- [0x0040B930, rodata]
-  - type: bin
-    start: 0x40B930
+      - [0x0040B930, data]
   - type: code
     start: 0x40BB00
     vram: 0x80102800
@@ -1677,9 +1458,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x040BB00, c]
-     #- [0x0040EA00, rodata]
-  - type: bin
-    start: 0x40EA00
+      - [0x0040EA00, data]
   - type: code
     start: 0x40EC60
     vram: 0x80102800
@@ -1689,9 +1468,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x040EC60, c]
-     #- [0x00413B00, rodata]
-  - type: bin
-    start: 0x413B00
+      - [0x00413B00, data]
   - type: code
     start: 0x413C90
     vram: 0x80102800
@@ -1701,9 +1478,7 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x0413C90, c]
-     #- [0x00414B00, rodata]
-  - type: bin
-    start: 0x414B00
+      - [0x00414B00, data]
   - type: code
     start: 0x415790
     vram: 0x80102800
@@ -1713,7 +1488,6 @@ segments:
     exclusive_ram_id: minigame
     subsegments:
       - [0x0415790, c]
-     #- [0x00417E10, rodata]
-  - type: bin
-    start: 0x417E10
+      - [0x00417E10, data]
+  - [0x418A50, bin] #has code?
   - [0x2000000]

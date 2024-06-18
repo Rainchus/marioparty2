@@ -39,7 +39,7 @@ LD_MAP    := $(BUILD_DIR)/$(TARGET).map
 PYTHON     := python3
 N64CKSUM   := $(PYTHON) tools/n64cksum.py
 SPLAT_YAML := marioparty2.yaml
-SPLAT      := $(PYTHON) tools/splat/split.py $(SPLAT_YAML)
+SPLAT      := splat split $(SPLAT_YAML)
 EMULATOR   := mupen64plus
 DIFF       := diff
 

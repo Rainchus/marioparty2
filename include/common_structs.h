@@ -23,4 +23,9 @@ typedef struct UnkEep {
     u16 unk8;
 } UnkEep;
 
+typedef struct board_overlay_entrypoint {
+    s16 index;
+    void (*fn)();
+} board_overlay_entrypoint;
+
 #endif

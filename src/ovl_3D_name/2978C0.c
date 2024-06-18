@@ -5,9 +5,9 @@ s32 func_80068328_68F28(s32);
 void func_8006836C_68F6C(s32);
 void func_800683BC_68FBC(s32);
 void omInitObjMan(s32, s32);
-void omOvlGotoEx(s32, s32, s32);
+void omOvlGotoEx(s32, s32, u16);
 void omOvlHisChg(s32, s32, s32, s32);
-void InitProcess(void* userFunc, u16 priority, s32 stack_size, s32 extra_data_size);
+void omAddPrcObj(void* userFunc, u16 priority, s32 stack_size, s32 extra_data_size);
 void func_80079128_79D28(void);
 void func_801028CC_29795C(void);
 void HuPrcVSleep(void); 
@@ -20,7 +20,7 @@ void func_800455CC_461CC(s32, s32);
 s32 func_8004CC7C_4D87C(s32, s32, s32);
 void func_8004CD70_4D970(s32);
 void omOvlReturnEx(s32);
-void func_80077574_78174(void);
+void omOvlKill(void);
 void func_80088640_89240(void);
 void func_8008CE5C_8DA5C(void);
 void InitFadeIn(s32, s32);
@@ -76,12 +76,12 @@ void func_801028CC_29795C(void) {
     
     func_8008CE5C_8DA5C();
     omOvlReturnEx(1);
-    func_80077574_78174();
+    omOvlKill();
     HuPrcVSleep();
 }
 
 void func_801029E0_297A70(void) {
     omInitObjMan(0xA, 0xA);
     func_80079128_79D28();
-    InitProcess(&func_801028CC_29795C, 0x1005, 0, 0);
+    omAddPrcObj(&func_801028CC_29795C, 0x1005, 0, 0);
 }

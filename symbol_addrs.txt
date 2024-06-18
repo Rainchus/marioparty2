@@ -1,5 +1,4 @@
 rand8 = 0x80018AFC; //rom:0x196FC
-rnd_seed = 0x800C99B4;
 osEPiRawStartDma = 0x8009D950; //rom:0x9E550
 osEepromProbe = 0x8009CAD0; // rom:0x9D6D0
 osSiGetAccess = 0x800A5F94; // rom:0xA6B94
@@ -13,8 +12,8 @@ osRecvMesg = 0x800A5890; // rom:0xA6490
 GetEepType = 0x8001ACD0; // rom:0x1B8D0
 GetSaveFileChecksum = 0x8001B114; //rom:0x1BD14
 LoadOverlay = 0x80018B30; // rom:0x19730
-InitProcess = 0x80076E64; // rom:0x77A64
 GetCurrentPlayerIndex = 0x8005DC30; // rom:0x5E830
+
 HuMemHeapInit = 0x80068460; // rom:0x69060
 HuMemMemoryAlloc = 0x80068480; // rom:0x69080
 HuMemMemoryFree = 0x8006850C; // rom:0x6910C
@@ -22,8 +21,6 @@ HuMemMemoryRealloc = 0x800685BC; // rom:0x691BC
 HuMemUsedMemorySizeGet = 0x80068684; // rom:0x69284
 HuMemUsedMemoryBlockGet = 0x800686B8; // rom:0x692B8
 HuMemMemoryAllocSizeGet = 0x800686E0; //rom:0x692E0
-
-
 HuMemInit = 0x80040D80; // rom:0x41980
 HuMemDirectMalloc = 0x80040DA4; // rom:0x419A4
 HuMemDirectFree = 0x80040DC8; // rom:0x419C8
@@ -66,12 +63,36 @@ BoardPlayerGet = 0x8005DC3C; // rom:0x5E83C
 InitFadeIn = 0x8008F544; // rom:0x90144
 InitFadeOut = 0x8008F5AC; // rom:0x901AC
 omInitObjMan = 0x800760C0; // rom:0x76CC0
+omDestroyObjMan = 0x80076390; // rom:0x76F90
+omAddObj = 0x80076598; // rom:0x77198
+omSetObjPrio = 0x80076724; // rom:0x77324
+omInsertObj = 0x80076838; // rom:0x77438
+omDelObj = 0x8007695C; // rom:0x7755C
+omSetStat = 0x80076AF4; // rom:0x776F4
+omSetStatBit = 0x80076AFC; // rom:0x776FC
+omResetStatBit = 0x80076B0C; // rom:0x7770C
+omPrcSetStat = 0x80076B20; // rom:0x77720
+omPrcSetStatBit = 0x80076B44; // rom:0x77744
+omPrcResetStatBit = 0x80076B70; // rom:0x77770
+omSetTra = 0x80076BA0; // rom:0x777A0
+omSetRot = 0x80076BB0; // rom:0x777B0
+omSetSca = 0x80076BC0; // rom:0x777C0
+omAddPrcObj = 0x80076E64; // rom:0x77A64
+omDelPrcObj = 0x80076FCC; // rom:0x77BCC
+omDestroyPrcObj = 0x80077018; // rom:0x77C18
+omPrcSetDestructor = 0x800770A8; // rom:0x77CA8
+omOvlKill = 0x80077574; // rom:0x78174
+omMain = 0x800775D8; // rom:0x781D8
+
 omOvlGotoEx = 0x800771EC; // rom:0x77DEC
 omOvlHisChg = 0x80077538; // rom:0x78138
 omOvlCallEx = 0x800770EC; // rom:0x77CEC
 omOvlReturnEx = 0x80077160; // rom:0x77D60
 BoardSpaceGet = 0x8005DD38; // rom:0x5E938
 
-gCurrentPlayerIndex = 0x800F93C6; // type:u8
-omovlhisidx = 0x800CD418; // type:s16
+//data and bss
+rnd_seed = 0x800C99B4;
 omovlhis = 0x800FDBE8; // size:0x60
+omovlhisidx = 0x800CD418; // type:s16
+gCurrentPlayerIndex = 0x800F93C6; // type:u8
+gPlayers = 0x800FD2C0; // size:0xD0

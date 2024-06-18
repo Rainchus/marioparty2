@@ -52,7 +52,7 @@ void func_80063178_63D78(void);                            /* extern */
 void func_80063844_64444(void);                            /* extern */
 s32 func_800638C8_644C8(void);                          /* extern */
 void omOvlReturnEx(s32);                           /* extern */
-void func_80077574_78174(void);                            /* extern */
+void omOvlKill(void);                            /* extern */
 void func_80079464_7A064(void);                            /* extern */
 void func_800794A8_7A0A8(s32);                           /* extern */
 void InitFadeOut(s16, s32);                      /* extern */
@@ -137,7 +137,7 @@ void func_80063950_64550(void) {
         D_800CCC10 = 0x69;
         func_800683BC_68FBC(0x45);
         omOvlReturnEx(1);
-        func_80077574_78174();
+        omOvlKill();
         HuPrcVSleep();
     }
 }

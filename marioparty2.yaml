@@ -35,6 +35,7 @@ segments:
     type: code
     start: 0x1000
     vram: 0x80000400
+    #bss_size: 0x3DC10
     subsegments:
       - [0x1000, asm]
       - [0xB6E0, c]

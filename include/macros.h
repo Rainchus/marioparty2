@@ -3,6 +3,8 @@
 
 #include "include_asm.h"
 
+#define ARRAY_COUNT(arr) (s32)(sizeof(arr) / sizeof(arr[0]))
+
 #define IS_DEBUG_PANIC(statement, file, line) do {} while(1)
 #define ASSERT(condition) \
     if (!(condition)) { \

@@ -6,39 +6,39 @@ typedef struct omOvlHisData {
 /* 0x06 */ u16 stat;
 } omOvlHisData; //sizeof 0x08
 
-void omOvlGotoEx(s32, s32, s32);
+void omOvlGotoEx(s32, s32, u16);
 extern s16 omovlhisidx;
 extern omOvlHisData omovlhis[12];
 
 INCLUDE_ASM(const s32, "76CC0", omInitObjMan);
 
-INCLUDE_ASM(const s32, "76CC0", func_80076390_76F90);
+INCLUDE_ASM(const s32, "76CC0", omDestroyObjMan);
 
-INCLUDE_ASM(const s32, "76CC0", func_80076598_77198);
+INCLUDE_ASM(const s32, "76CC0", omAddObj);
 
-INCLUDE_ASM(const s32, "76CC0", func_80076724_77324);
+INCLUDE_ASM(const s32, "76CC0", omSetObjPrio);
 
-INCLUDE_ASM(const s32, "76CC0", func_80076838_77438);
+INCLUDE_ASM(const s32, "76CC0", omInsertObj);
 
-INCLUDE_ASM(const s32, "76CC0", func_8007695C_7755C);
+INCLUDE_ASM(const s32, "76CC0", omDelObj);
 
-INCLUDE_ASM(const s32, "76CC0", func_80076AF4_776F4);
+INCLUDE_ASM(const s32, "76CC0", omSetStat);
 
-INCLUDE_ASM(const s32, "76CC0", func_80076AFC_776FC);
+INCLUDE_ASM(const s32, "76CC0", omSetStatBit);
 
-INCLUDE_ASM(const s32, "76CC0", func_80076B0C_7770C);
+INCLUDE_ASM(const s32, "76CC0", omResetStatBit);
 
-INCLUDE_ASM(const s32, "76CC0", func_80076B20_77720);
+INCLUDE_ASM(const s32, "76CC0", omPrcSetStat);
 
-INCLUDE_ASM(const s32, "76CC0", func_80076B44_77744);
+INCLUDE_ASM(const s32, "76CC0", omPrcSetStatBit);
 
-INCLUDE_ASM(const s32, "76CC0", func_80076B70_77770);
+INCLUDE_ASM(const s32, "76CC0", omPrcResetStatBit);
 
-INCLUDE_ASM(const s32, "76CC0", func_80076BA0_777A0);
+INCLUDE_ASM(const s32, "76CC0", omSetTra);
 
-INCLUDE_ASM(const s32, "76CC0", func_80076BB0_777B0);
+INCLUDE_ASM(const s32, "76CC0", omSetRot);
 
-INCLUDE_ASM(const s32, "76CC0", func_80076BC0_777C0);
+INCLUDE_ASM(const s32, "76CC0", omSetSca);
 
 INCLUDE_ASM(const s32, "76CC0", func_80076BD0_777D0);
 
@@ -56,17 +56,33 @@ INCLUDE_ASM(const s32, "76CC0", func_80076E20_77A20);
 
 INCLUDE_ASM(const s32, "76CC0", func_80076E54_77A54);
 
-INCLUDE_ASM(const s32, "76CC0", InitProcess);
+INCLUDE_ASM(const s32, "76CC0", omAddPrcObj);
 
 INCLUDE_ASM(const s32, "76CC0", func_80076F14_77B14);
 
-INCLUDE_ASM(const s32, "76CC0", func_80076FCC_77BCC);
+INCLUDE_ASM(const s32, "76CC0", omDelPrcObj);
 
-INCLUDE_ASM(const s32, "76CC0", func_80077018_77C18);
+INCLUDE_ASM(const s32, "76CC0", omDestroyPrcObj);
 
-INCLUDE_ASM(const s32, "76CC0", func_800770A8_77CA8);
+INCLUDE_ASM(const s32, "76CC0", omPrcSetDestructor);
 
-INCLUDE_ASM(const s32, "76CC0", omOvlCallEx);
+s32 omOvlCallEx(s32 overlayID, s16 event, s16 stat) {
+    omOvlHisData* history;
+    s32 index = omovlhisidx;
+    s32 result;
+
+    if (index < ARRAY_COUNT(omovlhis)) {
+        history = &omovlhis[++omovlhisidx];
+        history->overlayID = overlayID;
+        history->event = event;
+        history->stat = stat;
+        omOvlGotoEx(overlayID, event, stat);
+        result = 1;
+    } else {
+        result = 0;
+    }
+    return result;
+}
 
 s32 omOvlReturnEx(s16 level) {
     omovlhisidx -= level;
@@ -84,9 +100,9 @@ INCLUDE_ASM(const s32, "76CC0", omOvlGotoEx);
 
 INCLUDE_ASM(const s32, "76CC0", omOvlHisChg);
 
-INCLUDE_ASM(const s32, "76CC0", func_80077574_78174);
+INCLUDE_ASM(const s32, "76CC0", omOvlKill);
 
-INCLUDE_ASM(const s32, "76CC0", func_800775D8_781D8);
+INCLUDE_ASM(const s32, "76CC0", omMain);
 
 INCLUDE_ASM(const s32, "76CC0", func_80077EF0_78AF0);
 

@@ -1,14 +1,14 @@
 #include "common.h"
 
-INCLUDE_ASM(const s32, "84FF0", func_800843F0_84FF0);
+INCLUDE_ASM(const s32, "84FF0", SprDispCheck);
 
-INCLUDE_ASM(const s32, "84FF0", func_800845C8_851C8);
+INCLUDE_ASM(const s32, "84FF0", DispCheck);
 
-INCLUDE_ASM(const s32, "84FF0", func_800849D4_855D4);
+INCLUDE_ASM(const s32, "84FF0", SprDisp);
 
-INCLUDE_ASM(const s32, "84FF0", func_80085924_86524);
+INCLUDE_ASM(const s32, "84FF0", PutSprite);
 
-INCLUDE_ASM(const s32, "84FF0", func_800867B8_873B8);
+INCLUDE_ASM(const s32, "84FF0", SprTexLoad);
 
 INCLUDE_ASM(const s32, "84FF0", func_80086C08_87808);
 

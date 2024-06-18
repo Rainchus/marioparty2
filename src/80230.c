@@ -2,55 +2,55 @@
 
 INCLUDE_ASM(const s32, "80230", func_8007F630_80230);
 
-INCLUDE_ASM(const s32, "80230", func_8007F75C_8035C);
+INCLUDE_ASM(const s32, "80230", SprAlloc);
 
-INCLUDE_ASM(const s32, "80230", func_8007F800_80400);
+INCLUDE_ASM(const s32, "80230", SprFree);
 
-INCLUDE_ASM(const s32, "80230", func_8007F8B0_804B0);
+INCLUDE_ASM(const s32, "80230", SprKill);
 
-INCLUDE_ASM(const s32, "80230", func_8007F9DC_805DC);
+INCLUDE_ASM(const s32, "80230", SprClose);
 
-INCLUDE_ASM(const s32, "80230", func_8007FA6C_8066C);
+INCLUDE_ASM(const s32, "80230", SprCreate);
 
 INCLUDE_ASM(const s32, "80230", func_8007FBB4_807B4);
 
 INCLUDE_ASM(const s32, "80230", func_8007FD58_80958);
 
-INCLUDE_ASM(const s32, "80230", func_80080098_80C98);
+INCLUDE_ASM(const s32, "80230", InitAnimState);
 
-INCLUDE_ASM(const s32, "80230", func_800800D4_80CD4);
+INCLUDE_ASM(const s32, "80230", RestoreAnimState);
 
-INCLUDE_ASM(const s32, "80230", func_80080128_80D28);
+INCLUDE_ASM(const s32, "80230", InitData);
 
-INCLUDE_ASM(const s32, "80230", func_80080350_80F50);
+INCLUDE_ASM(const s32, "80230", LinkSprite);
 
-INCLUDE_ASM(const s32, "80230", func_8008036C_80F6C);
+INCLUDE_ASM(const s32, "80230", GetFirstSprite);
 
 INCLUDE_ASM(const s32, "80230", func_80080698_81298);
 
-INCLUDE_ASM(const s32, "80230", func_800807D4_813D4);
+INCLUDE_ASM(const s32, "80230", CalcGroupCenter);
 
-INCLUDE_ASM(const s32, "80230", func_80080864_81464);
+INCLUDE_ASM(const s32, "80230", SprBegin);
 
 INCLUDE_ASM(const s32, "80230", func_80081378_81F78);
 
-INCLUDE_ASM(const s32, "80230", func_80081420_82020);
+INCLUDE_ASM(const s32, "80230", SprExec);
 
-INCLUDE_ASM(const s32, "80230", func_80081824_82424);
+INCLUDE_ASM(const s32, "80230", SprLayerHook);
 
-INCLUDE_ASM(const s32, "80230", func_80081AD0_826D0);
+INCLUDE_ASM(const s32, "80230", SprPosSet);
 
 INCLUDE_ASM(const s32, "80230", func_80081B28_82728);
 
-INCLUDE_ASM(const s32, "80230", func_80081B5C_8275C);
+INCLUDE_ASM(const s32, "80230", TransformPoint);
 
-INCLUDE_ASM(const s32, "80230", func_80081C84_82884);
+INCLUDE_ASM(const s32, "80230", SprPos3DSet);
 
-INCLUDE_ASM(const s32, "80230", func_80082040_82C40);
+INCLUDE_ASM(const s32, "80230", SprPosPerspectiveSet);
 
-INCLUDE_ASM(const s32, "80230", func_80082160_82D60);
+INCLUDE_ASM(const s32, "80230", SprBankSet);
 
-INCLUDE_ASM(const s32, "80230", func_8008218C_82D8C);
+INCLUDE_ASM(const s32, "80230", SprAnimSet);
 
 INCLUDE_ASM(const s32, "80230", func_8008221C_82E1C);
 
@@ -58,19 +58,19 @@ INCLUDE_ASM(const s32, "80230", func_8008225C_82E5C);
 
 INCLUDE_ASM(const s32, "80230", func_800822A8_82EA8);
 
-INCLUDE_ASM(const s32, "80230", func_800822FC_82EFC);
+INCLUDE_ASM(const s32, "80230", SprAnimGet);
 
 INCLUDE_ASM(const s32, "80230", func_80082314_82F14);
 
-INCLUDE_ASM(const s32, "80230", func_80082340_82F40);
+INCLUDE_ASM(const s32, "80230", SprScaleSet);
 
-INCLUDE_ASM(const s32, "80230", func_80082384_82F84);
+INCLUDE_ASM(const s32, "80230", SprPrioSet);
 
-INCLUDE_ASM(const s32, "80230", func_800823B0_82FB0);
+INCLUDE_ASM(const s32, "80230", SprRotSet);
 
-INCLUDE_ASM(const s32, "80230", func_800823DC_82FDC);
+INCLUDE_ASM(const s32, "80230", SprAttrReset);
 
-INCLUDE_ASM(const s32, "80230", func_80082418_83018);
+INCLUDE_ASM(const s32, "80230", SprAttrSet);
 
 INCLUDE_ASM(const s32, "80230", func_80082450_83050);
 
@@ -90,29 +90,29 @@ INCLUDE_ASM(const s32, "80230", func_800825B8_831B8);
 
 INCLUDE_ASM(const s32, "80230", func_800825E8_831E8);
 
-INCLUDE_ASM(const s32, "80230", func_80082618_83218);
+INCLUDE_ASM(const s32, "80230", SprAnimInit);
 
-INCLUDE_ASM(const s32, "80230", func_80082660_83260);
+INCLUDE_ASM(const s32, "80230", SprAnimKill);
 
-INCLUDE_ASM(const s32, "80230", func_80082790_83390);
+INCLUDE_ASM(const s32, "80230", SprAnimKillAll);
 
-INCLUDE_ASM(const s32, "80230", func_80082800_83400);
+INCLUDE_ASM(const s32, "80230", SprAnimRead);
 
-INCLUDE_ASM(const s32, "80230", func_80082DAC_839AC);
+INCLUDE_ASM(const s32, "80230", SprAnimMake);
 
 INCLUDE_ASM(const s32, "80230", func_80082FE4_83BE4);
 
 INCLUDE_ASM(const s32, "80230", func_80083044_83C44);
 
-INCLUDE_ASM(const s32, "80230", func_800830A8_83CA8);
+INCLUDE_ASM(const s32, "80230", SprAnimBmpDirectGet);
 
-INCLUDE_ASM(const s32, "80230", func_800830C8_83CC8);
+INCLUDE_ASM(const s32, "80230", SprAnimBmpGet);
 
 INCLUDE_ASM(const s32, "80230", func_800830F8_83CF8);
 
-INCLUDE_ASM(const s32, "80230", func_80083118_83D18);
+INCLUDE_ASM(const s32, "80230", SprAnimBmpDataDirectGet);
 
-INCLUDE_ASM(const s32, "80230", func_8008313C_83D3C);
+INCLUDE_ASM(const s32, "80230", SprAnimBmpDataGet);
 
 INCLUDE_ASM(const s32, "80230", func_80083170_83D70);
 
@@ -120,9 +120,9 @@ INCLUDE_ASM(const s32, "80230", func_800831C0_83DC0);
 
 INCLUDE_ASM(const s32, "80230", func_80083220_83E20);
 
-INCLUDE_ASM(const s32, "80230", func_80083244_83E44);
+INCLUDE_ASM(const s32, "80230", SprAnimBmpPalDirectGet);
 
-INCLUDE_ASM(const s32, "80230", func_80083250_83E50);
+INCLUDE_ASM(const s32, "80230", SprAnimBmpPalGet);
 
 INCLUDE_ASM(const s32, "80230", func_8008326C_83E6C);
 
@@ -130,9 +130,9 @@ INCLUDE_ASM(const s32, "80230", func_800832AC_83EAC);
 
 INCLUDE_ASM(const s32, "80230", func_800832FC_83EFC);
 
-INCLUDE_ASM(const s32, "80230", func_80083394_83F94);
+INCLUDE_ASM(const s32, "80230", AnimateSprite);
 
-INCLUDE_ASM(const s32, "80230", func_80083640_84240);
+INCLUDE_ASM(const s32, "80230", SprFinish);
 
 INCLUDE_ASM(const s32, "80230", func_80083748_84348);
 

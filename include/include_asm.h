@@ -19,6 +19,14 @@
         "\t.end\t"#NAME \
     );
 #endif
+#ifndef INCLUDE_RODATA
+#define INCLUDE_RODATA(FOLDER, NAME) \
+    __asm__( \
+        ".section .rodata\n" \
+        "\t.include \""FOLDER"/"#NAME".s\"\n" \
+        ".section .text" \
+    )
+#endif
 __asm__(".include \"include/macro.inc\"\n");
 #ifdef MOVE_ADDU
 __asm__(".include \"include/move_addu.inc\"\n");

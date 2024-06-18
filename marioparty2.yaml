@@ -19,6 +19,7 @@ options:
   asm_jtbl_label_macro: jlabel
   asm_data_macro: dlabel
   migrate_rodata_to_functions: True
+  subalign: 8
   # extensions_path: tools/splat_ext
   # mips_abi_float_regs: o32
   # section_order: [".text", ".data", ".rodata", ".bss"]
@@ -348,6 +349,7 @@ segments:
     subsegments:
       - [0xD57F0, c]
       - [0xD8E40, data]
+      - [0xDA240, .rodata, D57F0]
   - type: code
     start: 0x0DA290
     vram: 0x80102800
@@ -358,6 +360,7 @@ segments:
     subsegments:
       - [0xDA290, c]
       - [0xE3140, data]
+    #  - [0xE3688, .rodata, DA290]
   - type: code
     start: 0x0E3A40
     vram: 0x80102800

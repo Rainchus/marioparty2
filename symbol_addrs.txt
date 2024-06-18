@@ -34,6 +34,94 @@ HuMemTempDirectRealloc = 0x80040EB4; // rom:0x41AB4
 HuMemTempUsedMallocSizeGet = 0x80040EE0; // rom:0x41AE0
 HuMemTempUsedMallocBlockGet = 0x80040F00; // rom:0x41B00
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SprAlloc = 0x8007F75C; // rom:0x8035C
+SprFree = 0x8007F800; // rom:0x80400
+SprKill = 0x8007F8B0; // rom:0x804B0
+SprClose = 0x8007F9DC; // rom:0x805DC
+SprCreate = 0x8007FA6C; // rom:0x8066C
+InitAnimState = 0x80080098; // rom:0x80C98
+RestoreAnimState = 0x800800D4; // rom:0x80CD4
+InitData = 0x80080128; // rom:0x80D28
+LinkSprite = 0x80080350; // rom:0x80F50
+GetFirstSprite = 0x8008036C; // rom:0x80F6C
+CalcGroupCenter = 0x800807D4; // rom:0x813D4
+SprBegin = 0x80080864; // rom:0x81464
+SprExec = 0x80081420; // rom:0x82020
+SprLayerHook = 0x80081824; // rom:0x82424
+SprPosSet = 0x80081AD0; // rom:0x826D0
+TransformPoint = 0x80081B5C; // rom:0x8275C
+SprPos3DSet = 0x80081C84; // rom:0x82884
+SprPosPerspectiveSet = 0x80082040; // rom:0x82C40
+SprBankSet = 0x80082160; // rom:0x82D60
+SprAnimSet = 0x8008218C; // rom:0x82D8C
+SprAnimGet = 0x800822FC; // rom:0x82EFC
+SprScaleSet = 0x80082340; // rom:0x82F40
+SprPrioSet = 0x80082384; // rom:0x82F84
+SprRotSet = 0x800823B0; // rom:0x82FB0
+SprAttrReset = 0x800823DC; // rom:0x82FDC
+SprAttrSet = 0x80082418; // rom:0x83018
+SprAnimInit = 0x80082618; // rom:0x83218
+SprAnimKill = 0x80082660; // rom:0x83260
+SprAnimKillAll = 0x80082790; // rom:0x83390
+SprAnimRead = 0x80082800; // rom:0x83400
+SprAnimMake = 0x80082DAC; // rom:0x839AC
+SprAnimBmpDirectGet = 0x800830A8; // rom:0x83CA8
+SprAnimBmpGet = 0x800830C8; // rom:0x83CC8
+SprAnimBmpDataDirectGet = 0x80083118; // rom:0x83D18
+SprAnimBmpDataGet = 0x8008313C; // rom:0x83D3C
+SprAnimBmpPalDirectGet = 0x80083244; // rom:0x83E44
+SprAnimBmpPalGet = 0x80083250; // rom:0x83E50
+AnimateSprite = 0x80083394; // rom:0x83F94
+SprFinish = 0x80083640; // rom:0x84240
+
+SprDispCheck = 0x800843F0; // rom:0x84FF0
+DispCheck = 0x800845C8; // rom:0x851C8
+SprDisp = 0x800849D4; // rom:0x855D4
+PutSprite = 0x80085924; // rom:0x86524
+SprTexLoad = 0x800867B8; // rom:0x873B8
+
+
 HuPrcInit = 0x8007D4F0; // rom:0x7E0F0
 LinkProcess = 0x8007D504; // rom:0x7E104
 UnlinkProcess = 0x8007D598; // rom:0x7E198

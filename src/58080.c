@@ -261,7 +261,7 @@ INCLUDE_ASM(const s32, "58080", func_8005DCA0_5E8A0);
 
 INCLUDE_ASM(const s32, "58080", func_8005DCC8_5E8C8);
 
-INCLUDE_ASM(const s32, "58080", func_8005DD38_5E938);
+INCLUDE_ASM(const s32, "58080", BoardSpaceGet);
 
 INCLUDE_ASM(const s32, "58080", func_8005DD68_5E968);
 

@@ -10,15 +10,66 @@ osEepromWrite = 0x8009C720; //rom:0x9D320
 osCreateMesgQueue = 0x800A5720; // rom:0xA6320
 osSendMesg = 0x800A59C0; // rom:0xA65C0
 osRecvMesg = 0x800A5890; // rom:0xA6490
-SleepVProcess = 0x8007DA44; // rom:0x7E644
 GetEepType = 0x8001ACD0; // rom:0x1B8D0
 GetSaveFileChecksum = 0x8001B114; //rom:0x1BD14
 LoadOverlay = 0x80018B30; // rom:0x19730
 InitProcess = 0x80076E64; // rom:0x77A64
-SleepProcess = 0x8007D9E0; //rom:0x7E5E0
 GetCurrentPlayerIndex = 0x8005DC30; // rom:0x5E830
-_malloc = 0x80068480; // rom:0x69080
+HuMemHeapInit = 0x80068460; // rom:0x69060
+HuMemMemoryAlloc = 0x80068480; // rom:0x69080
+HuMemMemoryFree = 0x8006850C; // rom:0x6910C
+HuMemMemoryRealloc = 0x800685BC; // rom:0x691BC
+HuMemUsedMemorySizeGet = 0x80068684; // rom:0x69284
+HuMemUsedMemoryBlockGet = 0x800686B8; // rom:0x692B8
+HuMemMemoryAllocSizeGet = 0x800686E0; //rom:0x692E0
+
+
+HuMemInit = 0x80040D80; // rom:0x41980
+HuMemDirectMalloc = 0x80040DA4; // rom:0x419A4
+HuMemDirectFree = 0x80040DC8; // rom:0x419C8
+HuMemDirectRealloc = 0x80040DE4; // rom:0x419E4
+HuMemUsedMallocSizeGet = 0x80040E10; // rom:0x41A10
+HuMemUsedMallocBlockGet = 0x80040E30; // rom:0x41A30
+HuMemTempInit = 0x80040E50; // rom:0x41A50
+HuMemTempDirectMalloc = 0x80040E74; // rom:0x41A74
+HuMemTempDirectFree = 0x80040E98; // rom:0x41A98
+HuMemTempDirectRealloc = 0x80040EB4; // rom:0x41AB4
+HuMemTempUsedMallocSizeGet = 0x80040EE0; // rom:0x41AE0
+HuMemTempUsedMallocBlockGet = 0x80040F00; // rom:0x41B00
+
+HuPrcInit = 0x8007D4F0; // rom:0x7E0F0
+LinkProcess = 0x8007D504; // rom:0x7E104
+UnlinkProcess = 0x8007D598; // rom:0x7E198
+HuPrcCreate = 0x8007D5D4; // rom:0x7E1D4
+HuPrcChildLink = 0x8007D700; // rom:0x7E300
+HuPrcChildUnlink = 0x8007D754; // rom:0x7E354
+HuPrcChildCreate = 0x8007D7A4; // rom:0x7E3A4
+HuPrcChildWatch = 0x8007D7E8; // rom:0x7E3E8
+HuPrcCurrentGet = 0x8007D838; // rom:0x7E438
+HuPrcChildProcCntGet = 0x8007D844; // rom:0x7E444
+SetKillStatusProcess = 0x8007D864; // rom:0x7E464
+HuPrcKill = 0x8007D8A8; // rom:0x7E4A8
+HuPrcChildKill = 0x8007D8DC; // rom:0x7E4DC
+TerminateProcess = 0x8007D93C; // rom:0x7E53C
+HuPrcEnd = 0x8007D9A4; // rom:0x7E5A4
+HuPrcSleep = 0x8007D9E0; // rom:0x7E5E0
+HuPrcVSleep = 0x8007DA44; // rom:0x7E644
+HuPrcWakeup = 0x8007DA60; // rom:0x7E660
+HuPrcDestructorSet2 = 0x8007DA68; // rom:0x7E668
+HuPrcDestructorSet = 0x8007DA70; // rom:0x7E670
+HuPrcCall = 0x8007DAA0; // rom:0x7E6A0
+HuPrcMemAlloc = 0x8007DBFC; // rom:0x7E7FC
+HuPrcMemFree = 0x8007DC2C; // rom:0x7E82C
+
+
+
 InitFadeIn = 0x8008F544; // rom:0x90144
 InitFadeOut = 0x8008F5AC; // rom:0x901AC
 InitObjSys = 0x800760C0; // rom:0x76CC0
+omOvlGotoEx = 0x800771EC; // rom:0x77DEC
+omOvlHisChg = 0x80077538; // rom:0x78138
+omOvlCallEx = 0x800770EC; // rom:0x77CEC
+omOvlReturnEx = 0x80077160; // rom:0x77D60
+BoardSpaceGet = 0x8005DD38; // rom:0x5E938
+
 gCurrentPlayerIndex = 0x800F93C6; // type:u8

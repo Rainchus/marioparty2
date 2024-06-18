@@ -1,18 +1,18 @@
 #include "common.h"
 
-INCLUDE_ASM(const s32, "69060", func_80068460_69060);
+INCLUDE_ASM(const s32, "69060", HuMemHeapInit);
 
-INCLUDE_ASM(const s32, "69060", _malloc);
+INCLUDE_ASM(const s32, "69060", HuMemMemoryAlloc);
 
-INCLUDE_ASM(const s32, "69060", func_8006850C_6910C);
+INCLUDE_ASM(const s32, "69060", HuMemMemoryFree);
 
-INCLUDE_ASM(const s32, "69060", func_800685BC_691BC);
+INCLUDE_ASM(const s32, "69060", HuMemMemoryRealloc);
 
-INCLUDE_ASM(const s32, "69060", func_80068684_69284);
+INCLUDE_ASM(const s32, "69060", HuMemUsedMemorySizeGet);
 
-INCLUDE_ASM(const s32, "69060", func_800686B8_692B8);
+INCLUDE_ASM(const s32, "69060", HuMemUsedMemoryBlockGet);
 
-INCLUDE_ASM(const s32, "69060", func_800686E0_692E0);
+INCLUDE_ASM(const s32, "69060", HuMemMemoryAllocSizeGet);
 
 INCLUDE_ASM(const s32, "69060", func_800686F0_692F0);
 

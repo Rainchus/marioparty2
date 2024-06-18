@@ -26,48 +26,48 @@ INCLUDE_ASM(const s32, "7D1D0", func_8007C9B4_7D5B4);
 
 INCLUDE_ASM(const s32, "7D1D0", func_8007CA0C_7D60C);
 
-INCLUDE_ASM(const s32, "7D1D0", func_8007D4F0_7E0F0);
+INCLUDE_ASM(const s32, "7D1D0", HuPrcInit);
 
-INCLUDE_ASM(const s32, "7D1D0", func_8007D504_7E104);
+INCLUDE_ASM(const s32, "7D1D0", LinkProcess);
 
-INCLUDE_ASM(const s32, "7D1D0", func_8007D598_7E198);
+INCLUDE_ASM(const s32, "7D1D0", UnlinkProcess);
 
-INCLUDE_ASM(const s32, "7D1D0", func_8007D5D4_7E1D4);
+INCLUDE_ASM(const s32, "7D1D0", HuPrcCreate);
 
-INCLUDE_ASM(const s32, "7D1D0", func_8007D700_7E300);
+INCLUDE_ASM(const s32, "7D1D0", HuPrcChildLink);
 
-INCLUDE_ASM(const s32, "7D1D0", func_8007D754_7E354);
+INCLUDE_ASM(const s32, "7D1D0", HuPrcChildUnlink);
 
-INCLUDE_ASM(const s32, "7D1D0", func_8007D7A4_7E3A4);
+INCLUDE_ASM(const s32, "7D1D0", HuPrcChildCreate);
 
-INCLUDE_ASM(const s32, "7D1D0", func_8007D7E8_7E3E8);
+INCLUDE_ASM(const s32, "7D1D0", HuPrcChildWatch);
 
-INCLUDE_ASM(const s32, "7D1D0", func_8007D838_7E438);
+INCLUDE_ASM(const s32, "7D1D0", HuPrcCurrentGet);
 
-INCLUDE_ASM(const s32, "7D1D0", func_8007D844_7E444);
+INCLUDE_ASM(const s32, "7D1D0", HuPrcChildProcCntGet);
 
-INCLUDE_ASM(const s32, "7D1D0", func_8007D864_7E464);
+INCLUDE_ASM(const s32, "7D1D0", SetKillStatusProcess);
 
-INCLUDE_ASM(const s32, "7D1D0", func_8007D8A8_7E4A8);
+INCLUDE_ASM(const s32, "7D1D0", HuPrcKill);
 
-INCLUDE_ASM(const s32, "7D1D0", func_8007D8DC_7E4DC);
+INCLUDE_ASM(const s32, "7D1D0", HuPrcChildKill);
 
-INCLUDE_ASM(const s32, "7D1D0", func_8007D93C_7E53C);
+INCLUDE_ASM(const s32, "7D1D0", TerminateProcess);
 
-INCLUDE_ASM(const s32, "7D1D0", func_8007D9A4_7E5A4);
+INCLUDE_ASM(const s32, "7D1D0", HuPrcEnd);
 
-INCLUDE_ASM(const s32, "7D1D0", SleepProcess);
+INCLUDE_ASM(const s32, "7D1D0", HuPrcSleep);
 
-INCLUDE_ASM(const s32, "7D1D0", SleepVProcess);
+INCLUDE_ASM(const s32, "7D1D0", HuPrcVSleep);
 
-INCLUDE_ASM(const s32, "7D1D0", func_8007DA60_7E660);
+INCLUDE_ASM(const s32, "7D1D0", HuPrcWakeup);
 
-INCLUDE_ASM(const s32, "7D1D0", func_8007DA68_7E668);
+INCLUDE_ASM(const s32, "7D1D0", HuPrcDestructorSet2);
 
-INCLUDE_ASM(const s32, "7D1D0", func_8007DA70_7E670);
+INCLUDE_ASM(const s32, "7D1D0", HuPrcDestructorSet);
 
-INCLUDE_ASM(const s32, "7D1D0", func_8007DAA0_7E6A0);
+INCLUDE_ASM(const s32, "7D1D0", HuPrcCall);
 
-INCLUDE_ASM(const s32, "7D1D0", func_8007DBFC_7E7FC);
+INCLUDE_ASM(const s32, "7D1D0", HuPrcMemAlloc);
 
-INCLUDE_ASM(const s32, "7D1D0", func_8007DC2C_7E82C);
+INCLUDE_ASM(const s32, "7D1D0", HuPrcMemFree);

@@ -56,13 +56,13 @@ INCLUDE_ASM(const s32, "76CC0", func_80077018_77C18);
 
 INCLUDE_ASM(const s32, "76CC0", func_800770A8_77CA8);
 
-INCLUDE_ASM(const s32, "76CC0", func_800770EC_77CEC);
+INCLUDE_ASM(const s32, "76CC0", omOvlCallEx);
 
-INCLUDE_ASM(const s32, "76CC0", func_80077160_77D60);
+INCLUDE_ASM(const s32, "76CC0", omOvlReturnEx);
 
-INCLUDE_ASM(const s32, "76CC0", func_800771EC_77DEC);
+INCLUDE_ASM(const s32, "76CC0", omOvlGotoEx);
 
-INCLUDE_ASM(const s32, "76CC0", func_80077538_78138);
+INCLUDE_ASM(const s32, "76CC0", omOvlHisChg);
 
 INCLUDE_ASM(const s32, "76CC0", func_80077574_78174);
 

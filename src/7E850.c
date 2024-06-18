@@ -1,7 +1,7 @@
 #include "common.h"
 
 extern OSMesgQueue D_800FD3C8;
-void SleepVProcess(void);
+void HuPrcVSleep(void);
 
 u16 func_8007DC50_7E850(void) {
     return GetSaveFileChecksum(0, (EEPROM_MAXBLOCKS * EEPROM_BLOCK_SIZE) - 0x10);
@@ -94,7 +94,7 @@ s32 func_8007EE0C_7FA0C(unkfunc_8007EE0C* arg0, void* GetEepType, UnkEep** arg2,
         break;
     case 2:
         while (osRecvMesg(&sp10, 0, 0) != 0) {
-            SleepVProcess(); //sleep 1 frame
+            HuPrcVSleep(); //sleep 1 frame
         }
         break;
     }

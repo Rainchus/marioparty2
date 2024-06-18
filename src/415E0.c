@@ -4,29 +4,29 @@ INCLUDE_ASM(const s32, "415E0", func_800409E0_415E0);
 
 INCLUDE_ASM(const s32, "415E0", func_80040CF8_418F8);
 
-INCLUDE_ASM(const s32, "415E0", func_80040D80_41980);
+INCLUDE_ASM(const s32, "415E0", HuMemInit);
 
-INCLUDE_ASM(const s32, "415E0", func_80040DA4_419A4);
+INCLUDE_ASM(const s32, "415E0", HuMemDirectMalloc);
 
-INCLUDE_ASM(const s32, "415E0", func_80040DC8_419C8);
+INCLUDE_ASM(const s32, "415E0", HuMemDirectFree);
 
-INCLUDE_ASM(const s32, "415E0", func_80040DE4_419E4);
+INCLUDE_ASM(const s32, "415E0", HuMemDirectRealloc);
 
-INCLUDE_ASM(const s32, "415E0", func_80040E10_41A10);
+INCLUDE_ASM(const s32, "415E0", HuMemUsedMallocSizeGet);
 
-INCLUDE_ASM(const s32, "415E0", func_80040E30_41A30);
+INCLUDE_ASM(const s32, "415E0", HuMemUsedMallocBlockGet);
 
-INCLUDE_ASM(const s32, "415E0", func_80040E50_41A50);
+INCLUDE_ASM(const s32, "415E0", HuMemTempInit);
 
-INCLUDE_ASM(const s32, "415E0", func_80040E74_41A74);
+INCLUDE_ASM(const s32, "415E0", HuMemTempDirectMalloc);
 
-INCLUDE_ASM(const s32, "415E0", func_80040E98_41A98);
+INCLUDE_ASM(const s32, "415E0", HuMemTempDirectFree);
 
-INCLUDE_ASM(const s32, "415E0", func_80040EB4_41AB4);
+INCLUDE_ASM(const s32, "415E0", HuMemTempDirectRealloc);
 
-INCLUDE_ASM(const s32, "415E0", func_80040EE0_41AE0);
+INCLUDE_ASM(const s32, "415E0", HuMemTempUsedMallocSizeGet);
 
-INCLUDE_ASM(const s32, "415E0", func_80040F00_41B00);
+INCLUDE_ASM(const s32, "415E0", HuMemTempUsedMallocBlockGet);
 
 INCLUDE_ASM(const s32, "415E0", func_80040F20_41B20);
 

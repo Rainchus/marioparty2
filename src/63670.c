@@ -42,8 +42,8 @@ INCLUDE_ASM(const s32, "63670", func_80063844_64444);
 
 INCLUDE_ASM(const s32, "63670", func_800638C8_644C8);
 
-void SleepProcess(s32);                                  /* extern */
-void SleepVProcess(void);                                  /* extern */
+void HuPrcSleep(s32);                                  /* extern */
+void HuPrcVSleep(void);                                  /* extern */
 void func_800114E8_120E8(s16, s32);                      /* extern */
 s16 func_8003F6F0_402F0(s16);                       /* extern */
 void func_80062A70_63670(s32, s16, s32);                 /* extern */
@@ -51,7 +51,7 @@ void func_80062CC0_638C0(void);                            /* extern */
 void func_80063178_63D78(void);                            /* extern */
 void func_80063844_64444(void);                            /* extern */
 s32 func_800638C8_644C8(void);                          /* extern */
-void func_80077160_77D60(s32);                           /* extern */
+void omOvlReturnEx(s32);                           /* extern */
 void func_80077574_78174(void);                            /* extern */
 void func_80079464_7A064(void);                            /* extern */
 void func_800794A8_7A0A8(s32);                           /* extern */
@@ -72,10 +72,10 @@ extern u16 D_801011FC;
 
 void func_80063950_64550(void) {
     do {
-        SleepVProcess();
+        HuPrcVSleep();
     } while (func_8008F618_90218() != 0);
     while (1) {
-        SleepVProcess();
+        HuPrcVSleep();
         if (D_801011FC == 0) {
             if (D_800E1F94 < 0) {
                 continue;
@@ -84,7 +84,7 @@ void func_80063950_64550(void) {
         D_800CCC10 = 0;
     
         while (func_8008F618_90218() != 0) {
-            SleepVProcess();
+            HuPrcVSleep();
         }
         
         if (D_800E1F98 != 0) {
@@ -101,7 +101,7 @@ void func_80063950_64550(void) {
         }
         D_800CCC10 = 0x64;
         InitFadeOut(D_800E1F96, 0x10);
-        SleepProcess(0x11);
+        HuPrcSleep(17);
         D_800CCC10 = 0x65;
         func_80063178_63D78();
         D_800CCC10 = 0x66;
@@ -136,9 +136,9 @@ void func_80063950_64550(void) {
         
         D_800CCC10 = 0x69;
         func_800683BC_68FBC(0x45);
-        func_80077160_77D60(1);
+        omOvlReturnEx(1);
         func_80077574_78174();
-        SleepVProcess();
+        HuPrcVSleep();
     }
 }
 

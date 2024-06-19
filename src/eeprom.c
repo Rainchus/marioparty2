@@ -1,9 +1,9 @@
 #include "common.h"
 
 extern u8 D_800C9B60[];
-extern u8 D_800D89F0[];
-extern u8 D_800D89F8[];
-extern OSMesgQueue D_800FA5E0;
+extern u8 D_800D89F0_D95F0[];
+extern u8 D_800D89F8_D95F8[];
+extern OSMesgQueue D_800FA5E0_FB1E0;
 
 void func_800A5210_A5E10(u8*, u8*, u16);
 
@@ -13,10 +13,10 @@ s32 GetEepType(s8** arg0) {
     s16 i;
 
     var_s1 = 0;
-    eepromProbeResult = osEepromProbe(&D_800FA5E0);
+    eepromProbeResult = osEepromProbe(&D_800FA5E0_FB1E0);
     if ((eepromProbeResult) == 0) {
         for (i = 0; i < 4; i++) {
-            eepromProbeResult = osEepromProbe(&D_800FA5E0);
+            eepromProbeResult = osEepromProbe(&D_800FA5E0_FB1E0);
             if (eepromProbeResult != 0) {
                 break;
             }
@@ -29,28 +29,28 @@ s32 GetEepType(s8** arg0) {
 
     ASSERT(eepromProbeResult == EEPROM_TYPE_4K);
 
-    if (osEepromLongRead(&D_800FA5E0, 0, D_800D89F0, (EEPROM_MAXBLOCKS * EEPROM_BLOCK_SIZE)) != 0) {
+    if (osEepromLongRead(&D_800FA5E0_FB1E0, 0, D_800D89F0_D95F0, (EEPROM_MAXBLOCKS * EEPROM_BLOCK_SIZE)) != 0) {
         return EEPROM_TYPE_16K;
     }
 
     i = 1;
     if (D_800C9B60[i] != 0) {
         while (1) {
-            if (D_800D89F0[i] != D_800C9B60[i]) {
+            if (D_800D89F0_D95F0[i] != D_800C9B60[i]) {
                 var_s1 = 1;
                 //Write "HUDSON\0\0" header
                 for (i = 0; i < 8; i++) {
-                    D_800D89F0[i] = D_800C9B60[i];
+                    D_800D89F0_D95F0[i] = D_800C9B60[i];
                 }
 
                 for (i = 8; i < EEPROM_MAXBLOCKS * EEPROM_BLOCK_SIZE; i++) {
-                    D_800D89F0[i] = 0;
+                    D_800D89F0_D95F0[i] = 0;
                 }
 
-                if (osEepromLongWrite(&D_800FA5E0, 1, D_800D89F8, 0x1F8) != 0) {
+                if (osEepromLongWrite(&D_800FA5E0_FB1E0, 1, D_800D89F8_D95F8, 0x1F8) != 0) {
                     return EEPROM_TYPE_16K;
                 }
-                if (osEepromLongWrite(&D_800FA5E0, 0, D_800D89F0, 8) == 0) {
+                if (osEepromLongWrite(&D_800FA5E0_FB1E0, 0, D_800D89F0_D95F0, 8) == 0) {
                     **arg0 = var_s1;
                     return 0;
                 }
@@ -84,14 +84,14 @@ s32 func_8001AF0C_1BB0C(UnkEep* arg0) {
                 if (arg0->unk0 + i >= (EEPROM_MAXBLOCKS * EEPROM_BLOCK_SIZE)) {
                     break;
                 }
-                D_800D89F0[arg0->unk0 + i] = arg0->unk4[i];
+                D_800D89F0_D95F0[arg0->unk0 + i] = arg0->unk4[i];
             }
         
         
         eepromBlockCount = (arg0->unk0 / EEPROM_BLOCK_SIZE);
         alignmentOffset = arg0->unk0 & 7;
         startOffset = (arg0->unk8 + alignmentOffset + 7) & 0xFFF8;
-        return (osEepromLongWrite(&D_800FA5E0, eepromBlockCount, &D_800D89F0[eepromBlockCount * EEPROM_BLOCK_SIZE], startOffset) != 0) * 2;
+        return (osEepromLongWrite(&D_800FA5E0_FB1E0, eepromBlockCount, &D_800D89F0_D95F0[eepromBlockCount * EEPROM_BLOCK_SIZE], startOffset) != 0) * 2;
     }
     return 2;
 }
@@ -108,10 +108,10 @@ void func_8001AFD8_1BBD8(s32 arg0, UnkEep* arg1, s16 arg2) {
 }
 
 s32 func_8001B014_1BC14(UnkEep* arg0) {
-    if (osEepromLongRead(&D_800FA5E0, 0, D_800D89F0, (EEPROM_MAXBLOCKS * EEPROM_BLOCK_SIZE)) != 0) {
+    if (osEepromLongRead(&D_800FA5E0_FB1E0, 0, D_800D89F0_D95F0, (EEPROM_MAXBLOCKS * EEPROM_BLOCK_SIZE)) != 0) {
         return 2;
     }
-    func_800A5210_A5E10(&D_800D89F0[arg0->unk0], arg0->unk4, arg0->unk8);
+    func_800A5210_A5E10(&D_800D89F0_D95F0[arg0->unk0], arg0->unk4, arg0->unk8);
     return 0;
 }
 
@@ -127,7 +127,7 @@ void func_8001B078_1BC78(s32 arg0, UnkEep* arg1, s16 arg2) {
 }
 
 s32 func_8001B0B4_1BCB4(void) {
-    return (osEepromWrite(&D_800FA5E0, 0, &D_800C9B60[1]) != 0) * 2;
+    return (osEepromWrite(&D_800FA5E0_FB1E0, 0, &D_800C9B60[1]) != 0) * 2;
 }
 
 s32 func_8001B0E8_1BCE8(UnkEep* arg0) {
@@ -146,7 +146,7 @@ s32 GetSaveFileChecksum(u16 checksumAddrOffset, u16 size) {
     while (size--) {
         offset = checksumAddrOffset;
         checksumAddrOffset++;
-        checksumTotal += D_800D89F0[offset];
+        checksumTotal += D_800D89F0_D95F0[offset];
         if ((checksumAddrOffset) >= (EEPROM_MAXBLOCKS * EEPROM_BLOCK_SIZE)) {
             break;
         }

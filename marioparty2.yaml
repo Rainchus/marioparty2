@@ -9,6 +9,7 @@ options:
   header_encoding: ASCII
   platform: n64
   symbol_name_format: $VRAM_$ROM
+  symbol_name_format_no_rom: $VRAM
   undefined_funcs_auto_path: undefined_funcs_auto.txt
   undefined_syms_auto_path: undefined_syms_auto.txt
   symbol_addrs_path: symbol_addrs.txt
@@ -36,7 +37,7 @@ segments:
     type: code
     start: 0x1000
     vram: 0x80000400
-    #bss_size: 0x3DC10
+    bss_size: 0x2DC10
     subsegments:
       - [0x1000, asm]
       - [0xB6E0, c]
@@ -337,7 +338,7 @@ segments:
       - [0xB8920, c]
       - [0xB8AC0, c]
       - [0xB8FB0, data]
-      #- {start: 0x0D57F0, type: bss, vram: 0x800D4BF0, name: globalBSS }
+      - {0x0D57F0, type: bss, vram: 0x800D4BF0, name: globalBSS }
 
   - type: code
     start: 0x0D57F0

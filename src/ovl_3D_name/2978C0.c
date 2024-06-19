@@ -26,8 +26,9 @@ void func_8008CE5C_8DA5C(void);
 void InitFadeIn(s32, s32);
 void InitFadeOut(s32, s32);
 s32 func_8008F618_90218();
+void func_80062BE0_637E0(void);
 
-extern u16 D_8010163C;
+extern u16 D_8010163C_10223C;
 
 void func_80102830_2978C0(void) {
     if (func_80068328_68F28(0) != 0) {
@@ -65,7 +66,7 @@ void func_801028CC_29795C(void) {
         func_800451F8_45DF8(3, 0xD);
         func_800453C4_45FC4(0xD, 0xB);
         func_80045488_46088(0xD, 0xE);
-    } while (!(D_8010163C & 0x1000));
+    } while (!(D_8010163C_10223C & 0x1000));
     
     func_8004CD70_4D970(temp_s0);
     InitFadeOut(0xFF, 8);

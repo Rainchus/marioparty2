@@ -65,7 +65,6 @@ extern s16 D_800E1F98_E2B98;
 extern s32 D_800E1F9C_E2B9C;
 extern s16 D_800E1FA0_E2BA0;
 extern s16 D_800F64B0_F70B0;
-extern s16 D_800F93AA_F9FAA;
 extern s16 D_800F93C8_F9FC8;
 extern s16 D_800FA652_FB252;
 extern u16 D_801011FC_101DFC;
@@ -108,7 +107,7 @@ void func_80063950_64550(void) {
         
         if (D_800E1F94_E2B94 & 0x20) {
             D_800E1F82_E2B82 = 1;
-            if ((D_800F93AA_F9FAA == 5) && (func_80068328_68F28(0xB) == 0)) {
+            if ((D_800F93A8.unk_02 == 5) && (func_80068328_68F28(0xB) == 0)) {
                 func_80062A70_63670(0x61, 0, 0x192);
             }
             func_80062A70_63670(0x52, 0, 0x192);

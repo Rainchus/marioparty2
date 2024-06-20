@@ -1,6 +1,6 @@
 #include "common.h"
 
-void func_80066F6C_67B6C(char*, s16);
+void func_80066F6C_67B6C(void*, s16);
 extern s16 D_800CD414_CE014;
 
 void func_80102830_2978C0(void);

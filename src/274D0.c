@@ -89,7 +89,7 @@ INCLUDE_ASM(const s32, "274D0", func_80029834_2A434);
 
 INCLUDE_ASM(const s32, "274D0", func_800298A4_2A4A4);
 
-INCLUDE_ASM(const s32, "274D0", func_800298E8_2A4E8);
+INCLUDE_ASM(const s32, "274D0", HmfModelObjAttrSet);
 
 INCLUDE_ASM(const s32, "274D0", func_80029988_2A588);
 

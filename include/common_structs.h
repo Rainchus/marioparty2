@@ -28,4 +28,10 @@ typedef struct board_overlay_entrypoint {
     void (*fn)();
 } board_overlay_entrypoint;
 
+typedef struct UnkBoardStatus {
+    char unk0[2];
+    s16 unk_02;
+    char unk4[0x24];
+} UnkBoardStatus; //sizeof 0x28
+
 #endif

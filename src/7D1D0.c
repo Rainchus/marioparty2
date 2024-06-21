@@ -6,7 +6,7 @@ INCLUDE_ASM(const s32, "7D1D0", func_8007C668_7D268);
 
 INCLUDE_ASM(const s32, "7D1D0", func_8007C6CC_7D2CC);
 
-INCLUDE_ASM(const s32, "7D1D0", func_8007C74C_7D34C);
+INCLUDE_ASM(const s32, "7D1D0", DrawDebugText);
 
 INCLUDE_ASM(const s32, "7D1D0", func_8007C7F4_7D3F4);
 

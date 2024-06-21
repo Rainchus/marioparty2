@@ -1,33 +1,5 @@
 #include "common.h"
 
-void func_80062B14_63714(void);
-s32 func_80068328_68F28(s32);
-void func_8006836C_68F6C(s32);
-void func_800683BC_68FBC(s32);
-void omInitObjMan(s32, s32);
-void omOvlGotoEx(s32, s32, u16);
-void omOvlHisChg(s32, s32, s32, s32);
-void omAddPrcObj(void* userFunc, u16 priority, s32 stack_size, s32 extra_data_size);
-void func_80079128_79D28(void);
-void func_801028CC_29795C(void);
-void HuPrcVSleep(void); 
-void func_80044F88_45B88(s32, s32);
-void func_80045184_45D84(s32, s32);
-void func_800451F8_45DF8(s32, s32);
-void func_800453C4_45FC4(s32, s32);
-void func_80045488_46088(s32, s32);
-void func_800455CC_461CC(s32, s32);
-s32 func_8004CC7C_4D87C(s32, s32, s32);
-void func_8004CD70_4D970(s32);
-void omOvlReturnEx(s32);
-void omOvlKill(void);
-void func_80088640_89240(void);
-void func_8008CE5C_8DA5C(void);
-void InitFadeIn(s32, s32);
-void InitFadeOut(s32, s32);
-s32 func_8008F618_90218();
-void func_80062BE0_637E0(void);
-
 extern u16 D_8010163C_10223C;
 
 void func_80102830_2978C0(void) {

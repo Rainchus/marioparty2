@@ -339,7 +339,6 @@ segments:
       - [0xB8AC0, c]
       - [0xB8FB0, data]
       - {0xD57F0, type: bss, vram: 0x800D4BF0, name: globalBSS }
-
   - type: code
     start: 0x0D57F0
     vram: 0x80102800

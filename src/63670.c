@@ -42,21 +42,6 @@ INCLUDE_ASM(const s32, "63670", func_80063844_64444);
 
 INCLUDE_ASM(const s32, "63670", func_800638C8_644C8);
 
-void HuPrcSleep(s32);                                  /* extern */
-void HuPrcVSleep(void);                                  /* extern */
-void func_800114E8_120E8(s16, s32);                      /* extern */
-s16 func_8003F6F0_402F0(s16);                       /* extern */
-void func_80062A70_63670(s32, s16, s32);                 /* extern */
-void func_80062CC0_638C0(void);                            /* extern */
-void func_80063178_63D78(void);                            /* extern */
-void func_80063844_64444(void);                            /* extern */
-s32 func_800638C8_644C8(void);                          /* extern */
-void omOvlReturnEx(s32);                           /* extern */
-void omOvlKill(void);                            /* extern */
-void func_80079464_7A064(void);                            /* extern */
-void func_800794A8_7A0A8(s32);                           /* extern */
-void InitFadeOut(s16, s32);                      /* extern */
-s32 func_8008F618_90218(void);                          /* extern */
 extern s32 D_800CCC10;
 extern s16 D_800E1F82_E2B82;
 extern s16 D_800E1F94_E2B94;

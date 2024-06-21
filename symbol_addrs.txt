@@ -140,7 +140,11 @@ omOvlCallEx = 0x800770EC; // rom:0x77CEC
 omOvlReturnEx = 0x80077160; // rom:0x77D60
 BoardSpaceGet = 0x8005DD38; // rom:0x5E938
 
+DrawDebugText = 0x8007C74C; // rom:0x7D34C
+ReadMainFS = 0x80017680; // rom:0x18280
+
 //data and bss
+overlay_table = 0x800C8874; // rom:0xC9474 size:0x1050
 rnd_seed = 0x800C99B4;
 omovlhis = 0x800FDBE8; // size:0x60
 omovlhisidx = 0x800CD418; // type:s16
@@ -150,3 +154,7 @@ D_800C9B60 = 0x800C9B60; // size:0x10
 D_800CCC10 = 0x800CCC10; // type:s16
 D_800F93A8 = 0x800F93A8; // size:0x28
 D_800F8C60 = 0x800F8C60; // size:0xC4
+
+debug_gPlayers = 0x801072B8; // size:0xD0 segment:Debug
+debug_ovl_table = 0x80105E50; // size:0x650 segment:Debug
+debug_unkTable = 0x801064A0; // type:s32 size:0x650 segment:Debug

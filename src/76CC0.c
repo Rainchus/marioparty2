@@ -1,14 +1,46 @@
 #include "common.h"
 
-typedef struct omOvlHisData {
+typedef struct omOvlHisData { //Object Manager History Data
 /* 0x00 */ s32 overlayID;
 /* 0x04 */ s16 event;
 /* 0x06 */ u16 stat;
 } omOvlHisData; //sizeof 0x08
 
-void omOvlGotoEx(s32, s32, u16);
+extern s16 D_800CD430_CE030;
+extern u16 D_800F9562_FA162;
+extern s16 D_800FCE84_FDA84;
+extern u16 D_800FFDF2_1009F2;
+extern u16 D_80102702_103302;
+extern s8 D_800CD412_CE012;
+extern u16 D_800E2130_E2D30;
+extern u16 D_800F93A0_F9FA0;
 extern s16 omovlhisidx;
 extern omOvlHisData omovlhis[12];
+extern u8 D_800CD360_CDF60[][2];
+extern u8 D_800CD3F0_CDFF0[][2];
+extern u16 D_800CD404_CE004;
+extern s32 D_800CD408_CE008;
+extern s16 D_800CD414_CE014;
+extern s16 D_800CD416_CE016;
+extern s8 D_800CD41C_CE01C;
+extern u8 D_800CD434_CE034;
+extern s16 D_800CD528_CE128;
+extern s16 D_800CD52C_CE12C;
+extern u8 D_800F92B2_F9EB2;
+extern s16 D_800F93C8_F9FC8;
+extern s32 D_800FA63C_FB23C;
+extern u16 D_800FA63E_FB23E;
+
+void func_80079338_79F38(s32);
+void func_8007935C_79F5C(s16 arg0, s16 arg1, s16 arg2);
+void func_8001A4C0_1B0C0(void);
+void func_80023124_23D24(void);
+void func_8002864C_2924C(void);
+void func_80029708_2A308(s32);
+void func_8002F1A4_2FDA4(void);
+void func_80069698_6A298(void);
+void omDestroyObjMan(void);
+void omOvlGotoEx(s32, s32, u16);
 
 INCLUDE_ASM(const s32, "76CC0", omInitObjMan);
 
@@ -96,11 +128,121 @@ s32 omOvlReturnEx(s16 level) {
     return 1;
 }
 
+#ifdef NON_EQUIVALENT
+void omOvlGotoEx(s32 arg0, s16 arg1, u16 arg2) {
+    u8 var_a0_3;
+    u8 var_v1_2;
+    s32 var_v0_3;
+
+    if ((D_800FA63C_FB23C != 0x73) && (D_800FA63C_FB23C != 0)) {
+        if ((D_800FA63C_FB23C != 0x5F) && (D_800FA63C_FB23C != 0x6F) && (D_800FA63C_FB23C != 0x70)) {
+            D_800CD408_CE008 = D_800FA63C_FB23C;
+        }
+        if ((D_800FA63C_FB23C != 0x73) && (D_800FA63C_FB23C != 0)) {
+            D_800CD404_CE004 = D_800FA63E_FB23E;
+        }
+    }
+
+    D_800CD41C_CE01C = 1;
+    D_800FA63C_FB23C = arg0;
+    D_800CD414_CE014 = arg1;
+    D_800CD416_CE016 = arg2;
+    D_800FCE84_FDA84 = 0;
+
+    if (arg2 & 0x40 && D_800F92B2_F9EB2 != 2) {
+        func_80079338_79F38(2);
+    } else if (arg2 & 0x80 && (D_800F92B2_F9EB2 != 3)) {
+        func_80079338_79F38(3);
+    }
+
+    if (arg2 & 1) {
+        if (D_800FFDF2_1009F2 == 0x1000 && (D_800F9562_FA162 == 0x2004) && (D_80102702_103302 == 0x180)) {
+            func_8007935C_79F5C(0x1000, 0x2000, 0x180); //this line is incorrect
+        } else {
+            func_8007935C_79F5C(0x1000, 0x2004, 0x180); //maybe this as well
+        }
+    } else if ((arg2 & 2) && (D_800FFDF2_1009F2 != 0x800 || (D_800F9562_FA162 == 0x1000) && (D_80102702_103302 != 0x180))) {
+        func_8007935C_79F5C(0x800, 0x1000, 0x180);
+    } else if (arg2 & 4 && (D_800FFDF2_1009F2 != 0x1000 || (D_800F9562_FA162 != 0x2004) || (D_80102702_103302 != 0x180))) {
+        func_8007935C_79F5C(0x1000, 0x2004, 0x180);
+    }
+
+    if (!(arg2 & 0x2000)) {
+        if (arg2 & 2) {
+            var_a0_3 = D_800CD3F0_CDFF0[D_800F93A8.unk_02][0];
+            var_v1_2 = D_800CD3F0_CDFF0[D_800F93A8.unk_02][1];
+            var_v0_3 = arg2 & 0x100;
+        } else if (arg2 & 4) {
+            var_a0_3 = 1;
+            if ((arg0 == 0x5F) || (arg0 == 0x6F)) {
+                var_v1_2 = 0x14;
+                var_v0_3 = arg2 & 0x100;
+            } else {
+                var_a0_3 = D_800CD360_CDF60[D_800F93C8_F9FC8 - 1][0];
+                var_v1_2 = D_800CD360_CDF60[D_800F93C8_F9FC8 - 1][1];
+                var_v0_3 = arg2 & 0x100;
+            }
+        } else {
+            var_a0_3 = 1;
+            var_v1_2 = 0x14;
+            var_v0_3 = arg2 & 0x100;
+        }
+
+        if (var_v0_3) {
+            var_a0_3 = 1;
+            var_v1_2 = 0x14;
+        } else if (arg2 & 0x200) {
+            var_a0_3 = 2;
+            var_v1_2 = 0x14;
+        } else if (arg2 & 0x400) {
+            var_a0_3 = 3;
+            var_v1_2 = 0x14;
+        } else if (arg2 & 0x800) {
+            var_a0_3 = 4;
+            var_v1_2 = 0x14;
+        } else if (arg2 & 0x1000) {
+            var_a0_3 = 5;
+            var_v1_2 = 0x14;
+        }
+
+        D_800CD434_CE034 = var_v1_2;
+        D_800CD528_CE128 = var_a0_3 & 0xFF;
+    }
+
+    if (((((arg0 - 0x5A) < 2U) || (arg0 == 0x5C)) || ((arg0 == 0x5D) || (arg0 == 0x62)) || (arg0 == 0x58))) {
+        D_800CD52C_CE12C = 1;
+        return;
+    }
+    D_800CD52C_CE12C = 0;
+}
+#else
 INCLUDE_ASM(const s32, "76CC0", omOvlGotoEx);
+#endif
 
-INCLUDE_ASM(const s32, "76CC0", omOvlHisChg);
+void omOvlHisChg(s16 arg0, s32 overlay, s16 event, s16 stat) {
+    s32 ovlhisIndex;
+    omOvlHisData* history;
 
-INCLUDE_ASM(const s32, "76CC0", omOvlKill);
+    ovlhisIndex = omovlhisidx - arg0;
+    if (ovlhisIndex >= 0) {
+        history = &omovlhis[ovlhisIndex];
+        history->overlayID = overlay;
+        history->event = event;
+        history->stat = stat;
+    }
+}
+
+void omOvlKill(void) {
+    D_800CD412_CE012 = 4;
+    D_800E2130_E2D30 = D_800F93A0_F9FA0;
+    func_80069698_6A298();
+    func_8002864C_2924C();
+    func_8002F1A4_2FDA4();
+    omDestroyObjMan();
+    func_8001A4C0_1B0C0();
+    func_80023124_23D24();
+    func_80029708_2A308(1);
+}
 
 INCLUDE_ASM(const s32, "76CC0", omMain);
 
@@ -122,7 +264,13 @@ INCLUDE_ASM(const s32, "76CC0", func_80079294_79E94);
 
 INCLUDE_ASM(const s32, "76CC0", func_80079338_79F38);
 
-INCLUDE_ASM(const s32, "76CC0", func_8007935C_79F5C);
+void func_8007935C_79F5C(s16 arg0, s16 arg1, s16 arg2) {
+    D_800FFDF2_1009F2 = arg0;
+    D_800F9562_FA162 = arg1;
+    D_80102702_103302 = arg2;
+    D_800CD430_CE030 = 1;
+    D_800FCE84_FDA84 = 4;
+}
 
 INCLUDE_ASM(const s32, "76CC0", func_80079390_79F90);
 

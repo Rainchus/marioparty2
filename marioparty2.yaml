@@ -97,7 +97,7 @@ segments:
       - [0x7C9A0, c]
       - [0x7CF70, c]
       - [0x7D1D0, c]
-      - [0x7E0F0, c, process]
+      - [0x7E0F0, c, "game/process"]
       - [0x7E850, c]
       - [0x7FAE0, c]
       - [0x80230, c]
@@ -343,7 +343,7 @@ segments:
   - type: code
     start: 0x0D57F0
     vram: 0x80102800
-    dir: ovl_00_Debug
+    dir: overlays/ovl_00_Debug
     name: Debug
     overlay: True
     exclusive_ram_id: minigame
@@ -356,7 +356,7 @@ segments:
   - type: code
     start: 0x0DA290
     vram: 0x80102800
-    dir: ovl_01_BowserSlots
+    dir: overlays/ovl_01_BowserSlots
     name: BowserSlots
     overlay: True
     exclusive_ram_id: minigame
@@ -369,7 +369,7 @@ segments:
   - type: code
     start: 0x0E3A40
     vram: 0x80102800
-    dir: ovl_02_RollOutTheBarrels
+    dir: overlays/ovl_02_RollOutTheBarrels
     name: RollOutTheBarrels
     overlay: True
     exclusive_ram_id: minigame
@@ -381,7 +381,7 @@ segments:
   - type: code
     start: 0x0F3F10
     vram: 0x80102800
-    dir: ovl_03_CoffinCongestion
+    dir: overlays/ovl_03_CoffinCongestion
     name: CoffinCongestion
     overlay: True
     exclusive_ram_id: minigame
@@ -393,7 +393,7 @@ segments:
   - type: code
     start: 0x0F84C0
     vram: 0x80102800
-    dir: ovl_04_HammerSlammer
+    dir: overlays/ovl_04_HammerSlammer
     name: HammerSlammer
     overlay: True
     exclusive_ram_id: minigame
@@ -405,7 +405,7 @@ segments:
   - type: code
     start: 0x0FF7E0
     vram: 0x80102800
-    dir: ovl_05_GiveMeABrake
+    dir: overlays/ovl_05_GiveMeABrake
     name: GiveMeABrake
     overlay: True
     exclusive_ram_id: minigame
@@ -417,7 +417,7 @@ segments:
   - type: code
     start: 0x105FC0
     vram: 0x80102800
-    dir: ovl_06_MalletGoRound
+    dir: overlays/ovl_06_MalletGoRound
     name: MalletGoRound
     overlay: True
     exclusive_ram_id: minigame
@@ -429,7 +429,7 @@ segments:
   - type: code
     start: 0x10BE10
     vram: 0x80102800
-    dir: ovl_07_GrabBag
+    dir: overlays/ovl_07_GrabBag
     name: GrabBag
     overlay: True
     exclusive_ram_id: minigame
@@ -441,7 +441,7 @@ segments:
   - type: code
     start: 0x113C80
     vram: 0x80102800
-    dir: ovl_08_LavaTileIsle
+    dir: overlays/ovl_08_LavaTileIsle
     name: LavaTileIsle
     overlay: True
     exclusive_ram_id: minigame
@@ -453,7 +453,7 @@ segments:
   - type: code
     start: 0x11B910
     vram: 0x80102800
-    dir: ovl_09_BumperBalloonCars
+    dir: overlays/ovl_09_BumperBalloonCars
     name: BumperBalloonCars
     overlay: True
     exclusive_ram_id: minigame
@@ -465,7 +465,7 @@ segments:
   - type: code
     start: 0x121740
     vram: 0x80102800
-    dir: ovl_0A_RakinEmIn
+    dir: overlays/ovl_0A_RakinEmIn
     name: RakinEmIn
     overlay: True
     exclusive_ram_id: minigame
@@ -477,7 +477,7 @@ segments:
   - type: code
     start: 0x125FE0
     vram: 0x80102800
-    dir: ovl_0B_DayAtTheRaces
+    dir: overlays/ovl_0B_DayAtTheRaces
     name: DayAtTheRaces
     overlay: True
     exclusive_ram_id: minigame
@@ -489,7 +489,7 @@ segments:
   - type: code
     start: 0x12E3F0
     vram: 0x80102800
-    dir: ovl_0C_HotRopeJump
+    dir: overlays/ovl_0C_HotRopeJump
     name: HotRopeJump
     overlay: True
     exclusive_ram_id: minigame
@@ -501,7 +501,7 @@ segments:
   - type: code
     start: 0x138530
     vram: 0x80102800
-    dir: ovl_0D_HotBobOmb
+    dir: overlays/ovl_0D_HotBobOmb
     name: HotBobOmb
     overlay: True
     exclusive_ram_id: minigame
@@ -513,7 +513,7 @@ segments:
   - type: code
     start: 0x13CB90
     vram: 0x80102800
-    dir: ovl_0E_BowlOver
+    dir: overlays/ovl_0E_BowlOver
     name: BowlOver
     overlay: True
     exclusive_ram_id: minigame
@@ -525,7 +525,7 @@ segments:
   - type: code
     start: 0x144190
     vram: 0x80102800
-    dir: ovl_0F_RainbowRun
+    dir: overlays/ovl_0F_RainbowRun
     name: RainbowRun
     overlay: True
     exclusive_ram_id: minigame
@@ -537,7 +537,7 @@ segments:
   - type: code
     start: 0x14C320
     vram: 0x80102800
-    dir: ovl_10_CraneGame
+    dir: overlays/ovl_10_CraneGame
     name: CraneGame
     overlay: True
     exclusive_ram_id: minigame
@@ -549,7 +549,7 @@ segments:
   - type: code
     start: 0x155C90
     vram: 0x80102800
-    dir: ovl_11_MoveToTheMusic
+    dir: overlays/ovl_11_MoveToTheMusic
     name: MoveToTheMusic
     overlay: True
     exclusive_ram_id: minigame
@@ -561,7 +561,7 @@ segments:
   - type: code
     start: 0x160B20
     vram: 0x80102800
-    dir: ovl_12_BobOmbBarrage
+    dir: overlays/ovl_12_BobOmbBarrage
     name: BobOmbBarrage
     overlay: True
     exclusive_ram_id: minigame
@@ -573,7 +573,7 @@ segments:
   - type: code
     start: 0x1675A0
     vram: 0x80102800
-    dir: ovl_13_LookAway
+    dir: overlays/ovl_13_LookAway
     name: LookAway
     overlay: True
     exclusive_ram_id: minigame
@@ -585,7 +585,7 @@ segments:
   - type: code
     start: 0x16B740
     vram: 0x80102800
-    dir: ovl_14_ShockDropOrRoll
+    dir: overlays/ovl_14_ShockDropOrRoll
     name: ShockDropOrRoll
     overlay: True
     exclusive_ram_id: minigame
@@ -597,7 +597,7 @@ segments:
   - type: code
     start: 0x170190
     vram: 0x80102800
-    dir: ovl_15_LightsOut
+    dir: overlays/ovl_15_LightsOut
     name: LightsOut
     overlay: True
     exclusive_ram_id: minigame
@@ -609,7 +609,7 @@ segments:
   - type: code
     start: 0x17A5B0
     vram: 0x80102800
-    dir: ovl_16_FiletRelay
+    dir: overlays/ovl_16_FiletRelay
     name: FiletRelay
     overlay: True
     exclusive_ram_id: minigame
@@ -621,7 +621,7 @@ segments:
   - type: code
     start: 0x181420
     vram: 0x80102800
-    dir: ovl_17_Archerival
+    dir: overlays/ovl_17_Archerival
     name: Archerival
     overlay: True
     exclusive_ram_id: minigame
@@ -633,7 +633,7 @@ segments:
   - type: code
     start: 0x186490
     vram: 0x80102800
-    dir: ovl_18_ToadBandstand
+    dir: overlays/ovl_18_ToadBandstand
     name: ToadBandstand
     overlay: True
     exclusive_ram_id: minigame
@@ -645,7 +645,7 @@ segments:
   - type: code
     start: 0x1913A0
     vram: 0x80102800
-    dir: ovl_19_BobsledRun
+    dir: overlays/ovl_19_BobsledRun
     name: BobsledRun
     overlay: True
     exclusive_ram_id: minigame
@@ -657,7 +657,7 @@ segments:
   - type: code
     start: 0x19B590
     vram: 0x80102800
-    dir: ovl_1A_HandcarHavoc
+    dir: overlays/ovl_1A_HandcarHavoc
     name: HandcarHavoc
     overlay: True
     exclusive_ram_id: minigame
@@ -669,7 +669,7 @@ segments:
   - type: code
     start: 0x1A40A0
     vram: 0x80102800
-    dir: ovl_1B_BallonBurst
+    dir: overlays/ovl_1B_BallonBurst
     name: BallonBurst
     overlay: True
     exclusive_ram_id: minigame
@@ -681,7 +681,7 @@ segments:
   - type: code
     start: 0x1ABE90
     vram: 0x80102800
-    dir: ovl_1C_SkyPilots
+    dir: overlays/ovl_1C_SkyPilots
     name: SkyPilots
     overlay: True
     exclusive_ram_id: minigame
@@ -693,7 +693,7 @@ segments:
   - type: code
     start: 0x1B4950
     vram: 0x80102800
-    dir: ovl_1D_SpeedHockey
+    dir: overlays/ovl_1D_SpeedHockey
     name: SpeedHockey
     overlay: True
     exclusive_ram_id: minigame
@@ -705,7 +705,7 @@ segments:
   - type: code
     start: 0x1B8DF0
     vram: 0x80102800
-    dir: ovl_1E_CakeFactory
+    dir: overlays/ovl_1E_CakeFactory
     name: CakeFactory
     overlay: True
     exclusive_ram_id: minigame
@@ -717,7 +717,7 @@ segments:
   - type: code
     start: 0x1BE380
     vram: 0x80102800
-    dir: ovl_1F_DungeonDash
+    dir: overlays/ovl_1F_DungeonDash
     name: DungeonDash
     overlay: True
     exclusive_ram_id: minigame
@@ -729,7 +729,7 @@ segments:
   - type: code
     start: 0x1C6BB0
     vram: 0x80102800
-    dir: ovl_20_MagnetCarta
+    dir: overlays/ovl_20_MagnetCarta
     name: MagnetCarta
     overlay: True
     exclusive_ram_id: minigame
@@ -741,7 +741,7 @@ segments:
   - type: code
     start: 0x1CFB60
     vram: 0x80102800
-    dir: ovl_21_FaceLift
+    dir: overlays/ovl_21_FaceLift
     name: FaceLift
     overlay: True
     exclusive_ram_id: minigame
@@ -753,7 +753,7 @@ segments:
   - type: code
     start: 0x1D6EE0
     vram: 0x80102800
-    dir: ovl_22_ShellShocked
+    dir: overlays/ovl_22_ShellShocked
     name: ShellShocked
     overlay: True
     exclusive_ram_id: minigame
@@ -765,7 +765,7 @@ segments:
   - type: code
     start: 0x1E1C50
     vram: 0x80102800
-    dir: ovl_23_CrazyCutters
+    dir: overlays/ovl_23_CrazyCutters
     name: CrazyCutters
     overlay: True
     exclusive_ram_id: minigame
@@ -777,7 +777,7 @@ segments:
   - type: code
     start: 0x1E89B0
     vram: 0x80102800
-    dir: ovl_24_ToadInTheBox
+    dir: overlays/ovl_24_ToadInTheBox
     name: ToadInTheBox
     overlay: True
     exclusive_ram_id: minigame
@@ -789,7 +789,7 @@ segments:
   - type: code
     start: 0x1F1540
     vram: 0x80102800
-    dir: ovl_25_MechaMarathon
+    dir: overlays/ovl_25_MechaMarathon
     name: MechaMarathon
     overlay: True
     exclusive_ram_id: minigame
@@ -801,7 +801,7 @@ segments:
   - type: code
     start: 0x1F71A0
     vram: 0x80102800
-    dir: ovl_26_RollCall
+    dir: overlays/ovl_26_RollCall
     name: RollCall
     overlay: True
     exclusive_ram_id: minigame
@@ -814,7 +814,7 @@ segments:
   - type: code
     start: 0x1FEE60
     vram: 0x80102800
-    dir: ovl_27_AbandonShip
+    dir: overlays/ovl_27_AbandonShip
     name: AbandonShip
     overlay: True
     exclusive_ram_id: minigame
@@ -826,7 +826,7 @@ segments:
   - type: code
     start: 0x205BA0
     vram: 0x80102800
-    dir: ovl_28_PlatformPeril
+    dir: overlays/ovl_28_PlatformPeril
     name: PlatformPeril
     overlay: True
     exclusive_ram_id: minigame
@@ -838,7 +838,7 @@ segments:
   - type: code
     start: 0x20C750
     vram: 0x80102800
-    dir: ovl_29_TotemPolePound
+    dir: overlays/ovl_29_TotemPolePound
     name: TotemPolePound
     overlay: True
     exclusive_ram_id: minigame
@@ -850,7 +850,7 @@ segments:
   - type: code
     start: 0x2111A0
     vram: 0x80102800
-    dir: ovl_2A_BumperBalls
+    dir: overlays/ovl_2A_BumperBalls
     name: BumperBalls
     overlay: True
     exclusive_ram_id: minigame
@@ -862,7 +862,7 @@ segments:
   - type: code
     start: 0x218BF0
     vram: 0x80102800
-    dir: ovl_2B_BombsAway
+    dir: overlays/ovl_2B_BombsAway
     name: BombsAway
     overlay: True
     exclusive_ram_id: minigame
@@ -874,7 +874,7 @@ segments:
   - type: code
     start: 0x223D30
     vram: 0x80102800
-    dir: ovl_2C_TipsyTourney
+    dir: overlays/ovl_2C_TipsyTourney
     name: TipsyTourney
     overlay: True
     exclusive_ram_id: minigame
@@ -886,7 +886,7 @@ segments:
   - type: code
     start: 0x2292D0
     vram: 0x80102800
-    dir: ovl_2D_HoneycombHavoc
+    dir: overlays/ovl_2D_HoneycombHavoc
     name: HoneycombHavoc
     overlay: True
     exclusive_ram_id: minigame
@@ -898,7 +898,7 @@ segments:
   - type: code
     start: 0x22E170
     vram: 0x80102800
-    dir: ovl_2E_HexagonHeat
+    dir: overlays/ovl_2E_HexagonHeat
     name: HexagonHeat
     overlay: True
     exclusive_ram_id: minigame
@@ -910,7 +910,7 @@ segments:
   - type: code
     start: 0x232150
     vram: 0x80102800
-    dir: ovl_2F_SkateboardScamper
+    dir: overlays/ovl_2F_SkateboardScamper
     name: SkateboardScamper
     overlay: True
     exclusive_ram_id: minigame
@@ -922,7 +922,7 @@ segments:
   - type: code
     start: 0x2386E0
     vram: 0x80102800
-    dir: ovl_30_SlotCarDerby
+    dir: overlays/ovl_30_SlotCarDerby
     name: SlotCarDerby
     overlay: True
     exclusive_ram_id: minigame
@@ -934,7 +934,7 @@ segments:
   - type: code
     start: 0x246110
     vram: 0x80102800
-    dir: ovl_31_ShyGuySays
+    dir: overlays/ovl_31_ShyGuySays
     name: ShyGuySays
     overlay: True
     exclusive_ram_id: minigame
@@ -946,7 +946,7 @@ segments:
   - type: code
     start: 0x24DE70
     vram: 0x80102800
-    dir: ovl_32_SneakNSnore
+    dir: overlays/ovl_32_SneakNSnore
     name: SneakNSnore
     overlay: True
     exclusive_ram_id: minigame
@@ -958,7 +958,7 @@ segments:
   - type: code
     start: 0x253A80
     vram: 0x80102800
-    dir: ovl_33_DriversEd
+    dir: overlays/ovl_33_DriversEd
     name: DriversEd
     overlay: True
     exclusive_ram_id: minigame
@@ -970,7 +970,7 @@ segments:
   - type: code
     start: 0x259900
     vram: 0x80102800
-    dir: ovl_34_ChanceTime
+    dir: overlays/ovl_34_ChanceTime
     name: ChanceTime
     overlay: True
     exclusive_ram_id: minigame
@@ -982,7 +982,7 @@ segments:
   - type: code
     start: 0x2677B0
     vram: 0x80102800
-    dir: ovl_35_LooneyLumberjacks
+    dir: overlays/ovl_35_LooneyLumberjacks
     name: LooneyLumberjacks
     overlay: True
     exclusive_ram_id: minigame
@@ -994,7 +994,7 @@ segments:
   - type: code
     start: 0x26FEE0
     vram: 0x80102800
-    dir: ovl_36_DizzyDancing
+    dir: overlays/ovl_36_DizzyDancing
     name: DizzyDancing
     overlay: True
     exclusive_ram_id: minigame
@@ -1006,7 +1006,7 @@ segments:
   - type: code
     start: 0x274F30
     vram: 0x80102800
-    dir: ovl_37_TileDriver
+    dir: overlays/ovl_37_TileDriver
     name: TileDriver
     overlay: True
     exclusive_ram_id: minigame
@@ -1018,7 +1018,7 @@ segments:
   - type: code
     start: 0x27A330
     vram: 0x80102800
-    dir: ovl_38_QuicksandCache
+    dir: overlays/ovl_38_QuicksandCache
     name: QuicksandCache
     overlay: True
     exclusive_ram_id: minigame
@@ -1030,7 +1030,7 @@ segments:
   - type: code
     start: 0x27F4F0
     vram: 0x80102800
-    dir: ovl_39_BowsersBigBlast
+    dir: overlays/ovl_39_BowsersBigBlast
     name: BowsersBigBlast
     overlay: True
     exclusive_ram_id: minigame
@@ -1042,7 +1042,7 @@ segments:
   - type: code
     start: 0x284A10
     vram: 0x80102800
-    dir: ovl_3A_TorpedoTargets
+    dir: overlays/ovl_3A_TorpedoTargets
     name: TorpedoTargets
     overlay: True
     exclusive_ram_id: minigame
@@ -1054,7 +1054,7 @@ segments:
   - type: code
     start: 0x28B620
     vram: 0x80102800
-    dir: ovl_3B_DestructionDuet
+    dir: overlays/ovl_3B_DestructionDuet
     name: DestructionDuet
     overlay: True
     exclusive_ram_id: minigame
@@ -1066,7 +1066,7 @@ segments:
   - type: code
     start: 0x291870
     vram: 0x80102800
-    dir: ovl_3C_DeepSeaSalvage
+    dir: overlays/ovl_3C_DeepSeaSalvage
     name: DeepSeaSalvage
     overlay: True
     exclusive_ram_id: minigame
@@ -1078,7 +1078,7 @@ segments:
   - type: code
     start: 0x297890
     vram: 0x80102800
-    dir: ovl_3D_name
+    dir: overlays/ovl_3D_name
     name: name_3D
     overlay: True
     exclusive_ram_id: minigame
@@ -1089,7 +1089,7 @@ segments:
   - type: code
     start: 0x297AD0
     vram: 0x80102800
-    dir: ovl_3E_name
+    dir: overlays/ovl_3E_name
     name: name_3E
     overlay: True
     exclusive_ram_id: minigame
@@ -1101,7 +1101,7 @@ segments:
   - type: code
     start: 0x2A89A0
     vram: 0x80102800
-    dir: ovl_3F_DesertDuel
+    dir: overlays/ovl_3F_DesertDuel
     name: DesertDuel
     overlay: True
     exclusive_ram_id: minigame
@@ -1113,7 +1113,7 @@ segments:
   - type: code
     start: 0x2AEDB0
     vram: 0x80102800
-    dir: ovl_40_Last5Turns
+    dir: overlays/ovl_40_Last5Turns
     name: Last5Turns
     overlay: True
     exclusive_ram_id: minigame
@@ -1125,7 +1125,7 @@ segments:
   - type: code
     start: 0x2B10C0
     vram: 0x80102800
-    dir: ovl_41_name
+    dir: overlays/ovl_41_name
     name: name_41
     overlay: True
     exclusive_ram_id: minigame
@@ -1137,7 +1137,7 @@ segments:
   - type: code
     start: 0x2C0780
     vram: 0x80102800
-    dir: ovl_42_PirateDuel
+    dir: overlays/ovl_42_PirateDuel
     name: PirateDuel
     overlay: True
     exclusive_ram_id: minigame
@@ -1149,7 +1149,7 @@ segments:
   - type: code
     start: 0x2C7CF0
     vram: 0x80102800
-    dir: ovl_43_name
+    dir: overlays/ovl_43_name
     name: name_43
     overlay: True
     exclusive_ram_id: minigame
@@ -1161,7 +1161,7 @@ segments:
   - type: code
     start: 0x2DA8B0
     vram: 0x80102800
-    dir: ovl_44_name
+    dir: overlays/ovl_44_name
     name: name_44
     overlay: True
     exclusive_ram_id: minigame
@@ -1173,7 +1173,7 @@ segments:
   - type: code
     start: 0x2E0F30
     vram: 0x80102800
-    dir: ovl_45_name
+    dir: overlays/ovl_45_name
     name: name_45
     overlay: True
     exclusive_ram_id: minigame
@@ -1185,7 +1185,7 @@ segments:
   - type: code
     start: 0x2F1730
     vram: 0x80102800
-    dir: ovl_46_name
+    dir: overlays/ovl_46_name
     name: name_46
     overlay: True
     exclusive_ram_id: minigame
@@ -1197,7 +1197,7 @@ segments:
   - type: code
     start: 0x2F7100
     vram: 0x80102800
-    dir: ovl_47_name
+    dir: overlays/ovl_47_name
     name: name_47
     overlay: True
     exclusive_ram_id: minigame
@@ -1209,7 +1209,7 @@ segments:
   - type: code
     start: 0x306BA0
     vram: 0x80102800
-    dir: ovl_48_name
+    dir: overlays/ovl_48_name
     name: name_48
     overlay: True
     exclusive_ram_id: minigame
@@ -1221,7 +1221,7 @@ segments:
   - type: code
     start: 0x30CCB0
     vram: 0x80102800
-    dir: ovl_49_name
+    dir: overlays/ovl_49_name
     name: name_49
     overlay: True
     exclusive_ram_id: minigame
@@ -1233,7 +1233,7 @@ segments:
   - type: code
     start: 0x31EE40
     vram: 0x80102800
-    dir: ovl_4A_name
+    dir: overlays/ovl_4A_name
     name: name_4A
     overlay: True
     exclusive_ram_id: minigame
@@ -1245,7 +1245,7 @@ segments:
   - type: code
     start: 0x3252C0
     vram: 0x80102800
-    dir: ovl_4B_name
+    dir: overlays/ovl_4B_name
     name: name_4B
     overlay: True
     exclusive_ram_id: minigame
@@ -1257,7 +1257,7 @@ segments:
   - type: code
     start: 0x325BC0
     vram: 0x80102800
-    dir: ovl_4C_name
+    dir: overlays/ovl_4C_name
     name: name_4C
     overlay: True
     exclusive_ram_id: minigame
@@ -1269,7 +1269,7 @@ segments:
   - type: code
     start: 0x328A30
     vram: 0x80102800
-    dir: ovl_4D_RulesLand
+    dir: overlays/ovl_4D_RulesLand
     name: RulesLand
     overlay: True
     exclusive_ram_id: minigame
@@ -1281,7 +1281,7 @@ segments:
   - type: code
     start: 0x32A1C0
     vram: 0x80102800
-    dir: ovl_4E_name
+    dir: overlays/ovl_4E_name
     name: name_4E
     overlay: True
     exclusive_ram_id: minigame
@@ -1293,7 +1293,7 @@ segments:
   - type: code
     start: 0x335440
     vram: 0x80102800
-    dir: ovl_4F_name
+    dir: overlays/ovl_4F_name
     name: name_4F
     overlay: True
     exclusive_ram_id: minigame
@@ -1305,7 +1305,7 @@ segments:
   - type: code
     start: 0x343060
     vram: 0x80102800
-    dir: ovl_50_name
+    dir: overlays/ovl_50_name
     name: name_50
     overlay: True
     exclusive_ram_id: minigame
@@ -1317,7 +1317,7 @@ segments:
   - type: code
     start: 0x352E10
     vram: 0x80102800
-    dir: ovl_51_name
+    dir: overlays/ovl_51_name
     name: name_51
     overlay: True
     exclusive_ram_id: minigame
@@ -1329,7 +1329,7 @@ segments:
   - type: code
     start: 0x358DE0
     vram: 0x80102800
-    dir: ovl_52_name
+    dir: overlays/ovl_52_name
     name: name_52
     overlay: True
     exclusive_ram_id: minigame
@@ -1341,7 +1341,7 @@ segments:
   - type: code
     start: 0x35D110
     vram: 0x80102800
-    dir: ovl_53_name
+    dir: overlays/ovl_53_name
     name: name_53
     overlay: True
     exclusive_ram_id: minigame
@@ -1353,7 +1353,7 @@ segments:
   - type: code
     start: 0x360670
     vram: 0x80102800
-    dir: ovl_54_name
+    dir: overlays/ovl_54_name
     name: name_54
     overlay: True
     exclusive_ram_id: minigame
@@ -1365,7 +1365,7 @@ segments:
   - type: code
     start: 0x3616F0
     vram: 0x80102800
-    dir: ovl_55_name
+    dir: overlays/ovl_55_name
     name: name_55
     overlay: True
     exclusive_ram_id: minigame
@@ -1377,7 +1377,7 @@ segments:
   - type: code
     start: 0x36B420
     vram: 0x80102800
-    dir: ovl_56_name
+    dir: overlays/ovl_56_name
     name: name_56
     overlay: True
     exclusive_ram_id: minigame
@@ -1389,7 +1389,7 @@ segments:
   - type: code
     start: 0x36D9A0
     vram: 0x80102800
-    dir: ovl_57_name
+    dir: overlays/ovl_57_name
     name: name_57
     overlay: True
     exclusive_ram_id: minigame
@@ -1401,7 +1401,7 @@ segments:
   - type: code
     start: 0x36DF00
     vram: 0x80102800
-    dir: ovl_58_name
+    dir: overlays/ovl_58_name
     name: name_58
     overlay: True
     exclusive_ram_id: minigame
@@ -1413,7 +1413,7 @@ segments:
   - type: code
     start: 0x37EE80
     vram: 0x80102800
-    dir: ovl_59_name
+    dir: overlays/ovl_59_name
     name: name_59
     overlay: True
     exclusive_ram_id: minigame
@@ -1425,7 +1425,7 @@ segments:
   - type: code
     start: 0x37F290
     vram: 0x80102800
-    dir: ovl_5A_name
+    dir: overlays/ovl_5A_name
     name: name_5A
     overlay: True
     exclusive_ram_id: minigame
@@ -1435,7 +1435,7 @@ segments:
   - type: code
     start: 0x37F4B0
     vram: 0x80102800
-    dir: ovl_5B_name
+    dir: overlays/ovl_5B_name
     name: name_5B
     overlay: True
     exclusive_ram_id: minigame
@@ -1447,7 +1447,7 @@ segments:
   - type: code
     start: 0x3906C0
     vram: 0x80102800
-    dir: ovl_5C_name
+    dir: overlays/ovl_5C_name
     name: name_5C
     overlay: True
     exclusive_ram_id: minigame
@@ -1459,7 +1459,7 @@ segments:
   - type: code
     start: 0x3A01F0
     vram: 0x80102800
-    dir: ovl_5D_name
+    dir: overlays/ovl_5D_name
     name: name_5D
     overlay: True
     exclusive_ram_id: minigame
@@ -1471,7 +1471,7 @@ segments:
   - type: code
     start: 0x3A9460
     vram: 0x80102800
-    dir: ovl_5E_name
+    dir: overlays/ovl_5E_name
     name: name_5E
     overlay: True
     exclusive_ram_id: minigame
@@ -1483,7 +1483,7 @@ segments:
   - type: code
     start: 0x3AB9A0
     vram: 0x80102800
-    dir: ovl_5F_name
+    dir: overlays/ovl_5F_name
     name: name_5F
     overlay: True
     exclusive_ram_id: minigame
@@ -1495,7 +1495,7 @@ segments:
   - type: code
     start: 0x3BDF60
     vram: 0x80102800
-    dir: ovl_60_name
+    dir: overlays/ovl_60_name
     name: name_60
     overlay: True
     exclusive_ram_id: minigame
@@ -1507,7 +1507,7 @@ segments:
   - type: code
     start: 0x3D0050
     vram: 0x80102800
-    dir: ovl_61_name
+    dir: overlays/ovl_61_name
     name: name_61
     overlay: True
     exclusive_ram_id: minigame
@@ -1519,7 +1519,7 @@ segments:
   - type: code
     start: 0x3D4D20
     vram: 0x80102800
-    dir: ovl_62_name
+    dir: overlays/ovl_62_name
     name: name_62
     overlay: True
     exclusive_ram_id: minigame
@@ -1531,7 +1531,7 @@ segments:
   - type: code
     start: 0x3E4250
     vram: 0x80102800
-    dir: ovl_63_name
+    dir: overlays/ovl_63_name
     name: name_63
     overlay: True
     exclusive_ram_id: minigame
@@ -1541,7 +1541,7 @@ segments:
   - type: code
     start: 0x3E4320
     vram: 0x80102800
-    dir: ovl_64_name
+    dir: overlays/ovl_64_name
     name: name_64
     overlay: True
     exclusive_ram_id: minigame
@@ -1553,7 +1553,7 @@ segments:
   - type: code
     start: 0x3E7ED0
     vram: 0x80102800
-    dir: ovl_65_name
+    dir: overlays/ovl_65_name
     name: name_65
     overlay: True
     exclusive_ram_id: minigame
@@ -1565,7 +1565,7 @@ segments:
   - type: code
     start: 0x3EBBB0
     vram: 0x80102800
-    dir: ovl_66_name
+    dir: overlays/ovl_66_name
     name: name_66
     overlay: True
     exclusive_ram_id: minigame
@@ -1577,7 +1577,7 @@ segments:
   - type: code
     start: 0x3EF7F0
     vram: 0x80102800
-    dir: ovl_67_name
+    dir: overlays/ovl_67_name
     name: name_67
     overlay: True
     exclusive_ram_id: minigame
@@ -1589,7 +1589,7 @@ segments:
   - type: code
     start: 0x3F33E0
     vram: 0x80102800
-    dir: ovl_68_name
+    dir: overlays/ovl_68_name
     name: name_68
     overlay: True
     exclusive_ram_id: minigame
@@ -1601,7 +1601,7 @@ segments:
   - type: code
     start: 0x3F7130
     vram: 0x80102800
-    dir: ovl_69_name
+    dir: overlays/ovl_69_name
     name: name_69
     overlay: True
     exclusive_ram_id: minigame
@@ -1613,7 +1613,7 @@ segments:
   - type: code
     start: 0x3FAE40
     vram: 0x80102800
-    dir: ovl_6A_name
+    dir: overlays/ovl_6A_name
     name: name_6A
     overlay: True
     exclusive_ram_id: minigame
@@ -1625,7 +1625,7 @@ segments:
   - type: code
     start: 0x3FEAA0
     vram: 0x80102800
-    dir: ovl_6B_name
+    dir: overlays/ovl_6B_name
     name: name_6B
     overlay: True
     exclusive_ram_id: minigame
@@ -1637,7 +1637,7 @@ segments:
   - type: code
     start: 0x402700
     vram: 0x80102800
-    dir: ovl_6C_name
+    dir: overlays/ovl_6C_name
     name: name_6C
     overlay: True
     exclusive_ram_id: minigame
@@ -1649,7 +1649,7 @@ segments:
   - type: code
     start: 0x406640
     vram: 0x80102800
-    dir: ovl_6D_name
+    dir: overlays/ovl_6D_name
     name: name_6D
     overlay: True
     exclusive_ram_id: minigame
@@ -1659,7 +1659,7 @@ segments:
   - type: code
     start: 0x40A330
     vram: 0x80102800
-    dir: ovl_6E_name
+    dir: overlays/ovl_6E_name
     name: name_6E
     overlay: True
     exclusive_ram_id: minigame
@@ -1669,7 +1669,7 @@ segments:
   - type: code
     start: 0x40BB00
     vram: 0x80102800
-    dir: ovl_6F_name
+    dir: overlays/ovl_6F_name
     name: name_6F
     overlay: True
     exclusive_ram_id: minigame
@@ -1681,7 +1681,7 @@ segments:
   - type: code
     start: 0x40EC60
     vram: 0x80102800
-    dir: ovl_70_name
+    dir: overlays/ovl_70_name
     name: name_70
     overlay: True
     exclusive_ram_id: minigame
@@ -1693,7 +1693,7 @@ segments:
   - type: code
     start: 0x413C90
     vram: 0x80102800
-    dir: ovl_71_name
+    dir: overlays/ovl_71_name
     name: name_71
     overlay: True
     exclusive_ram_id: minigame
@@ -1706,7 +1706,7 @@ segments:
   - type: code
     start: 0x415790
     vram: 0x80102800
-    dir: ovl_72_name
+    dir: overlays/ovl_72_name
     name: name_72
     overlay: True
     exclusive_ram_id: minigame

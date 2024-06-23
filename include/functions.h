@@ -45,5 +45,7 @@ s32 omOvlCallEx(s32 overlayID, s16 event, s16 stat);
 void func_80079464_7A064(void);
 void func_800794A8_7A0A8(s32);
 s32 func_8008F618_90218(void);
+s32 GetSaveFileChecksum(u16 checksumAddrOffset, u16 size);
+void func_8001AFD8_1BBD8(s32 arg0, UnkEep* arg1, s16 arg2);
 
 #endif

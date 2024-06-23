@@ -97,6 +97,7 @@ segments:
       - [0x7C9A0, c]
       - [0x7CF70, c]
       - [0x7D1D0, c]
+      - [0x7E0F0, c, process]
       - [0x7E850, c]
       - [0x7FAE0, c]
       - [0x80230, c]

@@ -85,8 +85,8 @@ SprTexLoad = 0x800867B8; // rom:0x873B8
 
 
 HuPrcInit = 0x8007D4F0; // rom:0x7E0F0
-LinkProcess = 0x8007D504; // rom:0x7E104
-UnlinkProcess = 0x8007D598; // rom:0x7E198
+HuLinkProcess = 0x8007D504; // rom:0x7E104
+HuUnlinkPrc = 0x8007D598; // rom:0x7E198
 HuPrcCreate = 0x8007D5D4; // rom:0x7E1D4
 HuPrcChildLink = 0x8007D700; // rom:0x7E300
 HuPrcChildUnlink = 0x8007D754; // rom:0x7E354
@@ -97,7 +97,7 @@ HuPrcChildProcCntGet = 0x8007D844; // rom:0x7E444
 SetKillStatusProcess = 0x8007D864; // rom:0x7E464
 HuPrcKill = 0x8007D8A8; // rom:0x7E4A8
 HuPrcChildKill = 0x8007D8DC; // rom:0x7E4DC
-TerminateProcess = 0x8007D93C; // rom:0x7E53C
+n64TerminateProcess = 0x8007D93C; // rom:0x7E53C
 HuPrcEnd = 0x8007D9A4; // rom:0x7E5A4
 HuPrcSleep = 0x8007D9E0; // rom:0x7E5E0
 HuPrcVSleep = 0x8007DA44; // rom:0x7E644
@@ -154,7 +154,12 @@ D_800C9B60 = 0x800C9B60; // size:0x10
 D_800CCC10 = 0x800CCC10; // type:s16
 D_800F93A8 = 0x800F93A8; // size:0x28
 D_800F8C60 = 0x800F8C60; // size:0xC4
-
+longjmp = 0x80092E04; // rom:0x93A04
+setjmp = 0x80092DA0; // rom:0x939A0
+processcnt = 0x800EB8F4; // type:s32
+processtop = 0x800EB8EC; // type:s32
+current_process = 0x800EB8F0; // type:s32
+process_jmp_buf = 0x800EB890; // type:s32
 debug_gPlayers = 0x801072B8; // size:0xD0 segment:Debug
 debug_ovl_table = 0x80105E50; // size:0x650 segment:Debug
 debug_unkTable = 0x801064A0; // type:s32 size:0x650 segment:Debug

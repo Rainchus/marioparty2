@@ -220,8 +220,8 @@ INCLUDE_ASM(const s32, "76CC0", omOvlGotoEx);
 #endif
 
 void omOvlHisChg(s16 arg0, s32 overlay, s16 event, s16 stat) {
-    s32 ovlhisIndex;
     omOvlHisData* history;
+    s32 ovlhisIndex;
 
     ovlhisIndex = omovlhisidx - arg0;
     if (ovlhisIndex >= 0) {

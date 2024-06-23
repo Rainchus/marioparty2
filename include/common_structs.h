@@ -107,4 +107,12 @@ typedef struct unkObjectStruct {
 /* 0x50 */ void* unk_50;
 } unkObjectStruct; //sizeof 0x54
 
+typedef struct HeapNode {
+    s32 size;
+    u8 heap_constant;
+    u8 used; // bool
+    struct HeapNode* prev;
+    struct HeapNode* next;
+} HeapNode;
+
 #endif

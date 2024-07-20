@@ -1389,8 +1389,8 @@ segments:
   - type: code
     start: 0x36D9A0
     vram: 0x80102800
-    dir: overlays/ovl_57_name
-    name: name_57
+    dir: overlays/ovl_57_BootLogos
+    name: BootLogos
     overlay: True
     exclusive_ram_id: minigame
     bss_size: 0x10
@@ -1401,8 +1401,8 @@ segments:
   - type: code
     start: 0x36DF00
     vram: 0x80102800
-    dir: overlays/ovl_58_name
-    name: name_58
+    dir: overlays/ovl_58_MinigameParkSetup
+    name: MinigameParkSetup
     overlay: True
     exclusive_ram_id: minigame
     bss_size: 0x6B0
@@ -1519,8 +1519,8 @@ segments:
   - type: code
     start: 0x3D4D20
     vram: 0x80102800
-    dir: overlays/ovl_62_name
-    name: name_62
+    dir: overlays/ovl_62_TitleScreenAndIntro
+    name: TitleScreenAndIntro
     overlay: True
     exclusive_ram_id: minigame
     bss_size: 0x1B80
@@ -1649,8 +1649,8 @@ segments:
   - type: code
     start: 0x406640
     vram: 0x80102800
-    dir: overlays/ovl_6D_name
-    name: name_6D
+    dir: overlays/ovl_6D_FinalMinigameCoaster
+    name: FinalMinigameCoaster
     overlay: True
     exclusive_ram_id: minigame
     subsegments:
@@ -1659,8 +1659,8 @@ segments:
   - type: code
     start: 0x40A330
     vram: 0x80102800
-    dir: overlays/ovl_6E_name
-    name: name_6E
+    dir: overlays/ovl_6E_MinigameCoaster
+    name: MinigameCoaster
     overlay: True
     exclusive_ram_id: minigame
     subsegments:
@@ -1669,8 +1669,8 @@ segments:
   - type: code
     start: 0x40BB00
     vram: 0x80102800
-    dir: overlays/ovl_6F_name
-    name: name_6F
+    dir: overlays/ovl_6F_BattleResults
+    name: BattleResults
     overlay: True
     exclusive_ram_id: minigame
     bss_size: 0x120
@@ -1681,8 +1681,8 @@ segments:
   - type: code
     start: 0x40EC60
     vram: 0x80102800
-    dir: overlays/ovl_70_name
-    name: name_70
+    dir: overlays/ovl_70_Results
+    name: Results
     overlay: True
     exclusive_ram_id: minigame
     bss_size: 0x5A0
@@ -1693,8 +1693,8 @@ segments:
   - type: code
     start: 0x413C90
     vram: 0x80102800
-    dir: overlays/ovl_71_name
-    name: name_71
+    dir: overlays/ovl_71_MsgTest
+    name: MsgTest
     overlay: True
     exclusive_ram_id: minigame
     bss_size: 0x1D0
@@ -1706,8 +1706,8 @@ segments:
   - type: code
     start: 0x415790
     vram: 0x80102800
-    dir: overlays/ovl_72_name
-    name: name_72
+    dir: overlays/ovl_72_Credits
+    name: Credits
     overlay: True
     exclusive_ram_id: minigame
     bss_size: 0x780

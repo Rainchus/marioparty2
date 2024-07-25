@@ -3,11 +3,11 @@
 
 #include "ultra64.h"
 
-typedef struct Vec3f{
+typedef struct Vec{
     f32 x;
     f32 y;
     f32 z;
-} Vec3f;
+} Vec;
 
 typedef struct unkfunc_8001AFD8 {
     s16 unk0;
@@ -77,6 +77,45 @@ typedef struct PlayerData {
 //P3 - 800FD328
 //P4 - 800FD35C
 
+typedef struct PlayerMain {
+/* 0x00 */ u8 team;
+/* 0x01 */ u8 cpu_difficulty;
+/* 0x02 */ u8 cpu_difficulty2; //copied from 0x01 for some reason..?
+/* 0x03 */ u8 controller_port;
+/* 0x04 */ u8 characterID;
+/* 0x05 */ char padding_05;
+/* 0x06 */ s16 flags;
+/* 0x08 */ s16 coins;
+/* 0x0A */ s16 extra_coins_collected_during_minigame;
+/* 0x0C */ s16 minigameCoinsWon; //coins won on current minigame, also stores battle placement briefly
+/* 0x0E */ s16 stars;
+/* 0x10 */ s16 cur_chain_index;
+/* 0x12 */ s16 cur_space_index;
+/* 0x14 */ s16 next_chain_index;
+/* 0x16 */ s16 next_space_index;
+/* 0x18 */ char unk_18;
+/* 0x19 */ s8 item;
+/* 0x1A */ s8 turn_status;
+/* 0x1B */ s8 player_space_color;
+/* 0x1C */ char unk_1C[4];
+/* 0x20 */ void* unk_20;
+/* 0x24 */ void* unk_24;
+/* 0x28 */ s16 minigame_coins_collected;
+/* 0x2A */ s16 coinPeak; //used for coin star
+/* 0x2C */ u8 happening_spaces_landed_on;
+/* 0x2D */ u8 red_spaces_landed_on;
+/* 0x2E */ u8 blue_spaces_landed_on;
+/* 0x2F */ u8 chance_spaces_landed_on;
+/* 0x30 */ u8 bowser_spaces_landed_on;
+/* 0x31 */ u8 battle_spaces_landed_on;
+/* 0x32 */ u8 item_spaces_landed_on;
+/* 0x33 */ u8 bank_spaces_landed_on;
+} PlayerMain; //sizeof 0x34
+//P1 - 800FD2C0
+//P2 - 800FD2F4
+//P3 - 800FD328
+//P4 - 800FD35C
+
 
 typedef struct unkObjectStruct {
 /* 0x00 */ s16 unk_00;
@@ -106,6 +145,30 @@ typedef struct unkObjectStruct {
 /* 0x4C */ u8  unk_4C[4];
 /* 0x50 */ void* unk_50;
 } unkObjectStruct; //sizeof 0x54
+
+typedef struct omObjData {
+/* 0x00 */ u16 stat;
+/* 0x02 */ s16 next_idx_alloc;
+/* 0x04 */ s16 prio;
+/* 0x06 */ s16 prev;
+/* 0x08 */ s16 next;
+/* 0x0A */ s16 next_idx;
+/* 0x0C */ s16 group;
+/* 0x0E */ s16 group_idx;
+/* 0x10 */ s32 unk_10;
+/* 0x14 */ void* func_ptr;
+/* 0x18 */ Vec trans;
+/* 0x24 */ Vec rot;
+/* 0x30 */ Vec scale;
+/* 0x3C */ u16 mdlcnt;
+// /* 0x3E */ char unk_3E[2];
+/* 0x40 */ s16* model;
+/* 0x44 */ u16 mtncnt;
+// /* 0x46 */ char unk_46[2];
+/* 0x48 */ s16* motion;
+/* 0x4C */ u8 work[4];
+/* 0x50 */ void* unk_50;
+} omObjData; //sizeof 0x54
 
 typedef struct HeapNode {
     s32 size;

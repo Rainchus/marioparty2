@@ -42,10 +42,24 @@ s32 func_800638C8_644C8(void);
 s32 omOvlReturnEx(s16);
 void omOvlKill(void);
 s32 omOvlCallEx(s32 overlayID, s16 event, s16 stat);
+omObjData* omAddObj(s16, u16, u16, s16, void*);
 void func_80079464_7A064(void);
 void func_800794A8_7A0A8(s32);
 s32 func_8008F618_90218(void);
 s32 GetSaveFileChecksum(u16 checksumAddrOffset, u16 size);
 void func_8001AFD8_1BBD8(s32 arg0, UnkEep* arg1, s16 arg2);
-
+void func_80018BD0_197D0(s32, f32, f32, f32, f32);
+void func_80018C34_19834(s32, f32, f32, f32, f32, f32, f32);
+void func_80018E30_19A30(s32);
+void func_80050A30_51630(u8*);
+void func_80050E00_51A00(s32);
+void func_8008D59C_8E19C(s16, s16);
+void func_8005E570_5F170(void);
+void func_800433D8_43FD8(void);
+void func_800581A0_58DA0(void);
+void func_800593C0_59FC0(void);
+void func_8005965C_5A25C(void);
+void func_8005E2B8_5EEB8(void);
+void func_80029E80_2AA80(s16, s32, s32);                   /* extern */
+void omDelPrcObj(s32);                                   /* extern */
 #endif

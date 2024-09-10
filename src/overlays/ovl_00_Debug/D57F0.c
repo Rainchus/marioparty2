@@ -22,8 +22,8 @@ void func_800689A0_695A0(void);
 void func_80068A20_69620(void);
 void func_80105B5C_D8B4C(u16, u16, char*, u16, u16);
 void func_80105BDC_D8BCC(void);
-void func_80103838_D6828(unkObjectStruct*);
-void func_80104FB4_D7FA4(unkObjectStruct* obj);
+void func_80103838_D6828(omObjData*);
+void func_80104FB4_D7FA4(omObjData* obj);
 typedef struct DebugOverlayData {
     u8 unk0;
     u8 overlayID;
@@ -54,7 +54,7 @@ INCLUDE_ASM(const s32, "overlays/ovl_00_Debug/D57F0", func_80103594_D6584);
 
 INCLUDE_ASM(const s32, "overlays/ovl_00_Debug/D57F0", func_80103838_D6828);
 
-void func_80103C4C_D6C3C(unkObjectStruct* arg0) {
+void func_80103C4C_D6C3C(omObjData* arg0) {
     s32 i;
 
     rand8();
@@ -95,7 +95,7 @@ INCLUDE_ASM(const s32, "overlays/ovl_00_Debug/D57F0", func_80103E50_D6E40);
 
 INCLUDE_ASM(const s32, "overlays/ovl_00_Debug/D57F0", func_80104ADC_D7ACC);
 
-void func_80104FA4_D7F94(unkObjectStruct* obj) {
+void func_80104FA4_D7F94(omObjData* obj) {
     obj->func_ptr = func_80104FB4_D7FA4;
 }
 

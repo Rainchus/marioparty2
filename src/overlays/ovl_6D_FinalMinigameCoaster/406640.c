@@ -26,7 +26,6 @@ s32 func_80075390_75F90(s32);
 void func_80079390_79F90(s32);
 void func_80106018_409E58(void);
 void func_80106160_409FA0(void);
-omObjData* omAddObj(s16, u16, u16, s16, void*);
 extern s16 D_800CD414_CE014;
 extern Unk_800FD8A8 D_800FD8A8_FE4A8;
 void func_80105CE8_409B28(void);

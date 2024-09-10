@@ -21,6 +21,7 @@ options:
   asm_data_macro: dlabel
   migrate_rodata_to_functions: True
   subalign: 8
+  use_legacy_include_asm: True
   # extensions_path: tools/splat_ext
   # mips_abi_float_regs: o32
   # section_order: [".text", ".data", ".rodata", ".bss"]

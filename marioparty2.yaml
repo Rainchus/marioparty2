@@ -1397,7 +1397,9 @@ segments:
     bss_size: 0x10
     subsegments:
       - [0x36D9A0, c]
-      - [0x36DED0, data]
+      - [0x36D9D0, c]
+      - [0x36DED0, .data, 36D9A0]
+      - [0x36DEF0, data, 36D9D0]
       - {0x36DF00, type: bss, vram: 0x80102D60, name: ovl_57_bss}
   - type: code
     start: 0x36DF00

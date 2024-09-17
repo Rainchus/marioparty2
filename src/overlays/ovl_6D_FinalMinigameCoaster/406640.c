@@ -100,7 +100,7 @@ void func_80105EC0_409D00(void) {
         func_8008CE5C_8DA5C();
         func_8005E584_5F184();
         if (D_801062A4_40A0E4 != 0) {
-            func_8006836C_68F6C(0xE);
+            _SetFlag(0xE);
             D_800CD2C4_CDEC4++;
             func_80067E6C_68A6C(0x27);
             omOvlCallEx(func_8003F6F0_402F0(D_800F93C8_F9FC8), 0, 0x94);

@@ -3,12 +3,13 @@
 
 #include "ultra64.h"
 #include "common_structs.h"
+#include "process.h"
 
 s32 func_8007EE0C_7FA0C(unkfunc_8007EE0C* arg0, void* GetEepType, UnkEep** arg2, s32 arg3);
 s32 rand8(void);
 void func_80062B14_63714(void);
 s32 func_80068328_68F28(s32);
-void func_8006836C_68F6C(s32);
+void _SetFlag(s32);
 void func_800683BC_68FBC(s32);
 void func_80044F88_45B88(s32, s32);
 void func_80045184_45D84(s32, s32);
@@ -26,7 +27,7 @@ void func_8008CE5C_8DA5C(void);
 void omInitObjMan(s32, s32);
 void omOvlGotoEx(s32, s32, u16);
 void omOvlHisChg(s16 arg0, s32 overlay, s16 event, s16 stat);
-void omAddPrcObj(void* userFunc, u16 priority, s32 stack_size, s32 extra_data_size);
+
 void HuPrcVSleep(void); 
 void InitFadeIn(s32, s32);
 void InitFadeOut(s32, s32);

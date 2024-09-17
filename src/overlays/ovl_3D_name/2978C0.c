@@ -4,7 +4,7 @@ extern u16 D_8010163C_10223C;
 
 void func_80102830_2978C0(void) {
     if (func_80068328_68F28(0) != 0) {
-        func_8006836C_68F6C(0x41);
+        _SetFlag(0x41);
     } else {
         func_800683BC_68FBC(0x41);
     }

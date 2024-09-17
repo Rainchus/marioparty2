@@ -3,6 +3,7 @@
         "common.h": "c",
         "functions.h": "c",
         "common_structs.h": "c",
-        "ultra64.h": "c"
+        "ultra64.h": "c",
+        "process.h": "c"
     }
 }

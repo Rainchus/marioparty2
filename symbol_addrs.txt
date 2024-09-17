@@ -37,6 +37,8 @@ HuMemTempDirectRealloc = 0x80040EB4; // rom:0x41AB4
 HuMemTempUsedMallocSizeGet = 0x80040EE0; // rom:0x41AE0
 HuMemTempUsedMallocBlockGet = 0x80040F00; // rom:0x41B00
 
+_SetFlag = 0x8006836C; //rom:0x68F6C
+
 SprAlloc = 0x8007F75C; // rom:0x8035C
 SprFree = 0x8007F800; // rom:0x80400
 SprKill = 0x8007F8B0; // rom:0x804B0
@@ -163,3 +165,4 @@ process_jmp_buf = 0x800EB890; // type:s32
 debug_gPlayers = 0x801072B8; // size:0xD0 segment:Debug
 debug_ovl_table = 0x80105E50; // size:0x650 segment:Debug
 debug_unkTable = 0x801064A0; // type:s32 size:0x650 segment:Debug
+D_800F8CD8 = 0x800F8CD8; //type:u8

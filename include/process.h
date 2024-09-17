@@ -54,7 +54,7 @@ void HuPrcSetStat(Process *process, u16 value);
 void HuPrcResetStat(Process *process, u16 value);
 void HuPrcAllPause(s32 flag);
 void HuPrcAllUPause(s32 flag);
-
+Process* omAddPrcObj(void* userFunc, u16 priority, s32 stack_size, s32 extra_data_size);
 s32 setjmp(jmp_buf* jump_buf);
 s32 longjmp(jmp_buf* jump_buf, s32 val);
 

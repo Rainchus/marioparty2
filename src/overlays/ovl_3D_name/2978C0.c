@@ -1,8 +1,10 @@
 #include "common.h"
 
+#include "common.h"
+
 extern u16 D_8010163C_10223C;
 
-void func_80102830_2978C0(void) {
+void func_80102830_2978C0_name_3D(void) {
     if (func_80068328_68F28(0) != 0) {
         _SetFlag(0x41);
     } else {
@@ -14,12 +16,12 @@ void func_80102830_2978C0(void) {
     omOvlHisChg(0, 0x3D, 1, 0x192);
 }
 
-void func_801028A4_297934(void) {
+void func_801028A4_297934_name_3D(void) {
     omInitObjMan(0xA, 0);
     func_80062BE0_637E0();
 }
 
-void func_801028CC_29795C(void) {
+void func_801028CC_29795C_name_3D(void) {
     s32 temp_s0;
 
     func_80088640_89240();
@@ -53,8 +55,8 @@ void func_801028CC_29795C(void) {
     HuPrcVSleep();
 }
 
-void func_801029E0_297A70(void) {
+void func_801029E0_297A70_name_3D(void) {
     omInitObjMan(0xA, 0xA);
     func_80079128_79D28();
-    omAddPrcObj(&func_801028CC_29795C, 0x1005, 0, 0);
+    omAddPrcObj(&func_801028CC_29795C_name_3D, 0x1005, 0, 0);
 }

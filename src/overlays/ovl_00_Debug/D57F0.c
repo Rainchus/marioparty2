@@ -117,14 +117,14 @@ void func_80105B5C_D8B4C(u16 arg0, u16 arg1, char* arg2, u16 arg3, u16 arg4) {
 #ifdef NON_MATCHING
 //matches but symbols are off
 extern u8 D_80106490_D9480[4][16];
-extern s16 D_801072A0_DA290;
-extern s16 D_801072A2_DA292;
+extern s16 D_801072A0_Debug;
+extern s16 D_801072A2_Debug;
 
 void func_80105BDC_D8BCC(void) {
     PlayerData* temp_v0;
     u8* temp_v1;
 
-    temp_v1 = &D_80106490_D9480[debug_ovl_table[D_801072A0_DA290 * 10 + D_801072A2_DA292].overlayID];
+    temp_v1 = &D_80106490_D9480[debug_ovl_table[D_801072A0_Debug * 10 + D_801072A2_Debug].overlayID];
     temp_v0 = debug_gPlayers;
     (temp_v0++)->group = temp_v1[0];
     (temp_v0++)->group = temp_v1[1];

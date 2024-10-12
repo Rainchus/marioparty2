@@ -65,9 +65,19 @@ def main():
 
     output = import_c_file(args.c_file)
 
-    with open(os.path.join(root_dir, "ctx.c"), "w", encoding="UTF-8") as f:
+    file_path = os.path.join(root_dir, "ctx.c")
+
+    with open(file_path, "w", encoding="UTF-8") as f:
         f.write(output)
 
+    with open(file_path, "r") as file:
+        lines = file.readlines()
+
+    # Filter out the lines that start with "#define __asm__(...)" and "#define __attribute__(...)"
+    with open(file_path, "w") as file:
+        for line in lines:
+            if not line.startswith("#define __asm__(...)") and not line.startswith("#define __attribute__(...)"):
+                file.write(line)
 
 if __name__ == "__main__":
     main()

@@ -98,7 +98,6 @@ void func_80103C6C_4100CC_Results(void) {
     func_8008CE5C_8DA5C();
 }
 
-
 INCLUDE_ASM(const s32, "overlays/ovl_70_Results/40EC60", func_80103DB4_410214_Results);
 
 INCLUDE_ASM(const s32, "overlays/ovl_70_Results/40EC60", func_801041C8_410628_Results);

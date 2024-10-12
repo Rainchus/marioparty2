@@ -166,3 +166,16 @@ debug_gPlayers = 0x801072B8; // size:0xD0 segment:Debug
 debug_ovl_table = 0x80105E50; // size:0x650 segment:Debug
 debug_unkTable = 0x801064A0; // type:s32 size:0x650 segment:Debug
 D_800F8CD8 = 0x800F8CD8; //type:u8
+
+
+D_801076C4_413B24_Results = 0x801076C4; // type:s16 size:0x10 rom:0x413B24 segment:Results
+D_801076D4_413B34_Results = 0x801076D4; // type:s16 size:0x10 rom:0x413B34 segment:Results
+D_801076E4_413B44_Results = 0x801076E4; // type:s16 size:0x10 rom:0x413B44 segment:Results
+D_801076F4_413B54_Results = 0x801076F4; // type:s16 size:0x10 rom:0x413B54 segment:Results
+D_80107704_413B64_Results = 0x80107704; // type:s16 size:0x10 rom:0x413B64 segment:Results
+D_80107714_413B74_Results = 0x80107714; // type:s16 size:0x10 rom:0x413B74 segment:Results
+D_80107724_413B84_Results = 0x80107724; // type:s16 size:0x10 rom:0x413B84 segment:Results
+D_80107734_413B94_Results = 0x80107734; // type:s16 size:0x10 rom:0x413B94 segment:Results
+D_80107744_413BA4_Results = 0x80107744; // type:s16 size:0x10 rom:0x413BA4 segment:Results
+D_80107754_413BB4_Results = 0x80107754; // type:s16 size:0x10 rom:0x413BB4 segment:Results
+D_80107764_413BC4_Results = 0x80107764; // type:s16 size:0x10 rom:0x413BC4 segment:Results

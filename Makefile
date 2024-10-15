@@ -68,7 +68,8 @@ ENDLINE := \n'
 ### Compiler Options ###
 
 ASFLAGS      := -G 0 -I include -mips3 -mabi=32
-CFLAGS       := -O1 -G0 -mips3 -mgp32 -mfp32
+NOP_FIX 	 :=
+CFLAGS       := -O1 -G0 -mips3 -mgp32 -mfp32 $(NOP_FIX)
 CPPFLAGS     := -I include -I $(BUILD_DIR)/include -I src -DF3DEX_GBI_2 -D_LANGUAGE_C
 LDFLAGS      := -T undefined_syms.txt -T undefined_funcs.txt -T undefined_funcs_auto.txt -T undefined_syms_auto.txt -T $(LD_SCRIPT) -Map $(LD_MAP) --no-check-sections
 CFLAGS_CHECK := -fsyntax-only -fsigned-char -nostdinc -fno-builtin -D CC_CHECK\
@@ -85,6 +86,8 @@ OBJECTS := $(shell grep -E 'build.+\.o' marioparty2.ld -o)
 DEPENDS := $(OBJECTS:=.d) 
 
 ### Targets ###
+
+build/src/overlays/ovl_00_Debug/D57F0.c : NOP_FIX = -Wa,--vr4300mul-off
 
 #build/src/libultra/os/%.o: CFLAGS := -O2 $(CFLAGSCOMMON)
 #build/src/libultra/libc/%.o: CFLAGS := -O2 $(CFLAGSCOMMON)

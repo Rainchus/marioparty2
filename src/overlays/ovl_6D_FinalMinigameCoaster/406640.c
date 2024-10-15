@@ -18,7 +18,7 @@ void func_80075424_76024(s32);
 void func_8007E018_7EC18(void);
 void func_8007E070_7EC70(void);
 s32 func_80075390_75F90(s32);
-void func_80079390_79F90(s32);
+void func_80079390_79F90(u8);
 void func_80105CE8_409B28_FinalMinigameCoaster(void);
 void func_80105FBC_409DFC_FinalMinigameCoaster(void);
 void func_80106018_409E58_FinalMinigameCoaster(void);

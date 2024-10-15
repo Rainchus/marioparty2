@@ -164,7 +164,7 @@ processcur = 0x800EB8F0; // type:s32
 process_jmp_buf = 0x800EB890; // type:s32
 debug_gPlayers = 0x801072B8; // size:0xD0 segment:Debug
 debug_ovl_table = 0x80105E50; // size:0x650 segment:Debug
-debug_unkTable = 0x801064A0; // type:s32 size:0x650 segment:Debug
+debug_unkTable = 0x801064A0; // type:s32 size:0x480 segment:Debug
 D_800F8CD8 = 0x800F8CD8; //type:u8
 
 
@@ -179,3 +179,5 @@ D_80107734_413B94_Results = 0x80107734; // type:s16 size:0x10 rom:0x413B94 segme
 D_80107744_413BA4_Results = 0x80107744; // type:s16 size:0x10 rom:0x413BA4 segment:Results
 D_80107754_413BB4_Results = 0x80107754; // type:s16 size:0x10 rom:0x413BB4 segment:Results
 D_80107764_413BC4_Results = 0x80107764; // type:s16 size:0x10 rom:0x413BC4 segment:Results
+
+D_800CD438_CE038 = 0x800CD438; //type:s32 size:0x90 rom:0xCE034

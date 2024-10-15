@@ -6,6 +6,7 @@ typedef struct omOvlHisData { //Object Manager History Data
 /* 0x06 */ u16 stat;
 } omOvlHisData; //sizeof 0x08
 
+extern s16 D_800FA660_FB260[];
 extern s16 D_800CD430_CE030;
 extern u16 D_800F9562_FA162;
 extern s16 D_800FCE84_FDA84;
@@ -31,6 +32,7 @@ extern s16 D_800F93C8_F9FC8;
 extern s32 D_800FA63C_FB23C;
 extern u16 D_800FA63E_FB23E;
 
+void func_800155B8_161B8(s16, s8);
 void func_80079338_79F38(s32);
 void func_8007935C_79F5C(s16 arg0, s16 arg1, s16 arg2);
 void func_8001A4C0_1B0C0(void);
@@ -290,7 +292,10 @@ INCLUDE_ASM(const s32, "76CC0", func_80079574_7A174);
 
 INCLUDE_ASM(const s32, "76CC0", func_8007959C_7A19C);
 
-INCLUDE_ASM(const s32, "76CC0", func_800795D8_7A1D8);
+void func_800795D8_7A1D8(s16 index, s8 val) {
+    D_800FA660_FB260[index] = val;
+    func_800155B8_161B8(index, val);
+}
 
 INCLUDE_ASM(const s32, "76CC0", func_80079614_7A214);
 

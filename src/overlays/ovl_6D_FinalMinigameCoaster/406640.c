@@ -18,13 +18,14 @@ void func_80075424_76024(s32);
 void func_8007E018_7EC18(void);
 void func_8007E070_7EC70(void);
 s32 func_80075390_75F90(s32);
-void func_80079390_79F90(u8);
+void PlayMusic(u8);
 void func_80105CE8_409B28_FinalMinigameCoaster(void);
 void func_80105FBC_409DFC_FinalMinigameCoaster(void);
 void func_80106018_409E58_FinalMinigameCoaster(void);
 void func_80106160_409FA0_FinalMinigameCoaster(void);
 void func_80106214_40A054_FinalMinigameCoaster(void);
 void func_80106054_409E94_FinalMinigameCoaster(void);
+s16 func_8003F6F0_402F0(s16);
 
 extern s32 D_801062A0_40A0E0_FinalMinigameCoaster;
 extern s32 D_801062A4_40A0E4_FinalMinigameCoaster;
@@ -43,13 +44,13 @@ void func_80102800_406640_FinalMinigameCoaster(void) {
     if (D_800FD8A8_FE4A8.unk4 == 2) {
         if (D_800CD414_CE014 == 0) {
             if (func_80075390_75F90(8) != 0) {
-                func_80079390_79F90(0x3D);
+                PlayMusic(0x3D);
             } else {
-                func_80079390_79F90(0x13);
+                PlayMusic(0x13);
             }
         }
     } else {
-        func_80079390_79F90(15);
+        PlayMusic(15);
     }
 }
 
@@ -88,7 +89,7 @@ void func_80105EC0_409D00_FinalMinigameCoaster(void) {
     if (func_8008F618_90218() == 0) {
         if (D_801062A0_40A0E0_FinalMinigameCoaster != 0) {
             func_80075424_76024(0);
-            func_800683BC_68FBC(0);
+            _ClearFlag(0);
             func_8007E018_7EC18();
             func_8007E070_7EC70();
             func_800740AC_74CAC();
@@ -101,11 +102,11 @@ void func_80105EC0_409D00_FinalMinigameCoaster(void) {
             _SetFlag(0xE);
             D_800CD2C4_CDEC4++;
             func_80067E6C_68A6C(0x27);
-            omOvlCallEx(func_8003F6F0_402F0(D_800F93C8_F9FC8), 0, 0x94);
+            omOvlCallEx(func_8003F6F0_402F0(D_800F93A8.unk_20), 0, 0x94);
             omOvlHisChg(1, 0x6D, 1, 0x192);
             return;
         }
-        func_800683BC_68FBC(0xE);
+        _ClearFlag(0xE);
         omOvlReturnEx(1);
     }
 }

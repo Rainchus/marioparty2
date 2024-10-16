@@ -30,6 +30,10 @@ typedef struct UnkDebug3 {
     s16 unk_02;
 } UnkDebug3;
 
+typedef struct UnkDebug4 {
+    s16 unk_00;
+    s16 unk_02;
+} UnkDebug4;
 typedef struct DebugOverlayData {
     u8 unk0;
     u8 overlayID;
@@ -38,6 +42,7 @@ typedef struct DebugOverlayData {
     u16 unk8;
     char* name;
 } DebugOverlayData; //size of this is probably wrong?
+
 void func_8001A7C8_1B3C8(u16, f32);
 void DrawDebugText(u16, u16, char*);
 s32 func_800172CC_17ECC(s16);
@@ -75,6 +80,17 @@ void func_80105A2C_D8A1C_Debug(s32);
 void func_80105BDC_D8BCC_Debug(void);
 s16 func_8007959C_7A19C(s16);
 void func_800795D8_7A1D8(s16, s8);
+s32 func_8001A8DC_1B4DC(u16);
+void func_8001A96C_1B56C(u16, u8, u8, u8);
+void func_8001AC44_1B844(u16);
+s32 func_800A5610_A6210(char*);
+void func_80103C4C_D6C3C_Debug(omObjData* arg0);
+void func_80104FA4_D7F94_Debug(omObjData* obj);
+void func_8001A654_1B254(u16);
+void func_80105964_D8954_Debug(u16 arg0);
+void func_801059B0_D89A0_Debug(s16 arg0);
+void func_80103E50_D6E40_Debug(void);
+void func_80104ADC_D7ACC_Debug(void);
 
 extern PlayerData debug_gPlayers[4];
 extern s32 D_800F8420_F9020;
@@ -99,7 +115,6 @@ extern s8 D_801073FC_DA3EC_Debug[4];
 extern s8 D_80107400_DA3F0_Debug;
 extern s16 D_80107402_DA3F2_Debug;
 extern s16 D_80107404_DA3F4_Debug;
-extern u16 D_80107406_DA3F6_Debug;
 extern s16 D_80107408_DA3F8_Debug;
 extern s16 D_80107410_DA400_Debug[];
 extern s16 D_80107474_DA464_Debug[];
@@ -117,6 +132,19 @@ extern DebugOverlayData debug_ovl_table[];
 extern u32 D_800CD408_CE008;
 extern UnkDebug2 debug_unkTable[4];
 extern UnkDebug3 D_80106920_D9910_Debug[];
+extern s32 D_801069E8_D99D8_Debug;
+extern s32 D_801069EC_D99DC_Debug;
+extern s32 D_801069F0_D99E0_Debug;
+extern u8 D_800CD40E;
+extern s16 D_8010163C_10223C[];
+extern UnkDebug4 D_80106934_D9924_Debug[];
+extern s32 D_801069CC_D99BC_Debug[];
+extern u8 D_801069D8_D99C8_Debug;
+extern char D_801071F8_DA1E8_Debug[];
+extern char D_80107204_DA1F4_Debug[];
+extern s16 D_801072B2_DA2A2_Debug;
+extern s16 D_801072B4_DA2A4_Debug;
+extern s16 D_801072B6_DA2A6_Debug;
 
 void func_80102800_D57F0_Debug(void) {
     omObjData* temp_s3;
@@ -132,7 +160,7 @@ void func_80102800_D57F0_Debug(void) {
         for (i = 0; i < 4; i++) {
             s16 totalCoins = gPlayers[i].coins + gPlayers[i].extra_coins_collected_during_minigame;
             gPlayers[i].coins = totalCoins;
-            if (totalCoins >= 1000) {
+            if (totalCoins > 999) {
                 gPlayers[i].coins = 999;
             }
             if (gPlayers[i].coins < 0) {
@@ -206,19 +234,23 @@ void func_80102800_D57F0_Debug(void) {
     InitFadeIn(255, 16);
     //i give up
     //this asm below should be just
-    //func_80079390_79F90(rand8() & 7);
+    //PlayMusic(rand8() & 7);
     //but the compiler keeps optimizing the andi instructions into 1 instruction instead of 2
     
+    #ifdef SHIFT
+        PlayMusic(rand8() & 7);
+    #else
     asm volatile (
         ".set noreorder\n\t"
         "jal rand8\n\t"
         "nop\n\t"
         "andi $v0, $v0, 7\n\t"
-        "jal func_80079390_79F90\n\t"
+        "jal PlayMusic\n\t"
         "andi $a0, %v0, 0xFF\n\t"
         ".set reorder\n\t"
         : "=r" (rand)
     );
+    #endif
 }
 
 void func_80102D54_D5D44_Debug(f32 arg0, f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6) {
@@ -232,6 +264,7 @@ void func_80102D54_D5D44_Debug(f32 arg0, f32 arg1, f32 arg2, f32 arg3, f32 arg4,
     D_8010274C_10334C.z = arg6;
 }
 
+//always running
 INCLUDE_ASM(const s32, "overlays/ovl_00_Debug/D57F0", func_80102DEC_D5DDC_Debug);
 
 void func_80103594_D6584_Debug(omObjData* arg0) {
@@ -291,7 +324,91 @@ void func_80103594_D6584_Debug(omObjData* arg0) {
     arg0->func_ptr = &func_80103838_D6828_Debug;
 }
 
+#ifdef NON_MATCHING
+void func_80103838_D6828_Debug(omObjData* arg0) {
+    UnkDebug4* var_v1;
+    DebugOverlayData* var_s1;
+    s32 i;
+
+    rand8();
+    var_s1 = &debug_ovl_table[D_801072A0_DA290_Debug * 10];
+    for (i = 0; i < 10; i++, var_s1++) {
+        sprintf(D_80101080_101C80, var_s1->name);
+        func_800A5610_A6210(D_80101080_101C80);
+        
+        if (debug_ovl_table[(D_801072A0_DA290_Debug * 10) + i].unk0 == 0) {
+            var_v1 = &D_80106934_D9924_Debug[0];
+        } else {
+            var_v1 = &D_80106934_D9924_Debug[1];
+        }
+        
+        if (D_801072A2_DA292_Debug == i) {
+            func_80105B5C_D8B4C_Debug(0x40, (i + 0xA) * 9, D_80101080_101C80, var_v1->unk_02, var_v1->unk_00);
+        } else {
+            func_80105B5C_D8B4C_Debug(0x40, (i + 0xA) * 9, D_80101080_101C80, var_v1->unk_00, 0);
+        }
+    }
+
+    sprintf(D_80101080_101C80, D_801071F8_DA1E8_Debug, D_801072A0_DA290_Debug + 1, 7);
+    func_80105B5C_D8B4C_Debug(0x80U, 0x40U, D_80101080_101C80, 0xFU, 7U);
+    sprintf(D_80101080_101C80, D_80107204_DA1F4_Debug, D_801069CC_D99BC_Debug[D_800CD40E]);
+    func_80105B5C_D8B4C_Debug(0x80U, 0x48U, D_80101080_101C80, 0xEU, 6U);
+    func_8001A694_1B294(D_80107406_DA3F6_Debug, 0x3C, (s16) (((D_801072A2_DA292_Debug + 0xB) * 9) - 1));
+    for (i = 0; i < 4; i++) {
+        if (func_800172CC_17ECC(i) != 0) {
+            if ((D_80107470_DA460_Debug[i] & 0x90) && (debug_ovl_table[(D_801072A0_DA290_Debug * 10) + D_801072A2_DA292_Debug].unk0 == 0)) {
+                if (D_801069D8_D99C8_Debug == 0) {
+                    omAddObj(2, 0U, 0U, -1, &func_80104FA4_D7F94_Debug);
+                    D_801069D8_D99C8_Debug = 1;
+                    func_8001A654_1B254(D_80107406_DA3F6_Debug);
+                    arg0->func_ptr = &func_80104ADC_D7ACC_Debug;
+                    func_80105964_D8954_Debug(1);
+                }
+            } else {
+                if (D_80107470_DA460_Debug[i] & 1) {
+                    func_801059B0_D89A0_Debug(-1);
+                    func_80105BDC_D8BCC_Debug();
+                    func_80105964_D8954_Debug(0);
+                } else if (D_80107470_DA460_Debug[i] & 2) {
+                    func_801059B0_D89A0_Debug(1);
+                    func_80105BDC_D8BCC_Debug();
+                    func_80105964_D8954_Debug(0);                    
+                }
+                else {
+                    if (D_80107470_DA460_Debug[i] & 4) {
+                        func_80105A2C_D8A1C_Debug(-1);
+                        func_80105BDC_D8BCC_Debug();
+                        func_80105964_D8954_Debug(4);
+                    } else if (D_80107470_DA460_Debug[i] & 8) {
+                        func_80105A2C_D8A1C_Debug(1);
+                        func_80105BDC_D8BCC_Debug();
+                        func_80105964_D8954_Debug(4);                        
+                    } else {
+                        if (D_80107470_DA460_Debug[i] & 0x40) {
+                            D_801072B2_DA2A2_Debug = 0;
+                            D_801072B4_DA2A4_Debug = 0;
+                            D_801072B6_DA2A6_Debug = 0;
+                            arg0->func_ptr = &func_80103E50_D6E40_Debug;
+                        }
+                        else if (D_8010163C_10223C[i] & 0x10) {
+                            if (++D_800CD40E >= 3U) {
+                                D_800CD40E = 0;
+                            }
+                        } else {
+                            if (D_80107470_DA460_Debug[i] & 0x20) {
+                                func_8001A654_1B254(D_80107406_DA3F6_Debug);
+                                arg0->func_ptr = &func_80103C4C_D6C3C_Debug;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}
+#else
 INCLUDE_ASM(const s32, "overlays/ovl_00_Debug/D57F0", func_80103838_D6828_Debug);
+#endif
 
 void func_80103C4C_D6C3C_Debug(omObjData* arg0) {
     s32 i;
@@ -331,14 +448,6 @@ void func_80103C4C_D6C3C_Debug(omObjData* arg0) {
 }
 
 INCLUDE_ASM(const s32, "overlays/ovl_00_Debug/D57F0", func_80103E50_D6E40_Debug);
-
-s32 func_8001A8DC_1B4DC(u16);
-void func_8001A96C_1B56C(u16, u8, u8, u8);
-void func_8001AC44_1B844(u16);
-s32 func_800A5610_A6210(char*);
-extern s32 D_801069E8_D99D8_Debug;
-extern s32 D_801069EC_D99DC_Debug;
-extern s32 D_801069F0_D99E0_Debug;
 
 void func_80104ADC_D7ACC_Debug(void) {
     s32 temp_s2;
@@ -411,6 +520,7 @@ void func_80104FA4_D7F94_Debug(omObjData* obj) {
     obj->func_ptr = func_80104FB4_D7FA4_Debug;
 }
 
+//used after minigame is selected, character select is on screen
 INCLUDE_ASM(const s32, "overlays/ovl_00_Debug/D57F0", func_80104FB4_D7FA4_Debug);
 
 void func_80105964_D8954_Debug(u16 arg0) {

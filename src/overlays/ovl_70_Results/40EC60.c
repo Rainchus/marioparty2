@@ -4,7 +4,7 @@ extern u16 D_800F9D24_FA924[];
 extern s8 D_801076A1_413B01_Results;
 extern s8 D_801076A2_413B02_Results;
 
-void func_80079390_79F90(u8);
+void PlayMusic(u8);
 void func_80104278_4106D8_Results(void);
 void func_8010492C_410D8C_Results(void);
 void func_80104B90_410FF0_Results(void);
@@ -20,7 +20,7 @@ void func_80102800_40EC60_Results(void) {
     func_80104B90_410FF0_Results();
     func_80104D3C_41119C_Results();
     omAddPrcObj(&func_80103DB4_410214_Results, 0x300U, 0x3000, 0);
-    func_80079390_79F90(0x14);
+    PlayMusic(0x14);
     omAddObj(5, 0U, 0U, -1, &func_801041C8_410628_Results);
     omAddObj(5, 0U, 0U, -1, &func_801028A0_40ED00_Results);
 }

@@ -37,7 +37,12 @@ typedef struct board_overlay_entrypoint {
 typedef struct UnkBoardStatus {
     char unk0[2];
     s16 unk_02;
-    char unk4[0x24];
+    char unk4[0x1A];
+    s16 unk_1E;
+    s16 unk_20;
+    s16 unk_22;
+    s16 unk_24;
+    s16 unk_26;
 } UnkBoardStatus; //sizeof 0x28
 
 typedef struct PlayerData {
@@ -60,7 +65,9 @@ typedef struct PlayerData {
 /* 0x19 */ s8 item;
 /* 0x1A */ s8 turn_status;
 /* 0x1B */ s8 player_space_color; //(color for minigame dividing)
-/* 0x1C */ char unk_1C[0x0C];
+/* 0x1C */ char unk_1C[4];
+/* 0x20 */ void* unk_20;
+/* 0x24 */ void* unk_24;
 /* 0x28 */ s16 minigame_coins_collected;
 /* 0x2A */ s16 coinPeak; //used for coin star
 /* 0x2C */ u8 happening_spaces_landed_on;

@@ -54,6 +54,8 @@ extern s16 D_800F93C8_F9FC8;
 extern s16 D_800FA652_FB252;
 extern u16 D_801011FC_101DFC;
 
+s16 func_8003F6F0_402F0(s16);
+
 void func_80063950_64550(void) {
     do {
         HuPrcVSleep();
@@ -109,7 +111,7 @@ void func_80063950_64550(void) {
         D_800CCC10 = 0x67;
         
         if (D_800E1F94_E2B94 & 2) {
-            func_80062A70_63670(func_8003F6F0_402F0(D_800F93C8_F9FC8), 0, 0x94);
+            func_80062A70_63670(func_8003F6F0_402F0(D_800F93A8.unk_20), 0, 0x94);
         }
         
         D_800CCC10 = 0x68;
@@ -119,7 +121,7 @@ void func_80063950_64550(void) {
         }
         
         D_800CCC10 = 0x69;
-        func_800683BC_68FBC(0x45);
+        _ClearFlag(0x45);
         omOvlReturnEx(1);
         omOvlKill();
         HuPrcVSleep();

@@ -8,7 +8,7 @@ void func_80102830_2978C0_name_3D(void) {
     if (func_80068328_68F28(0) != 0) {
         _SetFlag(0x41);
     } else {
-        func_800683BC_68FBC(0x41);
+        _ClearFlag(0x41);
     }
     omInitObjMan(0xA, 0);
     func_80062B14_63714();

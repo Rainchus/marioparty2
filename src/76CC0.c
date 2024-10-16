@@ -274,7 +274,7 @@ void func_8007935C_79F5C(s16 arg0, s16 arg1, s16 arg2) {
     D_800FCE84_FDA84 = 4;
 }
 
-INCLUDE_ASM(const s32, "76CC0", func_80079390_79F90);
+INCLUDE_ASM(const s32, "76CC0", PlayMusic);
 
 INCLUDE_ASM(const s32, "76CC0", func_80079428_7A028);
 

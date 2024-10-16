@@ -38,6 +38,7 @@ HuMemTempUsedMallocSizeGet = 0x80040EE0; // rom:0x41AE0
 HuMemTempUsedMallocBlockGet = 0x80040F00; // rom:0x41B00
 
 _SetFlag = 0x8006836C; //rom:0x68F6C
+_ClearFlag = 0x800683BC; //rom:0x68FBC
 
 SprAlloc = 0x8007F75C; // rom:0x8035C
 SprFree = 0x8007F800; // rom:0x80400
@@ -144,6 +145,8 @@ BoardSpaceGet = 0x8005DD38; // rom:0x5E938
 
 DrawDebugText = 0x8007C74C; // rom:0x7D34C
 ReadMainFS = 0x80017680; // rom:0x18280
+
+PlayMusic = 0x80079390; //rom:0x79F90
 
 //data and bss
 overlay_table = 0x800C8874; // rom:0xC9474 size:0x1050

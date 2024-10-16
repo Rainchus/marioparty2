@@ -287,7 +287,7 @@ INCLUDE_ASM(const s32, "58080", func_8005E228_5EE28);
 
 void func_8005E260_5EE60(s16 playerIndex) {
     s32 temp_a0;
-    PlayerMain* temp_v0;
+    PlayerData* temp_v0;
 
     temp_v0 = BoardPlayerGet(playerIndex);
     if (temp_v0->unk_24 != 0) {

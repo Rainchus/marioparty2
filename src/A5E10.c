@@ -1,6 +1,6 @@
 #include "common.h"
 
-INCLUDE_ASM(const s32, "A5E10", func_800A5210_A5E10);
+INCLUDE_ASM(const s32, "A5E10", bcopy);
 
 INCLUDE_ASM(const s32, "A5E10", func_800A5530_A6130);
 

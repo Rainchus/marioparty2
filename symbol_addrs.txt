@@ -184,3 +184,16 @@ D_80107754_413BB4_Results = 0x80107754; // type:s16 size:0x10 rom:0x413BB4 segme
 D_80107764_413BC4_Results = 0x80107764; // type:s16 size:0x10 rom:0x413BC4 segment:Results
 
 D_800CD438_CE038 = 0x800CD438; //type:s32 size:0x90 rom:0xCE034
+
+bcopy = 0x800A5210; //rom:0xA5E10
+HuRomDmaCodeRead = 0x8007C4E4; //rom:0x7D0E4
+HuRomDmaRead = 0x8007C410; //rom:0x7D010
+
+osInvalICache = 0x800A1DF0; //rom:0xA29F0
+osInvalDCache = 0x800A1D40; //rom:0xA2940
+
+HuStartDma = 0x8007C3C8; //rom:0x7CFC8
+osEPiStartDma = 0x8009DC00; //rom:0x9E800
+
+osCreatePiManager = 0x8009D7C0; //rom:0x9E3C0
+osCartRomInit = 0x8009DCA0; //rom:0x9E8A0

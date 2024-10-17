@@ -19,9 +19,9 @@ void HuPrcInit(void) {
 void HuLinkProcess(Process** root, Process* process) {
     Process* src_process = *root;
 
-    if (src_process != NULL && (src_process->prio >= process->prio)) {
+    if (src_process != NULL && (src_process->priority >= process->priority)) {
         while (src_process->next != NULL) {
-            if (src_process->next->prio < process->prio) {
+            if (src_process->next->priority < process->priority) {
                 break;
             }
             src_process = src_process->next;
@@ -57,7 +57,7 @@ void HuUnlinkPrc(Process **root, Process *process) {
     }
 }
 
-Process* HuPrcCreate(void (*func)(void), u16 prio, u32 stack_size, s32 extra_size) {
+Process* HuPrcCreate(void (*func)(void), u16 priority, u32 stack_size, s32 extra_size) {
     HeapNode* process_heap;
     Process* process;
     s32 alloc_size;
@@ -82,7 +82,7 @@ Process* HuPrcCreate(void (*func)(void), u16 prio, u32 stack_size, s32 extra_siz
     process->heap = process_heap;
     process->exec_mode = EXEC_PROCESS_DEFAULT;
     process->stat = 0;
-    process->prio = prio;
+    process->priority = priority;
     process->sleep_time = 0;
     process->base_sp = HuMemMemoryAlloc(process_heap, stack_size) + stack_size - 8;
     process->prc_jump.func = func;

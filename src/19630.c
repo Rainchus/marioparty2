@@ -27,7 +27,7 @@ typedef struct OverlayTable {
 /* 0x20 */ u8* bssVramEnd;
 } OverlayTable; //sizeof 0x24
 
-void func_8007C4E4_7D0E4(u8*, u8*, u8*);
+void HuRomDmaCodeRead(u8* src, u8* dest, s32 size);
 extern s8 D_800C8870_C9470;
 extern OverlayTable overlay_table[];
 
@@ -43,7 +43,7 @@ void LoadOverlay(s32 arg0) {
     bssStart = overlay_table[arg0].bssVramStart;
     bssEnd = overlay_table[arg0].bssVramEnd;
     
-    func_8007C4E4_7D0E4(romStart, overlay_table[arg0].vramStart, (u8*)(romEnd - romStart));
+    HuRomDmaCodeRead(romStart, overlay_table[arg0].vramStart, (u8*)(romEnd - romStart));
     curBssAddr = bssStart;
     while (bssStart < bssEnd) {
         *curBssAddr++ = 0;

@@ -47,7 +47,7 @@ omObjData* omAddObj(s16, u16, u16, s16, void*);
 void func_80079464_7A064(void);
 void func_800794A8_7A0A8(s32);
 s32 func_8008F618_90218(void);
-s32 GetSaveFileChecksum(u16 checksumAddrOffset, u16 size);
+u16 GetSaveFileChecksum(u16 checksumAddrOffset, u16 size);
 void func_8001AFD8_1BBD8(s32 arg0, UnkEep* arg1, s16 arg2);
 void func_80018BD0_197D0(s32, f32, f32, f32, f32);
 void func_80018C34_19834(s32, f32, f32, f32, f32, f32, f32);

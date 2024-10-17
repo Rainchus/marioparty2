@@ -1,11 +1,10 @@
 #include "common.h"
+#include "engine/siman.h"
 
 extern u8 D_800C9B60[];
 extern u8 D_800D89F0_D95F0[];
 extern u8 D_800D89F8_D95F8[];
 extern OSMesgQueue D_800FA5E0_FB1E0;
-
-void func_800A5210_A5E10(u8*, u8*, u16);
 
 s32 GetEepType(s8** arg0) {
     s16 eepromProbeResult;
@@ -80,13 +79,12 @@ s32 func_8001AF0C_1BB0C(UnkEep* arg0) {
     s32 startOffset;
 
     if (arg0->unk0 >= 8) {
-            for (i = 0; i < arg0->unk8; i++) {
-                if (arg0->unk0 + i >= (EEPROM_MAXBLOCKS * EEPROM_BLOCK_SIZE)) {
-                    break;
-                }
-                D_800D89F0_D95F0[arg0->unk0 + i] = arg0->unk4[i];
+        for (i = 0; i < arg0->unk8; i++) {
+            if (arg0->unk0 + i >= (EEPROM_MAXBLOCKS * EEPROM_BLOCK_SIZE)) {
+                break;
             }
-        
+            D_800D89F0_D95F0[arg0->unk0 + i] = arg0->unk4[i];
+        }
         
         eepromBlockCount = (arg0->unk0 / EEPROM_BLOCK_SIZE);
         alignmentOffset = arg0->unk0 & 7;
@@ -111,7 +109,7 @@ s32 func_8001B014_1BC14(UnkEep* arg0) {
     if (osEepromLongRead(&D_800FA5E0_FB1E0, 0, D_800D89F0_D95F0, (EEPROM_MAXBLOCKS * EEPROM_BLOCK_SIZE)) != 0) {
         return 2;
     }
-    func_800A5210_A5E10(&D_800D89F0_D95F0[arg0->unk0], arg0->unk4, arg0->unk8);
+    bcopy(&D_800D89F0_D95F0[arg0->unk0], arg0->unk4, arg0->unk8);
     return 0;
 }
 
@@ -123,7 +121,7 @@ void func_8001B078_1BC78(s32 arg0, UnkEep* arg1, s16 arg2) {
     sp20.unk4 = arg1;
     sp20.unk8 = arg2;
 
-    func_8007EE0C_7FA0C(&sp10, func_8001B014_1BC14, &sp20, 1);
+    func_8007EE0C_7FA0C(&sp10, (HuSiFunc)func_8001B014_1BC14, &sp20, 1);
 }
 
 s32 func_8001B0B4_1BCB4(void) {
@@ -133,15 +131,15 @@ s32 func_8001B0B4_1BCB4(void) {
 s32 func_8001B0E8_1BCE8(UnkEep* arg0) {
     unkfunc_8007EE0C sp10;
 
-    return func_8007EE0C_7FA0C(&sp10, &func_8001B0B4_1BCB4, 0, 1);
+    return func_8007EE0C_7FA0C(&sp10, (HuSiFunc)func_8001B0B4_1BCB4, 0, 1);
 }
 
-s32 GetSaveFileChecksum(u16 checksumAddrOffset, u16 size) {
+u16 GetSaveFileChecksum(u16 checksumAddrOffset, u16 size) {
     u16 offset;
     u16 checksumTotal;
 
     checksumTotal = 0;
-    checksumAddrOffset += 8;
+    checksumAddrOffset += EEPROM_BLOCK_SIZE;
 
     while (size--) {
         offset = checksumAddrOffset;

@@ -96,7 +96,7 @@ segments:
       - [0x76CC0, c]
       - [0x7AA60, c]
       - [0x7C9A0, c]
-      - [0x7CF70, c]
+      - [0x7CF70, c, rom]
       - [0x7D1D0, c]
       - [0x7E0F0, c, "game/process"]
       - [0x7E850, c]

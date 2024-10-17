@@ -1,0 +1,15 @@
+#for use with coddog
+name: Mario Party 2
+github: https://github.com/Rainchus/marioparty2
+platform: n64
+versions:
+- name: mp2
+  fullname: MP2
+  paths:
+    baserom: "baserom.us.z64"
+    build: "build/marioparty2.z64"
+    asm: "asm"
+    nonmatchings: "asm/nonmatchings"
+    map: "build/marioparty2.map"
+    elf: "build/marioparty2.elf"
+tools:

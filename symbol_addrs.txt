@@ -142,7 +142,7 @@ omOvlHisChg = 0x80077538; // rom:0x78138
 omOvlCallEx = 0x800770EC; // rom:0x77CEC
 omOvlReturnEx = 0x80077160; // rom:0x77D60
 BoardSpaceGet = 0x8005DD38; // rom:0x5E938
-
+HuGetPadInserted = 0x800172CC; //rom:0x17ECC
 DrawDebugText = 0x8007C74C; // rom:0x7D34C
 ReadMainFS = 0x80017680; // rom:0x18280
 

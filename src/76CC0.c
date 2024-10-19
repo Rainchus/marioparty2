@@ -102,10 +102,9 @@ INCLUDE_ASM(const s32, "76CC0", omPrcSetDestructor);
 
 s32 omOvlCallEx(s32 overlayID, s16 event, s16 stat) {
     omOvlHisData* history;
-    s32 index = omovlhisidx;
     s32 result;
 
-    if (index < ARRAY_COUNT(omovlhis)) {
+    if (omovlhisidx < ARRAY_COUNT(omovlhis)) {
         history = &omovlhis[++omovlhisidx];
         history->overlayID = overlayID;
         history->event = event;
@@ -222,10 +221,9 @@ INCLUDE_ASM(const s32, "76CC0", omOvlGotoEx);
 #endif
 
 void omOvlHisChg(s16 arg0, s32 overlay, s16 event, s16 stat) {
+    s32 ovlhisIndex = omovlhisidx - arg0;
     omOvlHisData* history;
-    s32 ovlhisIndex;
 
-    ovlhisIndex = omovlhisidx - arg0;
     if (ovlhisIndex >= 0) {
         history = &omovlhis[ovlhisIndex];
         history->overlayID = overlay;

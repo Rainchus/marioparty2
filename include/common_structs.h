@@ -111,7 +111,7 @@ typedef struct omObjData {
 typedef struct HeapNode {
     s32 size;
     u8 heap_constant;
-    u8 used; // bool
+    u8 active; // bool
     struct HeapNode* prev;
     struct HeapNode* next;
 } HeapNode;

@@ -43,4 +43,4 @@ INCLUDE_ASM(const s32, "169B0", func_80017244_17E44);
 
 INCLUDE_ASM(const s32, "169B0", func_80017294_17E94);
 
-INCLUDE_ASM(const s32, "169B0", func_800172CC_17ECC);
+INCLUDE_ASM(const s32, "169B0", HuGetPadInserted);

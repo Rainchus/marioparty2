@@ -7,7 +7,7 @@ void func_80102A6C_36DC0C_BootLogos(void);
 void func_80102AD8_36DC78_BootLogos(void);
 void func_8008F624_90224(s32, s32, s32);
 void func_80102A04_36DBA4_BootLogos(void);
-s32 func_800172CC_17ECC(s32);
+s32 HuGetPadInserted(s32);
 s32 func_80068448_69048(void);
 void SprAnimKill(s16);
 s16 func_8001A2F8_1AEF8(s32);
@@ -81,7 +81,7 @@ void func_80102A6C_36DC0C_BootLogos(void) {
 
     if (func_8008F618_90218() == 0) {
         temp_v0 = func_80068448_69048();
-        if ((temp_v0 == 1) && (func_800172CC_17ECC(0) != 0) && (D_8010163C_10223C & 0x1000)) {
+        if ((temp_v0 == 1) && (HuGetPadInserted(0) != 0) && (D_8010163C_10223C & 0x1000)) {
             D_80102D54_36DEF4_BootLogos = temp_v0;
         }
     }

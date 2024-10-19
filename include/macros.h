@@ -6,6 +6,8 @@
 #define MAX_PLAYERS 4
 #define ARRAY_COUNT(arr) (s32)(sizeof(arr) / sizeof(arr[0]))
 
+#define ALIGN_16(size) (((size) + 0x1F) & ~0xF)
+
 #define IS_DEBUG_PANIC(statement, file, line) do {} while(1)
 #define ASSERT(condition) \
     if (!(condition)) { \

@@ -45,7 +45,7 @@ typedef struct DebugOverlayData {
 
 void func_8001A7C8_1B3C8(u16, f32);
 void DrawDebugText(u16, u16, char*);
-s32 func_800172CC_17ECC(s16);
+s32 HuGetPadInserted(s16);
 void func_8001A614_1B214(u16);
 void func_8001CA48_1D648(void);
 void func_80067D90_68990(void);
@@ -75,7 +75,7 @@ void func_8001A91C_1B51C(u16, f32, f32);
 void func_80103594_D6584_Debug(omObjData* arg0);
 void func_80079E60_7AA60(void);
 void func_80102DEC_D5DDC_Debug(void);
-s32 func_800172CC_17ECC(s16);
+s32 HuGetPadInserted(s16);
 void func_80105A2C_D8A1C_Debug(s32);
 void func_80105BDC_D8BCC_Debug(void);
 s16 func_8007959C_7A19C(s16);
@@ -282,7 +282,7 @@ void func_80103594_D6584_Debug(omObjData* arg0) {
     }
 
     for (i = 0; i < 4; i++) {
-        if (func_800172CC_17ECC(i) != 0) {
+        if (HuGetPadInserted(i) != 0) {
             D_801073C0_DA3B0_Debug[i] = 1;
         }        
     }
@@ -355,7 +355,7 @@ void func_80103838_D6828_Debug(omObjData* arg0) {
     func_80105B5C_D8B4C_Debug(0x80U, 0x48U, D_80101080_101C80, 0xEU, 6U);
     func_8001A694_1B294(D_80107406_DA3F6_Debug, 0x3C, (s16) (((D_801072A2_DA292_Debug + 0xB) * 9) - 1));
     for (i = 0; i < 4; i++) {
-        if (func_800172CC_17ECC(i) != 0) {
+        if (HuGetPadInserted(i) != 0) {
             if ((D_80107470_DA460_Debug[i] & 0x90) && (debug_ovl_table[(D_801072A0_DA290_Debug * 10) + D_801072A2_DA292_Debug].unk0 == 0)) {
                 if (D_801069D8_D99C8_Debug == 0) {
                     omAddObj(2, 0U, 0U, -1, &func_80104FA4_D7F94_Debug);
@@ -421,7 +421,7 @@ void func_80103C4C_D6C3C_Debug(omObjData* arg0) {
     sprintf(D_80101080_101C80, D_80107228_DA218_Debug);
     func_80105B5C_D8B4C_Debug(0x70, 0x70, D_80101080_101C80, 0xD, 5);
     for (i = 0; i < MAX_PLAYERS; i++) {
-        if (func_800172CC_17ECC(i) == 0) {
+        if (HuGetPadInserted(i) == 0) {
             continue;
         }
         

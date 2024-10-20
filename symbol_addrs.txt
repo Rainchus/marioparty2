@@ -87,6 +87,13 @@ PutSprite = 0x80085924; // rom:0x86524
 SprTexLoad = 0x800867B8; // rom:0x873B8
 
 
+espInit = 0x8001A260; //rom:0x1AE60
+espMain = 0x8001A4F0; //rom:0x1B0F0
+espDispOn = 0x8001A614; //rom:0x1B214
+espDispOff = 0x8001A654; //rom:0x1B254
+espPosSet = 0x8001A694; //rom:0x1B294
+
+
 HuPrcInit = 0x8007D4F0; // rom:0x7E0F0
 HuLinkProcess = 0x8007D504; // rom:0x7E104
 HuUnlinkPrc = 0x8007D598; // rom:0x7E198

@@ -11,8 +11,8 @@ s32 HuGetPadInserted(s32);
 s32 func_80068448_69048(void);
 void SprAnimKill(s16);
 s16 func_8001A2F8_1AEF8(s32);
-void func_8001A614_1B214(s32);
-void func_8001A694_1B294(s32, s32, s32);
+void espDispOn(s32);
+void espPosSet(s32, s32, s32);
 void func_8001A788_1B388(s32, u16);
 s32 func_8001AAAC_1B6AC(s16, s32, s32);
 void func_8001AC44_1B844(u16);
@@ -93,14 +93,14 @@ void func_80102AD8_36DC78_BootLogos(void) {
 
     temp_v0 = func_8001A2F8_1AEF8(0x90000);
     temp_s0 = func_8001AAAC_1B6AC(temp_v0, 0, 1);
-    func_8001A694_1B294(temp_s0, 0xA0, 0x78);
-    func_8001A614_1B214(temp_s0);
+    espPosSet(temp_s0, 0xA0, 0x78);
+    espDispOn(temp_s0);
     func_8001A788_1B388(temp_s0, 0xFFFF);
     InitFadeIn(0, 0x1E);
     while (func_8008F618_90218() != 0) {
         HuPrcVSleep();
     }
-    HuPrcSleep(0x2D);
+    HuPrcSleep(45);
     InitFadeOut(0, 9);
     
     while (func_8008F618_90218() != 0) {
@@ -112,15 +112,15 @@ void func_80102AD8_36DC78_BootLogos(void) {
     HuPrcSleep(9);
     temp_v0 = func_8001A2F8_1AEF8(0x90001);
     temp_s0 = func_8001AAAC_1B6AC(temp_v0, 0, 1);
-    func_8001A694_1B294(temp_s0, 0xA0, 0x78);
-    func_8001A614_1B214(temp_s0);
+    espPosSet(temp_s0, 0xA0, 0x78);
+    espDispOn(temp_s0);
     func_8001A788_1B388(temp_s0, -1);
     InitFadeIn(0, 9);
     
     while (func_8008F618_90218() != 0) {
         HuPrcVSleep();
     }
-    HuPrcSleep(0x2D);
+    HuPrcSleep(45);
     InitFadeOut(0, 9);
     
     while (func_8008F618_90218() != 0) {
@@ -131,8 +131,8 @@ void func_80102AD8_36DC78_BootLogos(void) {
     SprAnimKill(temp_v0);
     HuPrcSleep(9);
     temp_s0 = func_8001AAAC_1B6AC(func_8001A2F8_1AEF8(0x90002), 0, 1);
-    func_8001A694_1B294(temp_s0, 0xA0, 0x78);
-    func_8001A614_1B214(temp_s0);
+    espPosSet(temp_s0, 0xA0, 0x78);
+    espDispOn(temp_s0);
     func_8001A788_1B388(temp_s0, -1);
     InitFadeIn(0, 9);
     
@@ -140,7 +140,7 @@ void func_80102AD8_36DC78_BootLogos(void) {
         HuPrcVSleep();
     }
     
-    HuPrcSleep(0x2D);
+    HuPrcSleep(45);
     D_801011FC_101DFC = 1;
     while (1) {
         HuPrcVSleep();

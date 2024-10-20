@@ -1,6 +1,6 @@
 #include "common.h"
 
-INCLUDE_ASM(const s32, "1AE60", func_8001A260_1AE60);
+INCLUDE_ASM(const s32, "1AE60", espInit);
 
 INCLUDE_ASM(const s32, "1AE60", func_8001A2F8_1AEF8);
 
@@ -8,13 +8,13 @@ INCLUDE_ASM(const s32, "1AE60", func_8001A340_1AF40);
 
 INCLUDE_ASM(const s32, "1AE60", func_8001A4C0_1B0C0);
 
-INCLUDE_ASM(const s32, "1AE60", func_8001A4F0_1B0F0);
+INCLUDE_ASM(const s32, "1AE60", espMain);
 
-INCLUDE_ASM(const s32, "1AE60", func_8001A614_1B214);
+INCLUDE_ASM(const s32, "1AE60", espDispOn);
 
-INCLUDE_ASM(const s32, "1AE60", func_8001A654_1B254);
+INCLUDE_ASM(const s32, "1AE60", espDispOff);
 
-INCLUDE_ASM(const s32, "1AE60", func_8001A694_1B294);
+INCLUDE_ASM(const s32, "1AE60", espPosSet);
 
 INCLUDE_ASM(const s32, "1AE60", func_8001A6BC_1B2BC);
 

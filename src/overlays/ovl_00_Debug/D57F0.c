@@ -46,7 +46,7 @@ typedef struct DebugOverlayData {
 void func_8001A7C8_1B3C8(u16, f32);
 void DrawDebugText(u16, u16, char*);
 s32 HuGetPadInserted(s16);
-void func_8001A614_1B214(u16);
+void espDispOn(u16);
 void func_8001CA48_1D648(void);
 void func_80067D90_68990(void);
 void func_80068964_69564(void);
@@ -70,7 +70,7 @@ u16 func_8001AAAC_1B6AC(s16, s16, u16);
 void func_8001A788_1B388(u16, u16);
 void func_8001A708_1B308(u16, s16);
 void func_8001A6BC_1B2BC(u16, u8);
-void func_8001A694_1B294(u16, s16, s16);
+void espPosSet(u16, s16, s16);
 void func_8001A91C_1B51C(u16, f32, f32);
 void func_80103594_D6584_Debug(omObjData* arg0);
 void func_80079E60_7AA60(void);
@@ -86,7 +86,7 @@ void func_8001AC44_1B844(u16);
 s32 func_800A5610_A6210(char*);
 void func_80103C4C_D6C3C_Debug(omObjData* arg0);
 void func_80104FA4_D7F94_Debug(omObjData* obj);
-void func_8001A654_1B254(u16);
+void espDispOff(u16);
 void func_80105964_D8954_Debug(u16 arg0);
 void func_801059B0_D89A0_Debug(s16 arg0);
 void func_80103E50_D6E40_Debug(void);
@@ -206,17 +206,17 @@ void func_80102800_D57F0_Debug(void) {
     
     for (i = 0; i < 0x23; i++) {
         temp_s0_2 = func_8001AAAC_1B6AC(D_80107402_DA3F2_Debug, i % 6, 1);
-        func_8001A614_1B214(temp_s0_2);
+        espDispOn(temp_s0_2);
         func_8001A788_1B388(temp_s0_2, -1);
         func_8001A708_1B308(temp_s0_2, 0x4000);
         func_8001A6BC_1B2BC(temp_s0_2, -1);
-        func_8001A694_1B294(temp_s0_2, ((i % 7) * 0x30), ((i / 7) * 0x30));
+        espPosSet(temp_s0_2, ((i % 7) * 0x30), ((i / 7) * 0x30));
     }
 
     D_80107404_DA3F4_Debug = func_8001A2F8_1AEF8(0xE);
     D_80107406_DA3F6_Debug = func_8001AAAC_1B6AC(D_80107404_DA3F4_Debug, 0, 1);
-    func_8001A614_1B214(D_80107406_DA3F6_Debug);
-    func_8001A694_1B294(D_80107406_DA3F6_Debug, 0x80, 0x80);
+    espDispOn(D_80107406_DA3F6_Debug);
+    espPosSet(D_80107406_DA3F6_Debug, 0x80, 0x80);
     func_8001A91C_1B51C(D_80107406_DA3F6_Debug, 0.25f, 0.25f);
 
     for (i = 0; i < 0x28; i++) {
@@ -353,14 +353,14 @@ void func_80103838_D6828_Debug(omObjData* arg0) {
     func_80105B5C_D8B4C_Debug(0x80U, 0x40U, D_80101080_101C80, 0xFU, 7U);
     sprintf(D_80101080_101C80, D_80107204_DA1F4_Debug, D_801069CC_D99BC_Debug[D_800CD40E]);
     func_80105B5C_D8B4C_Debug(0x80U, 0x48U, D_80101080_101C80, 0xEU, 6U);
-    func_8001A694_1B294(D_80107406_DA3F6_Debug, 0x3C, (s16) (((D_801072A2_DA292_Debug + 0xB) * 9) - 1));
+    espPosSet(D_80107406_DA3F6_Debug, 0x3C, (s16) (((D_801072A2_DA292_Debug + 0xB) * 9) - 1));
     for (i = 0; i < 4; i++) {
         if (HuGetPadInserted(i) != 0) {
             if ((D_80107470_DA460_Debug[i] & 0x90) && (debug_ovl_table[(D_801072A0_DA290_Debug * 10) + D_801072A2_DA292_Debug].unk0 == 0)) {
                 if (D_801069D8_D99C8_Debug == 0) {
                     omAddObj(2, 0U, 0U, -1, &func_80104FA4_D7F94_Debug);
                     D_801069D8_D99C8_Debug = 1;
-                    func_8001A654_1B254(D_80107406_DA3F6_Debug);
+                    espDispOff(D_80107406_DA3F6_Debug);
                     arg0->func_ptr = &func_80104ADC_D7ACC_Debug;
                     func_80105964_D8954_Debug(1);
                 }
@@ -396,7 +396,7 @@ void func_80103838_D6828_Debug(omObjData* arg0) {
                             }
                         } else {
                             if (D_80107470_DA460_Debug[i] & 0x20) {
-                                func_8001A654_1B254(D_80107406_DA3F6_Debug);
+                                espDispOff(D_80107406_DA3F6_Debug);
                                 arg0->func_ptr = &func_80103C4C_D6C3C_Debug;
                             }
                         }
@@ -426,7 +426,7 @@ void func_80103C4C_D6C3C_Debug(omObjData* arg0) {
         }
         
         if (D_80107470_DA460_Debug[i] & 0x20) {
-            func_8001A614_1B214(D_80107406_DA3F6_Debug);
+            espDispOn(D_80107406_DA3F6_Debug);
             arg0->func_ptr = &func_80103838_D6828_Debug;
             continue;
         }
@@ -434,7 +434,7 @@ void func_80103C4C_D6C3C_Debug(omObjData* arg0) {
         if (D_80107470_DA460_Debug[i] & 0x10) {
             func_80067D90_68990();
             func_800689A0_695A0();
-            func_8001A614_1B214(D_80107406_DA3F6_Debug);
+            espDispOn(D_80107406_DA3F6_Debug);
             func_8001CA48_1D648();
             func_80068964_69564();
             func_80068A20_69620();
@@ -472,7 +472,7 @@ void func_80104ADC_D7ACC_Debug(void) {
             func_8001A788_1B388(D_80107410_DA400_Debug[D_801069EC_D99DC_Debug], 0x8000U);
             func_8001A91C_1B51C(D_80107410_DA400_Debug[D_801069EC_D99DC_Debug], 0.75f, 0.75f);
             func_8001A7C8_1B3C8(D_80107410_DA400_Debug[D_801069EC_D99DC_Debug], 8.0f);
-            func_8001A694_1B294(D_80107410_DA400_Debug[D_801069EC_D99DC_Debug], temp_s3, ((temp_s2 - D_801069E8_D99D8_Debug) + var_s4 + 8));
+            espPosSet(D_80107410_DA400_Debug[D_801069EC_D99DC_Debug], temp_s3, ((temp_s2 - D_801069E8_D99D8_Debug) + var_s4 + 8));
             func_8001A96C_1B56C(D_80107410_DA400_Debug[D_801069EC_D99DC_Debug], 0xFF, 0xFF, 0xBE);
             D_801069EC_D99DC_Debug += 1;
             D_80107410_DA400_Debug[D_801069EC_D99DC_Debug] = func_8001AAAC_1B6AC(D_80107408_DA3F8_Debug, 0, 1U);
@@ -480,7 +480,7 @@ void func_80104ADC_D7ACC_Debug(void) {
             func_8001A788_1B388(D_80107410_DA400_Debug[D_801069EC_D99DC_Debug], 0x8000U);
             func_8001A91C_1B51C(D_80107410_DA400_Debug[D_801069EC_D99DC_Debug], 0.75f, 0.75f);
             func_8001A7C8_1B3C8(D_80107410_DA400_Debug[D_801069EC_D99DC_Debug], 8.0f);
-            func_8001A694_1B294(D_80107410_DA400_Debug[D_801069EC_D99DC_Debug], (temp_s3 + (func_800A5610_A6210(debug_ovl_table[D_801072A0_DA290_Debug * 10 + D_801072A2_DA292_Debug].name) * 8)), ((temp_s2 - D_801069E8_D99D8_Debug) + var_s4) + 8);
+            espPosSet(D_80107410_DA400_Debug[D_801069EC_D99DC_Debug], (temp_s3 + (func_800A5610_A6210(debug_ovl_table[D_801072A0_DA290_Debug * 10 + D_801072A2_DA292_Debug].name) * 8)), ((temp_s2 - D_801069E8_D99D8_Debug) + var_s4) + 8);
             func_8001A96C_1B56C(D_80107410_DA400_Debug[D_801069EC_D99DC_Debug], 255, 255, 0xBE);
             D_801069EC_D99DC_Debug += 1;
             D_801069F0_D99E0_Debug = 4;

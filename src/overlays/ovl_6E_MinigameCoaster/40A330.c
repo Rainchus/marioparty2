@@ -85,8 +85,8 @@ void func_80103C98_40B7C8_MinigameCoaster(void) {
 
 void func_80103D34_40B864_MinigameCoaster(void) {
     func_80018E30_19A30(1);
-    func_80018BD0_197D0(0, 0, 0, 320.0f, 240.0f);
-    func_80018C34_19834(0, 640.0f, 480.0f, 511.0f, 640.0f, 480.0f, 511.0f);
+    ScissorSet(0, 0, 0, 320.0f, 240.0f);
+    ViewportSet(0, 640.0f, 480.0f, 511.0f, 640.0f, 480.0f, 511.0f);
     func_80050A30_51630(D_01164160);
     func_80050E00_51A00(0x2E);
 }

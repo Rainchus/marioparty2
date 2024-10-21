@@ -4,7 +4,7 @@ extern u16 D_800F9D24_FA924[];
 extern s8 D_801076A1_413B01_Results;
 extern s8 D_801076A2_413B02_Results;
 
-void PlayMusic(u8);
+void PlayMusic(s16);
 void func_80104278_4106D8_Results(void);
 void func_8010492C_410D8C_Results(void);
 void func_80104B90_410FF0_Results(void);

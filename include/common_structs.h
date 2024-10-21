@@ -108,6 +108,49 @@ typedef struct omObjData {
 /* 0x50 */ void* unk_50;
 } omObjData; //sizeof 0x54
 
+typedef struct SpriteStuff {
+    /* 0x00 */ s8 unk_00;
+    /* 0x01 */ s8 unk1;                             /* inferred */
+    /* 0x02 */ s8 unk2[2];                             /* inferred */
+    /* 0x04 */ char pad4[2];                        /* maybe part of unk2[4]? */
+    /* 0x06 */ u8 unk_06;
+    /* 0x07 */ char pad7[1];
+    /* 0x08 */ s16 unk_08;
+    /* 0x0A */ char padA[2];
+    /* 0x0C */ s16 unk_0C;
+    /* 0x0E */ char padE[2];
+    /* 0x10 */ f32 xPos;
+    /* 0x14 */ f32 yPos;
+    /* 0x18 */ f32 unk_18;
+    /* 0x1C */ f32 unk_1C;
+    /* 0x20 */ f32 unk_20;
+    /* 0x24 */ f32 unk_24;
+    /* 0x28 */ f32 unk_28;
+    /* 0x2C */ f32 unk_2C;
+    /* 0x30 */ s32 unk30;                           /* inferred */
+    /* 0x34 */ char pad34[2];
+    /* 0x36 */ s16 unk_36;
+    /* 0x38 */ u8 unk_38[12];
+    /* 0x44 */ s16 unk_44[2];
+} SpriteStuff;                                      /* size = 0x48 */
+
+typedef struct Vec2f {
+    f32 unk_00; //f32?
+    f32 unk_04; //f32?
+} Vec2f; //sizeof 0x8
+
+typedef struct RectF {
+    f32 x1;
+    f32 y1;
+    f32 x2;
+    f32 y2;
+} RectF;
+
+typedef struct UnkItemSprite2 {
+    f32 unk_00;
+    f32 unk_04;
+} UnkItemSprite2; //sizeof 0x8
+
 typedef struct HeapNode {
     s32 size;
     u8 heap_constant;

@@ -8,9 +8,9 @@ INCLUDE_ASM(const s32, "20C70", func_80020260_20E60);
 
 INCLUDE_ASM(const s32, "20C70", func_800202DC_20EDC);
 
-INCLUDE_ASM(const s32, "20C70", func_80020324_20F24);
+INCLUDE_ASM(const s32, "20C70", CameraScissorSet);
 
-INCLUDE_ASM(const s32, "20C70", func_80020378_20F78);
+INCLUDE_ASM(const s32, "20C70", CameraViewportSet);
 
 INCLUDE_ASM(const s32, "20C70", func_800203DC_20FDC);
 

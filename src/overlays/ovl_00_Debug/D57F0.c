@@ -145,12 +145,12 @@ extern char D_80107204_DA1F4_Debug[];
 extern s16 D_801072B2_DA2A2_Debug;
 extern s16 D_801072B4_DA2A4_Debug;
 extern s16 D_801072B6_DA2A6_Debug;
+void PlayMusic(s16);
 
 void func_80102800_D57F0_Debug(void) {
     omObjData* temp_s3;
     s32 temp_s0_2;
     s32 i;
-    s32 rand;
     
     D_80107400_DA3F0_Debug = 0;
     _SetFlag(0x19);
@@ -232,25 +232,7 @@ void func_80102800_D57F0_Debug(void) {
     }
 
     InitFadeIn(255, 16);
-    //i give up
-    //this asm below should be just
-    //PlayMusic(rand8() & 7);
-    //but the compiler keeps optimizing the andi instructions into 1 instruction instead of 2
-    
-    #ifdef SHIFT
-        PlayMusic(rand8() & 7);
-    #else
-    asm volatile (
-        ".set noreorder\n\t"
-        "jal rand8\n\t"
-        "nop\n\t"
-        "andi $v0, $v0, 7\n\t"
-        "jal PlayMusic\n\t"
-        "andi $a0, %v0, 0xFF\n\t"
-        ".set reorder\n\t"
-        : "=r" (rand)
-    );
-    #endif
+    PlayMusic(rand8() & 7);
 }
 
 void func_80102D54_D5D44_Debug(f32 arg0, f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6) {

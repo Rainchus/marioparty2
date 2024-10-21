@@ -17,7 +17,7 @@
 
 // u8 D_800C8870_C9470[] = {0, 0, 0, 0};
 
-// OverlayTable overlay_table[] = {
+// OverlayTable _ovltbl[] = {
 // {Debug_ROM_START, Debug_ROM_END, Debug_VRAM, Debug_TEXT_START, Debug_TEXT_END, Debug_DATA_START, Debug_RODATA_END, Debug_bss_VRAM, Debug_bss_VRAM},
 // {BowserSlots_ROM_START, BowserSlots_ROM_END, BowserSlots_VRAM, BowserSlots_TEXT_START, BowserSlots_TEXT_END, BowserSlots_DATA_START, BowserSlots_RODATA_END, BowserSlots_bss_VRAM, BowserSlots_bss_VRAM},
 // {RollOutTheBarrels_ROM_START, RollOutTheBarrels_ROM_END, RollOutTheBarrels_VRAM, RollOutTheBarrels_TEXT_START, RollOutTheBarrels_TEXT_END, RollOutTheBarrels_DATA_START, RollOutTheBarrels_RODATA_END, RollOutTheBarrels_bss_VRAM, RollOutTheBarrels_bss_VRAM},

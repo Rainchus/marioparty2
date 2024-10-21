@@ -6,7 +6,7 @@
 #include "process.h"
 
 s32 func_8007EE0C_7FA0C(unkfunc_8007EE0C* arg0, void* GetEepType, UnkEep** arg2, s32 arg3);
-s32 rand8(void);
+u8 rand8(void);
 void func_80062B14_63714(void);
 s32 func_80068328_68F28(s32);
 void _SetFlag(s32);
@@ -49,8 +49,8 @@ void func_800794A8_7A0A8(s32);
 s32 func_8008F618_90218(void);
 u16 GetSaveFileChecksum(u16 checksumAddrOffset, u16 size);
 void func_8001AFD8_1BBD8(s32 arg0, UnkEep* arg1, s16 arg2);
-void func_80018BD0_197D0(s32, f32, f32, f32, f32);
-void func_80018C34_19834(s32, f32, f32, f32, f32, f32, f32);
+void ScissorSet(u8 arg0, f32 x1, f32 y1, f32 x2, f32 y2);
+void ViewportSet(u8, f32, f32, f32, f32, f32, f32);
 void func_80018E30_19A30(s32);
 void func_80050A30_51630(u8*);
 void func_80050E00_51A00(s32);
@@ -61,6 +61,6 @@ void func_800581A0_58DA0(void);
 void func_800593C0_59FC0(void);
 void func_8005965C_5A25C(void);
 void func_8005E2B8_5EEB8(void);
-void func_80029E80_2AA80(s16, s32, s32);                   /* extern */
-void omDelPrcObj(s32);                                   /* extern */
+void func_80029E80_2AA80(s16, s32, s32);
+void omDelPrcObj(s32);
 #endif

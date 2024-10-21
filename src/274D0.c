@@ -51,7 +51,7 @@ INCLUDE_ASM(const s32, "274D0", func_800275C4_281C4);
 
 INCLUDE_ASM(const s32, "274D0", func_800277B0_283B0);
 
-INCLUDE_ASM(const s32, "274D0", func_80027884_28484);
+INCLUDE_ASM(const s32, "274D0", Hu3DModelCreate);
 
 INCLUDE_ASM(const s32, "274D0", func_80027D3C_2893C);
 
